@@ -7,20 +7,129 @@
 //
 
 import UIKit
+import SnapKit
 
-class ViewController: UIViewController {
+private let cellTitle = "cellTitle"
+private let cellNextVC = "cellNextVC"
 
+class ViewController: EZBaseVC {
+    
+    struct CellInfo {
+        var title: String?
+        var vcClass: UIViewController.Type?
+    }
+    
+    var dataSource = [CellInfo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        title = "Swift"
+        title = "Swift learning"
+        let frame = CGRect(x: 0, y: 64, width: UIScreen.width, height: UIScreen.height-64)
+        let tableView = UITableView(frame: frame, style: .plain)
+        view.addSubview(tableView)
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.delegate = self
+        tableView.dataSource = self
+        let refreshView = RefreshHeaderView(frame: CGRect(x: 0,
+                                               y: -64,
+                                               width: tableView.bounds.width,
+                                               height: 64))
+        tableView.insertSubview(refreshView, at: 0)
+        
+        setCellItems()
     }
-
+    
+    func setCellItems()
+    {
+        let item0 = CellInfo(title: "Grammar", vcClass: GrammarViewController.self)
+        dataSource.append(item0)
+        
+        let item1 = CellInfo(title: "TestView", vcClass: TestViewController.self)
+        dataSource.append(item1)
+        
+        let item2 = CellInfo(title: "searchControler", vcClass: SearchViewController.self)
+        dataSource.append(item2)
+        
+        let item3 = CellInfo(title: "SwiftyJSON", vcClass: SwiftyJSONViewController.self)
+        dataSource.append(item3)
+        
+        let item4 = CellInfo(title: "UIButton", vcClass: ButtonViewController.self)
+        dataSource.append(item4)
+        
+        let item5 = CellInfo(title: "AudioPlayer", vcClass: AudioViewController.self)
+        dataSource.append(item5)
+        
+        let item6 = CellInfo(title: "keyboard", vcClass: KeyboardViewController.self)
+        dataSource.append(item6)
+        
+        let item7 = CellInfo(title: "Gesture", vcClass: GestureRecognizerViewController.self)
+        dataSource.append(item7)
+        
+        let item8 = CellInfo(title: "RichText", vcClass: RichTextViewController.self)
+        dataSource.append(item8)
+        
+        let item9 = CellInfo(title: "Kingfisher", vcClass: KingfisherViewController.self)
+        dataSource.append(item9)
+        
+        let item10 = CellInfo(title: "Protocol", vcClass: ProtocolViewController.self)
+        dataSource.append(item10)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
-
-
 }
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIndentifier)
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: UITableViewCell.reuseIndentifier)
+            cell?.textLabel?.textColor = UIColor.RGB(74, 74, 74)
+        }
+        cell!.textLabel?.text = dataSource[indexPath.row].title
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: false)
+        
+        if let vcClass = dataSource[indexPath.row].vcClass {
+            let nextVC = vcClass.init()
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
+    
+}
+
+extension ViewController: BadgeViewDelegate {
+    func badgeViewDidBlast(_ badgeView: BadgeView) {
+        print(#function)
+    }
+}
+
+
+extension ViewController: UIScrollViewDelegate {
+
+    
+    
+}
+
+
+
 
