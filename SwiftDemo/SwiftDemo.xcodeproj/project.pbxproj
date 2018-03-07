@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C18B820503448000E4A31 /* HeaderAnimator.swift */; };
+		083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083C18B820503448000E4A31 /* HeaderAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAnimator.swift; sourceTree = "<group>"; };
+		083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 				08F396EC204AE02500FD2DE4 /* GroupAvatarView.swift */,
 				08E36E2D204EDA0E0020D5FB /* RefreshHeaderView.swift */,
 				08E36E2F204EE09E0020D5FB /* RefreshComponent.swift */,
+				083C18B820503448000E4A31 /* HeaderAnimator.swift */,
+				083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -498,8 +504,10 @@
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
+				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
 				08F396CD204AE01400FD2DE4 /* SearchViewController.swift in Sources */,
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
+				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				08F396CC204AE01400FD2DE4 /* SearchResultsController.swift in Sources */,
 				08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */,
 				08F396D2204AE01400FD2DE4 /* Singleton.swift in Sources */,

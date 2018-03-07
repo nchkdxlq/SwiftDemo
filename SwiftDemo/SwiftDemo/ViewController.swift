@@ -36,6 +36,7 @@ class ViewController: EZBaseVC {
                                                height: 64))
         tableView.insertSubview(refreshView, at: 0)
         
+
         setCellItems()
     }
     

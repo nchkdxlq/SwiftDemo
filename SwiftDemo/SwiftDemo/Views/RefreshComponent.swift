@@ -16,7 +16,7 @@ class RefreshComponent: UIView {
     weak var scrollView: UIScrollView?
     var scrollViewInsets = UIEdgeInsets.zero
     
-    var isObserving = false
+    private var isObserving = false
     var isRefreshing = false
     var isIgnoreObserving = false
     
@@ -69,7 +69,7 @@ class RefreshComponent: UIView {
     }
     
     func contentSizeDidChanged(_ newValue: CGSize, oldValue: CGSize) {
-        
+        print("contentSize newValue = \(newValue), oldValue = \(oldValue)")
     }
     
     func contentOffsetDidChanged(_ newValue: CGPoint, oldValue: CGPoint) {
