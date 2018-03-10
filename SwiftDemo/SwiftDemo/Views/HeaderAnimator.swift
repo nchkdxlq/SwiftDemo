@@ -11,6 +11,9 @@ import UIKit
 class HeaderAnimator: UIView {
     
     var trigger: CGFloat = 40.0
+    
+    var refreshBlock: VoidClosure?
+    
     let pullTextLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -42,15 +45,52 @@ class HeaderAnimator: UIView {
             addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
         }
-        addSubview(pullTextLabel)
-        addSubview(releaseTextLabel)
-        addSubview(indicatorView)
         
+        addPullTextLabelConstraint()
+        addReleaseTextLabelConstraint()
+        addIndicatorViewConstraint()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func addPullTextLabelConstraint() {
+        let centerX = NSLayoutConstraint(item: pullTextLabel, attribute: .centerX,
+                                         relatedBy: .equal,
+                                         toItem: self, attribute: .centerX,
+                                         multiplier: 1.0, constant: 0.0)
+        let top = NSLayoutConstraint(item: pullTextLabel, attribute: .top,
+                                     relatedBy: .equal,
+                                     toItem: self, attribute: .centerY,
+                                     multiplier: 1.0, constant: 0.0)
+        NSLayoutConstraint.activate([centerX, top])
+    }
+    
+    func addReleaseTextLabelConstraint() {
+        let centerX = NSLayoutConstraint(item: releaseTextLabel, attribute: .centerX,
+                                         relatedBy: .equal,
+                                         toItem: self, attribute: .centerX,
+                                         multiplier: 1.0, constant: 0.0)
+        let top = NSLayoutConstraint(item: releaseTextLabel, attribute: .top,
+                                     relatedBy: .equal,
+                                     toItem: self, attribute: .centerY,
+                                     multiplier: 1.0, constant: 0.0)
+        NSLayoutConstraint.activate([centerX, top])
+    }
+    
+    func addIndicatorViewConstraint() {
+        let centerX = NSLayoutConstraint(item: indicatorView, attribute: .centerX,
+                                         relatedBy: .equal,
+                                         toItem: self, attribute: .centerX,
+                                         multiplier: 1.0, constant: 0.0)
+        let centerY = NSLayoutConstraint(item: indicatorView, attribute: .centerY,
+                                     relatedBy: .equal,
+                                     toItem: self, attribute: .centerY,
+                                     multiplier: 1.0, constant: 0.0)
+        NSLayoutConstraint.activate([centerX, centerY])
+    }
+    
     
     func dragDistanceDidChanged(distance: CGFloat) {
         

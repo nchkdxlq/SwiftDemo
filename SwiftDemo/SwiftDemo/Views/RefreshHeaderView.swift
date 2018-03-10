@@ -10,6 +10,13 @@ import UIKit
 
 class RefreshHeaderView: RefreshComponent {
 
+    var animator: HeaderAnimator!
+    
+    convenience init(animator: HeaderAnimator) {
+        self.init()
+        self.animator = animator
+    }
+    
     override func contentOffsetDidChanged(_ newValue: CGPoint, oldValue: CGPoint) {
         super.contentOffsetDidChanged(newValue, oldValue: oldValue)
         var delta: CGFloat = 0
@@ -19,10 +26,38 @@ class RefreshHeaderView: RefreshComponent {
             // Fallback on earlier versions
             delta = self.scrollView!.contentInset.top + newValue.y
         }
-        if delta < 0 {
+        
+        if delta <= 0 {
             print("1111111111")
+            animator.dragDistanceDidChanged(distance: -delta)
         } else {
             print("2222222222")
         }
     }
+    
+    func startRefresh() {
+        self.isRefreshing = true
+        guard let __scrollView = scrollView else {
+            return
+        }
+        if __scrollView.isDragging {
+            //
+        } else {
+            
+        }
+    }
+    
+    func endRefresh() {
+        self.isRefreshing = false
+        guard let __scrollView = scrollView else {
+            return
+        }
+        
+        if __scrollView.isDragging {
+            
+        } else {
+            
+        }
+    }
+    
 }
