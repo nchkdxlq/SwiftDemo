@@ -13,12 +13,15 @@ let kRefreshContentOffset = "contentOffset"
 
 class RefreshComponent: UIView {
 
-    weak var scrollView: UIScrollView?
+    private(set) weak var scrollView: UIScrollView?
     var scrollViewInsets = UIEdgeInsets.zero
     
     private var isObserving = false
+    private(set) var oldDragging = false
     var isRefreshing = false
     var isIgnoreObserving = false
+    
+    var refreshBlock: VoidClosure?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +48,7 @@ class RefreshComponent: UIView {
         addObserver()
     }
     
+    
     func addObserver() {
         if isObserving == false {
             isObserving = true
@@ -68,11 +72,17 @@ class RefreshComponent: UIView {
         }
     }
     
-    func contentSizeDidChanged(_ newValue: CGSize, oldValue: CGSize) {
+    func contentSizeDidChanged(_ newValue: CGSize,
+                               oldValue: CGSize,
+                               newDragging: Bool,
+                               oldDragging: Bool) {
         print("contentSize newValue = \(newValue), oldValue = \(oldValue)")
     }
     
-    func contentOffsetDidChanged(_ newValue: CGPoint, oldValue: CGPoint) {
+    func contentOffsetDidChanged(_ newValue: CGPoint,
+                                 oldValue: CGPoint,
+                                 newDragging: Bool,
+                                 oldDragging: Bool) {
         print("contentOffset newValue = \(newValue), oldValue = \(oldValue)")
     }
     
@@ -87,14 +97,22 @@ class RefreshComponent: UIView {
             if let newValue = __change[NSKeyValueChangeKey.newKey] as? CGSize,
                 let oldValue = __change[NSKeyValueChangeKey.oldKey] as? CGSize {
                 if newValue != oldValue {
-                    contentSizeDidChanged(newValue, oldValue: oldValue)
+                    contentSizeDidChanged(newValue,
+                                          oldValue: oldValue,
+                                          newDragging: scrollView!.isDragging,
+                                          oldDragging: oldDragging)
+                    oldDragging = scrollView!.isDragging
                 }
             }
         } else if __keyPath == kRefreshContentOffset {
             if let newValue = __change[NSKeyValueChangeKey.newKey] as? CGPoint,
                 let oldValue = __change[NSKeyValueChangeKey.oldKey] as? CGPoint {
                 if newValue != oldValue {
-                    contentOffsetDidChanged(newValue, oldValue: oldValue)
+                    contentOffsetDidChanged(newValue,
+                                            oldValue: oldValue,
+                                            newDragging: scrollView!.isDragging,
+                                            oldDragging: oldDragging)
+                    oldDragging = scrollView!.isDragging
                 }
             }
         }

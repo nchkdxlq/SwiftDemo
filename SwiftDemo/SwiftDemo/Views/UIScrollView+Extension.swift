@@ -24,12 +24,17 @@ extension UIScrollView {
     }
     
     func addPullRefresh(refreshBlock: @escaping VoidClosure) {
-        addPullRefresh(animator: HeaderAnimator(), refreshBlock: refreshBlock)
+        let animator = HeaderAnimator(frame: CGRect(x: 0,
+                                                    y: 0,
+                                                    width: bounds.width,
+                                                    height: 60))
+        addPullRefresh(animator: animator, refreshBlock: refreshBlock)
     }
     
     func addPullRefresh(animator: HeaderAnimator, refreshBlock: @escaping VoidClosure) {
-        animator.refreshBlock = refreshBlock
-        insertSubview(animator, at: 0)
+        let refreshView = RefreshHeaderView(animator: animator)
+        refreshView.refreshBlock = refreshBlock
+        insertSubview(refreshView, at: 0)
     }
     
 }

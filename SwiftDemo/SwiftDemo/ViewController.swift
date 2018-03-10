@@ -30,11 +30,11 @@ class ViewController: EZBaseVC {
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.delegate = self
         tableView.dataSource = self
-        let refreshView = RefreshHeaderView(frame: CGRect(x: 0,
-                                               y: -64,
-                                               width: tableView.bounds.width,
-                                               height: 64))
-        tableView.insertSubview(refreshView, at: 0)
+        tableView.backgroundColor = UIColor(r: 215, g: 215, b: 215)
+
+        tableView.addPullRefresh {
+            print("6666666666666666")
+        }
         
 
         setCellItems()
