@@ -12,14 +12,18 @@ typealias VoidClosure = (() -> Void)
 
 extension UIScrollView {
     
-    var refreshHeaderView: RefreshHeaderView? {
-        //  get  willSet set didSet, 方法， 以及如何控制 读写权限 ？？？？？
+    private struct AssociatedKey {
+        static var refreshHeader = "refreshHeader"
+        static var refreshFooter = "refreshFooter"
+    }
+    
+    var refreshHeader: RefreshHeaderView? {
         get {
-            return nil
+            return objc_getAssociatedObject(self, &AssociatedKey.refreshHeader) as? RefreshHeaderView
         }
         
         set {
-            
+            objc_setAssociatedObject(self, &AssociatedKey.refreshHeader, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -35,6 +39,7 @@ extension UIScrollView {
         let refreshView = RefreshHeaderView(animator: animator)
         refreshView.refreshBlock = refreshBlock
         insertSubview(refreshView, at: 0)
+        self.refreshHeader = refreshView
     }
     
 }

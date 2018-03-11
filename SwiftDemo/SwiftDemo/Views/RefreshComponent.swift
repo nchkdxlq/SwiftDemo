@@ -76,14 +76,14 @@ class RefreshComponent: UIView {
                                oldValue: CGSize,
                                newDragging: Bool,
                                oldDragging: Bool) {
-        print("contentSize newValue = \(newValue), oldValue = \(oldValue)")
+//        print("contentSize newValue = \(newValue), oldValue = \(oldValue)")
     }
     
     func contentOffsetDidChanged(_ newValue: CGPoint,
                                  oldValue: CGPoint,
                                  newDragging: Bool,
                                  oldDragging: Bool) {
-        print("contentOffset newValue = \(newValue), oldValue = \(oldValue)")
+//        print("contentOffset newValue = \(newValue), oldValue = \(oldValue)")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

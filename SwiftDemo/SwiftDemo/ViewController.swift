@@ -24,7 +24,7 @@ class ViewController: EZBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Swift learning"
-        let frame = CGRect(x: 0, y: 64, width: UIScreen.width, height: UIScreen.height-64)
+        let frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height)
         let tableView = UITableView(frame: frame, style: .plain)
         view.addSubview(tableView)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -33,7 +33,10 @@ class ViewController: EZBaseVC {
         tableView.backgroundColor = UIColor(r: 215, g: 215, b: 215)
 
         tableView.addPullRefresh {
-            print("6666666666666666")
+            let time = DispatchTime.now() + 2.0
+            DispatchQueue.main.asyncAfter(deadline: time, execute: {
+                tableView.refreshHeader?.endRefresh()
+            })
         }
         
 

@@ -49,6 +49,10 @@ class RefreshHeaderView: RefreshComponent {
                                       oldValue: oldValue,
                                       newDragging: newDragging,
                                       oldDragging: oldDragging)
+        if self.isRefreshing {
+            print("refreshing")
+            return
+        }
         var delta: CGFloat = 0
         if #available(iOS 11.0, *) {
             delta = self.scrollView!.contentInset.top + self.scrollView!.adjustedContentInset.top + newValue.y
@@ -58,22 +62,20 @@ class RefreshHeaderView: RefreshComponent {
         }
         
         if delta <= 0 {
-            if self.isRefreshing {
-                return
-            }
             let bRefresh = animator.shouldRefreshWithDistance(distance: -delta,
                                                               newDragging: newDragging,
                                                               oldDragging: oldDragging)
             if bRefresh {
                 var insets = self.scrollViewInsets
                 insets.top += animator.bounds.height
-                self.scrollView!.contentInset = insets
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.scrollView!.contentInset = insets
+                })
                 startRefresh()
             }
         } else {
-            print("2222222222")
+            
         }
-        
     }
 
     
@@ -81,6 +83,7 @@ class RefreshHeaderView: RefreshComponent {
         if self.isRefreshing {
             return
         }
+        print("aaaaaaaaaaaaaaaaa")
         self.isRefreshing = true
         animator.startAnimating()
         refreshBlock?()
@@ -90,8 +93,13 @@ class RefreshHeaderView: RefreshComponent {
         if self.isRefreshing == false {
             return
         }
-        self.isRefreshing = false
-        animator.stopAnimating()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.scrollView?.contentInset = self.scrollViewInsets
+        }) { (finish) in
+            self.isRefreshing = false
+            self.animator.stopAnimating()
+            print("bbbbbbbbbbbbbbbb")
+        }
     }
     
 }
