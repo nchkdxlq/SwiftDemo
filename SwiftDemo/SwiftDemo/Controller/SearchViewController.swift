@@ -25,6 +25,10 @@ class SearchViewController: BaseTableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        
+        
+        
+        Dispatch.dispatchEntry()
     }
 
     override func didReceiveMemoryWarning() {
