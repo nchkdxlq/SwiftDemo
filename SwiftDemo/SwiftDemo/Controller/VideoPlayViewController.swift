@@ -97,12 +97,15 @@ class VideoPlayViewController: EZBaseVC {
         videoDuration = Int(CMTimeGetSeconds(playerItem.duration))
         durationTimeLabel.text = timeText(videoDuration)
         
-        let playableKey = "isPlayable"
-        asset.loadValuesAsynchronously(forKeys: [playableKey]) {
+        let playableKey = "playable"
+        asset.loadValuesAsynchronously(forKeys: [playableKey]) { [weak self] in
+            guard let strongSelf = self else { return }
             var error: NSError? = nil
-            let status = self.asset.statusOfValue(forKey: playableKey, error: &error)
+            let status = strongSelf.asset.statusOfValue(forKey: playableKey, error: &error)
             if status == AVKeyValueStatus.loaded {
-                self.play()
+                DispatchQueue.main.async {
+                    strongSelf.play()
+                }
             }
         }
     }
@@ -233,6 +236,7 @@ class VideoPlayViewController: EZBaseVC {
     }
     
     @objc private func closeHandle(_ sender: UIButton) {
+        invalidateTimer()
         if let _ = presentedViewController {
             dismiss(animated: true, completion: nil)
         } else {
