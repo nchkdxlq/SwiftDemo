@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C18B820503448000E4A31 /* HeaderAnimator.swift */; };
 		083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */; };
+		084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */; };
+		084D0B37205DF5AD00C2795A /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 084D0B36205DF5AC00C2795A /* video.mp4 */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -74,6 +76,9 @@
 /* Begin PBXFileReference section */
 		083C18B820503448000E4A31 /* HeaderAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAnimator.swift; sourceTree = "<group>"; };
 		083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
+		084D0B36205DF5AC00C2795A /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		084D0B38205DF97400C2795A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +243,7 @@
 				08F396C8204AE01400FD2DE4 /* RichTextCell.swift */,
 				08F396C9204AE01400FD2DE4 /* Student.swift */,
 				08F396CA204AE01400FD2DE4 /* LQTextViewController.swift */,
+				084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 		08F396E3204AE01F00FD2DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				084D0B36205DF5AC00C2795A /* video.mp4 */,
 				08F396E4204AE01F00FD2DE4 /* time_stone.mp3 */,
 				08F396E5204AE01F00FD2DE4 /* just_need_one_time.mp3 */,
 				08F396E6204AE01F00FD2DE4 /* goodBye.mp3 */,
@@ -278,6 +285,7 @@
 		0A0C32B15514EF92EE64DDFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				084D0B38205DF97400C2795A /* AVFoundation.framework */,
 				E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
@@ -403,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F396E8204AE01F00FD2DE4 /* just_need_one_time.mp3 in Resources */,
+				084D0B37205DF5AD00C2795A /* video.mp4 in Resources */,
 				08E27C74204AA2FC00CD1AE1 /* LaunchScreen.storyboard in Resources */,
 				08F396E9204AE01F00FD2DE4 /* goodBye.mp3 in Resources */,
 				08F396E7204AE01F00FD2DE4 /* time_stone.mp3 in Resources */,
@@ -499,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */,
 				08F396D8204AE01400FD2DE4 /* ButtonViewController.swift in Sources */,
 				08F396F4204AE0DF00FD2DE4 /* UIView+Extension.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,

@@ -14,7 +14,8 @@ class Dispatch: NSObject {
         
 //        group()
 //        semaphore()
-        createQueue()
+//        createQueue()
+        dispatch_after()
     }
     
     
@@ -35,7 +36,7 @@ class Dispatch: NSObject {
     //MARK: - createQueue
     
     static func createQueue() {
-//        createSerialQueue()
+        createSerialQueue()
         createConcurrentQueue()
     }
     
@@ -177,6 +178,18 @@ class Dispatch: NSObject {
         print("wait 111111")
         semaphore.wait() // 等待/占用信号, 会阻塞
         print("wait 222222")
+    }
+    
+    //MARK: - after
+    
+    static func dispatch_after() {
+        
+        let queue = DispatchQueue.main
+        let now = DispatchTime.now() + 2
+        print(Date())
+        queue.asyncAfter(deadline: now) {
+            print(Date())
+        }
     }
     
 }

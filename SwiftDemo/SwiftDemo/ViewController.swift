@@ -77,6 +77,9 @@ class ViewController: EZBaseVC {
         
         let item10 = CellInfo(title: "Protocol", vcClass: ProtocolViewController.self)
         dataSource.append(item10)
+        
+        let item11 = CellInfo(title: "Video", vcClass: VideoPlayViewController.self)
+        dataSource.append(item11)
     }
     
     

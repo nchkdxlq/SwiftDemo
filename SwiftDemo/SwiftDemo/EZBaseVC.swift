@@ -10,6 +10,16 @@ import UIKit
 
 class EZBaseVC: UIViewController {
 
+    var isNavigationBarHidden: Bool {
+        get {
+            return navigationController?.isNavigationBarHidden ?? false
+        }
+        
+        set{
+            navigationController?.isNavigationBarHidden = newValue
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -37,6 +47,8 @@ class EZBaseVC: UIViewController {
         button.sizeToFit()
         return UIBarButtonItem(customView: button)
     }
+    
+    
     
     deinit
     {
