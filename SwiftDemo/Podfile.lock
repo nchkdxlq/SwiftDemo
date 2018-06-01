@@ -26,6 +26,17 @@ DEPENDENCIES:
   - SnapKit (~> 4.0.0)
   - SwiftyJSON (~> 4.0.0)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Cent
+    - Dollar
+    - ImageViewer
+    - Kingfisher
+    - PromiseKit
+    - SnapKit
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Cent: fb5ef7da981cc382a3562da5d86a01461cfb5ac4
@@ -38,4 +49,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 881fac15208f3d110ca38476af42b483c2cf4f82
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
