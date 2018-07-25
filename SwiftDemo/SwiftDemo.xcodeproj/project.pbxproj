@@ -17,6 +17,8 @@
 		085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617742108B3FF001B2006 /* TetrisMachineManager.swift */; };
 		085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617762108B9FC001B2006 /* DesignPatternsEntry.swift */; };
 		085617792108BA29001B2006 /* CommandEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617782108BA29001B2006 /* CommandEntry.swift */; };
+		0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177A2108C917001B2006 /* DynamicCommand.swift */; };
+		0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -92,6 +94,8 @@
 		085617742108B3FF001B2006 /* TetrisMachineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisMachineManager.swift; sourceTree = "<group>"; };
 		085617762108B9FC001B2006 /* DesignPatternsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsEntry.swift; sourceTree = "<group>"; };
 		085617782108BA29001B2006 /* CommandEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandEntry.swift; sourceTree = "<group>"; };
+		0856177A2108C917001B2006 /* DynamicCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCommand.swift; sourceTree = "<group>"; };
+		0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCommandManager.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 				085617722108B338001B2006 /* Command.swift */,
 				085617702108B238001B2006 /* TetrisMachine.swift */,
 				085617742108B3FF001B2006 /* TetrisMachineManager.swift */,
+				0856177A2108C917001B2006 /* DynamicCommand.swift */,
+				0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -580,7 +586,9 @@
 				08F396E1204AE01400FD2DE4 /* Student.swift in Sources */,
 				08F396E2204AE01400FD2DE4 /* LQTextViewController.swift in Sources */,
 				085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */,
+				0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */,
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
+				0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */,
 				08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

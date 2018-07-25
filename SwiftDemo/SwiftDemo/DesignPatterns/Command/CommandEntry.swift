@@ -11,27 +11,51 @@ import Foundation
 
 func commandEntry() {
     
-    let tm = TetrisMachine()
+    //MARK: - demo1
     
-    let leftCmd = TMLeftCommand(tm: tm)
-    let rightCmd = TMRightCommand(tm: tm)
-    let transformCmd = TMTransformCommand(tm: tm)
+    func demo1() {
+        let tm = TetrisMachine()
+        
+        let leftCmd = TMLeftCommand(tm: tm)
+        let rightCmd = TMRightCommand(tm: tm)
+        let transformCmd = TMTransformCommand(tm: tm)
+        
+        // 直接调用 tm 的操作，不能很方便的对操作做额外的记录，比如回退操作；
+        // 而用Manager管理tm, 在Manager中可以做很多额外的事情。
+        //    tm.toLeft()
+        //    tm.toRight()
+        //    tm.transform()
+        
+        let tmManager = TetrisMachineManager(tm: tm,
+                                             leftCmd: leftCmd,
+                                             rightCmd: rightCmd,
+                                             transformCmd: transformCmd)
+        
+        tmManager.toLeft()
+        tmManager.toRight()
+        tmManager.toTransfrom()
+        
+        tmManager.undo()
+        tmManager.undoAll()
+    }
     
-    // 直接调用 tm 的操作，不能很方便的对操作做额外的记录，比如回退操作；
-    // 而用Manager管理tm, 在Manager中可以做很多额外的事情。
-//    tm.toLeft()
-//    tm.toRight()
-//    tm.transform()
+//    demo1()
     
-    let tmManager = TetrisMachineManager(tm: tm,
-                                         leftCmd: leftCmd,
-                                         rightCmd: rightCmd,
-                                         transformCmd: transformCmd)
+    //MARK: - demo2
     
-    tmManager.toLeft()
-    tmManager.toRight()
-    tmManager.toTransfrom()
+    func demo2() {
+        // 系统类实现 NSUndoManager
+        
+        let tm = TetrisMachine()
+        
+        let cmdManager = DynamicCommandManager(tm: tm)
+        cmdManager.toLeft()
+        cmdManager.toRight()
+        cmdManager.toTransfrom()
+        
+        cmdManager.undo()
+        cmdManager.undoAll()
+    }
     
-    tmManager.undo()
-    tmManager.undoAll()
+    demo2()
 }
