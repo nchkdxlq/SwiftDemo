@@ -1,6 +1,6 @@
 //
 //  EZTabBarController.swift
-//  EZWeibo
+//  SwiftDemo
 //
 //  Created by nchkdxlq on 4/28/16.
 //  Copyright © 2016 nchkdxlq. All rights reserved.
