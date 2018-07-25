@@ -11,6 +11,12 @@
 		083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C18BA20503615000E4A31 /* UIScrollView+Extension.swift */; };
 		084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */; };
 		084D0B37205DF5AD00C2795A /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 084D0B36205DF5AC00C2795A /* video.mp4 */; };
+		0856176D2108B00F001B2006 /* TMCommandProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176C2108B00F001B2006 /* TMCommandProtocol.swift */; };
+		085617712108B238001B2006 /* TetrisMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617702108B238001B2006 /* TetrisMachine.swift */; };
+		085617732108B338001B2006 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617722108B338001B2006 /* Command.swift */; };
+		085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617742108B3FF001B2006 /* TetrisMachineManager.swift */; };
+		085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617762108B9FC001B2006 /* DesignPatternsEntry.swift */; };
+		085617792108BA29001B2006 /* CommandEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617782108BA29001B2006 /* CommandEntry.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -80,6 +86,12 @@
 		084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
 		084D0B36205DF5AC00C2795A /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		084D0B38205DF97400C2795A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0856176C2108B00F001B2006 /* TMCommandProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMCommandProtocol.swift; sourceTree = "<group>"; };
+		085617702108B238001B2006 /* TetrisMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisMachine.swift; sourceTree = "<group>"; };
+		085617722108B338001B2006 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		085617742108B3FF001B2006 /* TetrisMachineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisMachineManager.swift; sourceTree = "<group>"; };
+		085617762108B9FC001B2006 /* DesignPatternsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsEntry.swift; sourceTree = "<group>"; };
+		085617782108BA29001B2006 /* CommandEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandEntry.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +172,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0856176A2108AB5D001B2006 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				085617762108B9FC001B2006 /* DesignPatternsEntry.swift */,
+				0856176B2108AFBF001B2006 /* Command */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		0856176B2108AFBF001B2006 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				085617782108BA29001B2006 /* CommandEntry.swift */,
+				0856176C2108B00F001B2006 /* TMCommandProtocol.swift */,
+				085617722108B338001B2006 /* Command.swift */,
+				085617702108B238001B2006 /* TetrisMachine.swift */,
+				085617742108B3FF001B2006 /* TetrisMachineManager.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
 		08E27C5D204AA2FC00CD1AE1 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +223,7 @@
 				08F396C3204AE01400FD2DE4 /* EZBaseVC.swift */,
 				08F396C4204AE01400FD2DE4 /* EZNavigationController.swift */,
 				08F396C5204AE01400FD2DE4 /* EZTabBarController.swift */,
+				0856176A2108AB5D001B2006 /* DesignPatterns */,
 				76CA56B6210821AA001B6F2E /* Syntax */,
 				08F396EF204AE0DE00FD2DE4 /* Extension */,
 				08F396B2204AE01400FD2DE4 /* Controller */,
@@ -510,11 +544,14 @@
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
+				085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */,
 				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
 				08F396CD204AE01400FD2DE4 /* SearchViewController.swift in Sources */,
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
+				085617732108B338001B2006 /* Command.swift in Sources */,
 				08F396CC204AE01400FD2DE4 /* SearchResultsController.swift in Sources */,
+				0856176D2108B00F001B2006 /* TMCommandProtocol.swift in Sources */,
 				08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */,
 				08F396D2204AE01400FD2DE4 /* Singleton.swift in Sources */,
 				08F396E0204AE01400FD2DE4 /* RichTextCell.swift in Sources */,
@@ -535,11 +572,14 @@
 				08F396ED204AE02500FD2DE4 /* CustomWebViewController.swift in Sources */,
 				08F396D3204AE01400FD2DE4 /* BaseTableViewController.swift in Sources */,
 				08F396CB204AE01400FD2DE4 /* ClosureSyntax.swift in Sources */,
+				085617712108B238001B2006 /* TetrisMachine.swift in Sources */,
+				085617792108BA29001B2006 /* CommandEntry.swift in Sources */,
 				08F396EE204AE02500FD2DE4 /* GroupAvatarView.swift in Sources */,
 				08F396F6204AE0DF00FD2DE4 /* String+Extention.swift in Sources */,
 				08F396DC204AE01400FD2DE4 /* EZNavigationController.swift in Sources */,
 				08F396E1204AE01400FD2DE4 /* Student.swift in Sources */,
 				08F396E2204AE01400FD2DE4 /* LQTextViewController.swift in Sources */,
+				085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */,
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
 				08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */,
 			);

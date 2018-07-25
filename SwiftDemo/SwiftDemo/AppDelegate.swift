@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootVc
         window?.makeKeyAndVisible()
         
+        // 命令模式测试入口
+        designPatternsEntry()
+        
         return true
     }
 
