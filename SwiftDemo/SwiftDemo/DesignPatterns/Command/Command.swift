@@ -10,7 +10,7 @@ import Foundation
 
 // 具体命令
 
-class TMLeftCommand : MTCommandProtocol {
+class TMLeftCommand : TMCommandProtocol {
     
     var tm: TetrisMachine
     
@@ -27,7 +27,7 @@ class TMLeftCommand : MTCommandProtocol {
 
 ////////////////////////////////////////
 
-class TMRightCommand : MTCommandProtocol {
+class TMRightCommand : TMCommandProtocol {
     
     
     var tm: TetrisMachine
@@ -46,7 +46,7 @@ class TMRightCommand : MTCommandProtocol {
 ////////////////////////////////////////
 
 
-class TMTransformCommand : MTCommandProtocol {
+class TMTransformCommand : TMCommandProtocol {
     
 
     var tm: TetrisMachine

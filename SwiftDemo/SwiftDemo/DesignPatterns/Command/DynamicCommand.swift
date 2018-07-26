@@ -15,7 +15,7 @@ typealias DynamicClosure = (TetrisMachine) -> Void
     2. 传递接收者
  */
 
-class DynamicCommand: MTCommandProtocol {
+class DynamicCommand: TMCommandProtocol {
     
     var tm: TetrisMachine
     var closure: DynamicClosure

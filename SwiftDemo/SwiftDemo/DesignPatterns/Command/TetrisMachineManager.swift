@@ -14,7 +14,7 @@ import Foundation
 //  具体命令可以在内部创建、也可以在外部创建
 class TetrisMachineManager {
     
-    private var cmds = [MTCommandProtocol]()
+    private var cmds = [TMCommandProtocol]()
     
     var tm: TetrisMachine
     var leftCmd: TMLeftCommand

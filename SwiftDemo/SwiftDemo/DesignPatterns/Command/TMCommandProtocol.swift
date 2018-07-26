@@ -31,7 +31,7 @@
  原理理解：
  
  角色划分：
- 角色一：命令接口（抽象命令） -> MTCommandProtocol
+ 角色一：命令接口（抽象命令） -> TMCommandProtocol
  角色二：具体命令
         1. 左命令   toLeft
         2. 有命令   toRight
@@ -65,7 +65,7 @@ import Foundation
 
 
 //角色一：命令接口（抽象命令）
-protocol MTCommandProtocol {
+protocol TMCommandProtocol {
     
     func execute();
     

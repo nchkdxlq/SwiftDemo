@@ -19,6 +19,10 @@
 		085617792108BA29001B2006 /* CommandEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617782108BA29001B2006 /* CommandEntry.swift */; };
 		0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177A2108C917001B2006 /* DynamicCommand.swift */; };
 		0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */; };
+		0856177F210948D9001B2006 /* WrapperCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177E210948D9001B2006 /* WrapperCommand.swift */; };
+		08561781210948EB001B2006 /* WrapperCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561780210948EB001B2006 /* WrapperCommandManager.swift */; };
+		0856178321094F53001B2006 /* GenericCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856178221094F53001B2006 /* GenericCommand.swift */; };
+		085617852109532D001B2006 /* GenericCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617842109532D001B2006 /* GenericCommandManager.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -96,6 +100,10 @@
 		085617782108BA29001B2006 /* CommandEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandEntry.swift; sourceTree = "<group>"; };
 		0856177A2108C917001B2006 /* DynamicCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCommand.swift; sourceTree = "<group>"; };
 		0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCommandManager.swift; sourceTree = "<group>"; };
+		0856177E210948D9001B2006 /* WrapperCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperCommand.swift; sourceTree = "<group>"; };
+		08561780210948EB001B2006 /* WrapperCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperCommandManager.swift; sourceTree = "<group>"; };
+		0856178221094F53001B2006 /* GenericCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCommand.swift; sourceTree = "<group>"; };
+		085617842109532D001B2006 /* GenericCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCommandManager.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +203,10 @@
 				085617742108B3FF001B2006 /* TetrisMachineManager.swift */,
 				0856177A2108C917001B2006 /* DynamicCommand.swift */,
 				0856177C2108CFA3001B2006 /* DynamicCommandManager.swift */,
+				0856177E210948D9001B2006 /* WrapperCommand.swift */,
+				08561780210948EB001B2006 /* WrapperCommandManager.swift */,
+				0856178221094F53001B2006 /* GenericCommand.swift */,
+				085617842109532D001B2006 /* GenericCommandManager.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -561,10 +573,12 @@
 				08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */,
 				08F396D2204AE01400FD2DE4 /* Singleton.swift in Sources */,
 				08F396E0204AE01400FD2DE4 /* RichTextCell.swift in Sources */,
+				08561781210948EB001B2006 /* WrapperCommandManager.swift in Sources */,
 				08F396DE204AE01400FD2DE4 /* KingfisherViewController.swift in Sources */,
 				08F396CE204AE01400FD2DE4 /* RichTextViewController.swift in Sources */,
 				08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */,
 				08F396CF204AE01400FD2DE4 /* AudioViewController.swift in Sources */,
+				0856178321094F53001B2006 /* GenericCommand.swift in Sources */,
 				08F396D1204AE01400FD2DE4 /* BadgeView.swift in Sources */,
 				08F396F5204AE0DF00FD2DE4 /* Extension.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
@@ -578,6 +592,7 @@
 				08F396ED204AE02500FD2DE4 /* CustomWebViewController.swift in Sources */,
 				08F396D3204AE01400FD2DE4 /* BaseTableViewController.swift in Sources */,
 				08F396CB204AE01400FD2DE4 /* ClosureSyntax.swift in Sources */,
+				085617852109532D001B2006 /* GenericCommandManager.swift in Sources */,
 				085617712108B238001B2006 /* TetrisMachine.swift in Sources */,
 				085617792108BA29001B2006 /* CommandEntry.swift in Sources */,
 				08F396EE204AE02500FD2DE4 /* GroupAvatarView.swift in Sources */,
@@ -590,6 +605,7 @@
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
 				0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */,
 				08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */,
+				0856177F210948D9001B2006 /* WrapperCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

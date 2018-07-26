@@ -11,9 +11,9 @@ import Foundation
 
 func commandEntry() {
     
-    //MARK: - demo1
+    //MARK: - Command
     
-    func demo1() {
+    func commandDemo() {
         let tm = TetrisMachine()
         
         let leftCmd = TMLeftCommand(tm: tm)
@@ -39,11 +39,11 @@ func commandEntry() {
         tmManager.undoAll()
     }
     
-//    demo1()
+//    commandDemo()
     
-    //MARK: - demo2
+    //MARK: - DynamicCommand
     
-    func demo2() {
+    func dynamicCommandDemo() {
         // 系统类实现 NSUndoManager
         
         let tm = TetrisMachine()
@@ -57,5 +57,23 @@ func commandEntry() {
         cmdManager.undoAll()
     }
     
-    demo2()
+    DynamicCommandDemo()
+    
+    
+    //MARK: WapperCommand
+    
+    func wapperCommandDemo() {
+        
+    }
+    
+    wapperCommandDemo()
+    
+    //MARK: GenericCommand
+    
+    func genericCommandDemo() {
+        
+    }
+    
+    genericCommandDemo()
+    
 }
