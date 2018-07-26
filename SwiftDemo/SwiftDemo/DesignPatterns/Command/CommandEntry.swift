@@ -57,7 +57,7 @@ func commandEntry() {
         cmdManager.undoAll()
     }
     
-    DynamicCommandDemo()
+    dynamicCommandDemo()
     
     
     //MARK: WapperCommand
