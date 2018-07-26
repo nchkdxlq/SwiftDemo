@@ -60,20 +60,64 @@ func commandEntry() {
     dynamicCommandDemo()
     
     
-    //MARK: WapperCommand
+    //MARK: - WapperCommand
     
     func wapperCommandDemo() {
         
+        let cmdManager = WrapperCommandManager(tm: TetrisMachine())
+        
+        cmdManager.toLeft()
+        cmdManager.toRight()
+        cmdManager.toTransform()
+        
+        cmdManager.undo()
+        cmdManager.undoAll()
     }
     
     wapperCommandDemo()
     
-    //MARK: GenericCommand
+    //MARK: - GenericCommand
     
     func genericCommandDemo() {
+        let cmdManager = GenericsCommandManager(tm: TetrisMachine())
         
+        cmdManager.toLeft()
+        cmdManager.toRight()
+        cmdManager.toTransfrom()
+        
+        cmdManager.undo()
+        cmdManager.undoAll()
     }
     
     genericCommandDemo()
     
+    //MARK: - QueueCommand
+    
+    func queueCommand() {
+        let cmdManager = QueueCommandManager(tm: TetrisMachine())
+        
+        cmdManager.toLeft()
+        cmdManager.toRight()
+        cmdManager.toTransfrom()
+        
+        cmdManager.undo()
+        cmdManager.undoAll()
+    }
+    
+    queueCommand()
+    
+    //MARK: - ClosureCommand
+    
+    func closureCommand() {
+        let cmdManager = ClosureCommandManager(tm: TetrisMachine())
+        
+        cmdManager.toLeft()
+        cmdManager.toRight()
+        cmdManager.toTransform()
+        
+        cmdManager.undo()
+        cmdManager.undoAll()
+    }
+    
+    closureCommand()
 }

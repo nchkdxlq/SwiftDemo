@@ -38,7 +38,7 @@ class WrapperCommandManager {
     }
     
     
-    func toTransForm() {
+    func toTransform() {
         let dyCmd = DynamicCommand(tm: tm) { (tm) in
             tm.transform()
         }

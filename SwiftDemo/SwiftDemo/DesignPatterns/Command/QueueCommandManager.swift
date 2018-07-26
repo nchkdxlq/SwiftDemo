@@ -1,5 +1,5 @@
 //
-//  GenericCommandManager.swift
+//  QueueCommandManager.swift
 //  SwiftDemo
 //
 //  Created by nchkdxlq on 2018/7/26.
@@ -8,39 +8,46 @@
 
 import Foundation
 
-
-class GenericCommandManager {
+class QueueCommandManager {
     
     let tm: TetrisMachine
-    var cmds = [GenericCommand<TetrisMachine>]()
+    private var cmds = [DynamicCommand]()
+    let queue: DispatchQueue
     
     init(tm: TetrisMachine) {
         self.tm = tm
+        queue = DispatchQueue(label: "com.nchkdxlq.command")
     }
     
-    
     func toLeft() {
-        let cmd = GenericCommand<TetrisMachine>(receiver: tm) { (tm) in
+        let cmd = DynamicCommand(tm: tm) { (tm) in
             tm.toLeft()
         }
-        cmd.execute()
+        
         cmds.append(cmd)
+        queue.sync {
+            cmd.execute()
+        }
     }
     
     func toRight() {
-        let cmd = GenericCommand<TetrisMachine>(receiver: tm) { (tm) in
+        let cmd = DynamicCommand(tm: tm) { (tm) in
             tm.toRight()
         }
-        cmd.execute()
         cmds.append(cmd)
+        queue.sync {
+            cmd.execute()
+        }
     }
     
     func toTransfrom() {
-        let cmd = GenericCommand<TetrisMachine>(receiver: tm) { (tm) in
+        let cmd = DynamicCommand(tm: tm) { (tm) in
             tm.transform()
         }
-        cmd.execute()
         cmds.append(cmd)
+        queue.sync {
+            cmd.execute()
+        }
     }
     
     func undo() {
@@ -56,13 +63,10 @@ class GenericCommandManager {
             return
         }
         print("\(#function)")
-        
-        let wrapperCmd = WrapperCommand(cmds: cmds)
-        wrapperCmd.execute()
+        while cmds.count > 0 {
+            cmds.removeLast().execute()
+        }
     }
-    
+
     
 }
-
-
-

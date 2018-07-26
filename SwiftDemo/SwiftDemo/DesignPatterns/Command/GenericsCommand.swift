@@ -1,5 +1,5 @@
 //
-//  GenericCommand.swift
+//  GenericsCommand.swift
 //  SwiftDemo
 //
 //  Created by nchkdxlq on 2018/7/26.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class GenericCommand<T> : TMCommandProtocol {
+class GenericsCommand<T> : TMCommandProtocol {
     
     let receiver: T
     let cmdClosure: (T) -> Void
