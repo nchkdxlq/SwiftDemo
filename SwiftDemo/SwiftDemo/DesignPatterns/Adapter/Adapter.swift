@@ -45,6 +45,7 @@ protocol Voltage5Protocol {
 
 // Source
 class Voltage220 {
+    
     func output220() -> Int {
         let src = 220
         print("This is \(src) V")
@@ -80,6 +81,45 @@ class Mobile {
     }
 }
 
+/*
+ 总结：
+ 1. 适配器需要继承src类，这算是一个缺点
+ 2. 并且dst要求是接口、协议
+ 3. 由于继承了src类，所以可以根据需求重写src类的方法，是的Adapter的灵活性增强了。
+ 
+ */
 
+
+//MARK: - 对象适配模式（常用）
+
+class VoltageAdpter2 {
+    
+    let vol220: Voltage220
+    
+    init(vol: Voltage220) {
+        vol220 = vol
+    }
+}
+
+extension VoltageAdpter2 : Voltage5Protocol {
+    
+    func output5V() -> Int {
+        let vol = vol220.output220()
+        
+        var des = 0;
+        des = vol / 44
+        
+        return des
+    }
+}
+
+/*
+ 总结：
+ 1. 对象适配器和类适配器算是同一种思想，只不过实现方式不同
+ 2. 根据合成复用原则，组合大于继承，所以他解决了类适配器必须继承src的局限性问题。，
+    也不再强求dst必须是接口，同样的它使用的成本更低，更灵活。
+ 
+ 
+ */
 
 

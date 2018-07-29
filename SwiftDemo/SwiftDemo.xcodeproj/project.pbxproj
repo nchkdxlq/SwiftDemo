@@ -196,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				085617762108B9FC001B2006 /* DesignPatternsEntry.swift */,
+				08561791210DB5BD001B2006 /* Strategy */,
+				0856178A210B501F001B2006 /* Factory */,
 				76E05A70210B297700B6A16A /* Adapter */,
 				0856176B2108AFBF001B2006 /* Command */,
 			);
@@ -220,6 +222,20 @@
 				08561788210A156B001B2006 /* ClosureCommandManager.swift */,
 			);
 			path = Command;
+			sourceTree = "<group>";
+		};
+		0856178A210B501F001B2006 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		08561791210DB5BD001B2006 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 		08E27C5D204AA2FC00CD1AE1 = {
