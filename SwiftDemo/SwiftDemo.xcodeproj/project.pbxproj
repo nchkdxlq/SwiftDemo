@@ -25,6 +25,10 @@
 		085617852109532D001B2006 /* GenericsCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085617842109532D001B2006 /* GenericsCommandManager.swift */; };
 		08561787210A0DF3001B2006 /* QueueCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561786210A0DF3001B2006 /* QueueCommandManager.swift */; };
 		08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561788210A156B001B2006 /* ClosureCommandManager.swift */; };
+		08561793210DB6AD001B2006 /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561792210DB6AD001B2006 /* Duck.swift */; };
+		08561795210DB6C4001B2006 /* StrategyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561794210DB6C4001B2006 /* StrategyEntry.swift */; };
+		08561797210DB6FE001B2006 /* FlyBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561796210DB6FE001B2006 /* FlyBehavior.swift */; };
+		08561799210DB76E001B2006 /* QuackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561798210DB76E001B2006 /* QuackBehavior.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -110,6 +114,10 @@
 		085617842109532D001B2006 /* GenericsCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsCommandManager.swift; sourceTree = "<group>"; };
 		08561786210A0DF3001B2006 /* QueueCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueCommandManager.swift; sourceTree = "<group>"; };
 		08561788210A156B001B2006 /* ClosureCommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureCommandManager.swift; sourceTree = "<group>"; };
+		08561792210DB6AD001B2006 /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
+		08561794210DB6C4001B2006 /* StrategyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyEntry.swift; sourceTree = "<group>"; };
+		08561796210DB6FE001B2006 /* FlyBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyBehavior.swift; sourceTree = "<group>"; };
+		08561798210DB76E001B2006 /* QuackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackBehavior.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +242,10 @@
 		08561791210DB5BD001B2006 /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
+				08561794210DB6C4001B2006 /* StrategyEntry.swift */,
+				08561792210DB6AD001B2006 /* Duck.swift */,
+				08561796210DB6FE001B2006 /* FlyBehavior.swift */,
+				08561798210DB76E001B2006 /* QuackBehavior.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -594,6 +606,7 @@
 				76CA56B8210821CE001B6F2E /* Init.swift in Sources */,
 				084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */,
 				08F396D8204AE01400FD2DE4 /* ButtonViewController.swift in Sources */,
+				08561795210DB6C4001B2006 /* StrategyEntry.swift in Sources */,
 				76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */,
 				08F396F4204AE0DF00FD2DE4 /* UIView+Extension.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
@@ -603,11 +616,13 @@
 				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
 				08F396CD204AE01400FD2DE4 /* SearchViewController.swift in Sources */,
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
+				08561793210DB6AD001B2006 /* Duck.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				085617732108B338001B2006 /* Command.swift in Sources */,
 				08F396CC204AE01400FD2DE4 /* SearchResultsController.swift in Sources */,
 				0856176D2108B00F001B2006 /* TMCommandProtocol.swift in Sources */,
 				08561787210A0DF3001B2006 /* QueueCommandManager.swift in Sources */,
+				08561797210DB6FE001B2006 /* FlyBehavior.swift in Sources */,
 				08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */,
 				08F396D2204AE01400FD2DE4 /* Singleton.swift in Sources */,
 				08F396E0204AE01400FD2DE4 /* RichTextCell.swift in Sources */,
@@ -643,6 +658,7 @@
 				085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */,
 				0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */,
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
+				08561799210DB76E001B2006 /* QuackBehavior.swift in Sources */,
 				0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */,
 				08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */,
 				0856177F210948D9001B2006 /* WrapperCommand.swift in Sources */,

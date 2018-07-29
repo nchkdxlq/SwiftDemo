@@ -40,8 +40,10 @@ import Foundation
 func designPatternsEntry() {
     
     // 1. 命令模式
-    commandEntry()
+//    commandEntry()
     
+    // 2. 策略模式
+    strategyEntry()
     
 }
 
