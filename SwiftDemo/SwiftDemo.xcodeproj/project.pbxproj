@@ -29,6 +29,10 @@
 		08561795210DB6C4001B2006 /* StrategyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561794210DB6C4001B2006 /* StrategyEntry.swift */; };
 		08561797210DB6FE001B2006 /* FlyBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561796210DB6FE001B2006 /* FlyBehavior.swift */; };
 		08561799210DB76E001B2006 /* QuackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08561798210DB76E001B2006 /* QuackBehavior.swift */; };
+		085EA3712111EA7F0073A516 /* ObserverEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3702111EA7F0073A516 /* ObserverEntry.swift */; };
+		085EA3732111EAC20073A516 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3722111EAC20073A516 /* Observable.swift */; };
+		085EA3752111EC140073A516 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3742111EC140073A516 /* WeatherData.swift */; };
+		085EA3772111F2FF0073A516 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3762111F2FE0073A516 /* Display.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -118,6 +122,10 @@
 		08561794210DB6C4001B2006 /* StrategyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyEntry.swift; sourceTree = "<group>"; };
 		08561796210DB6FE001B2006 /* FlyBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyBehavior.swift; sourceTree = "<group>"; };
 		08561798210DB76E001B2006 /* QuackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackBehavior.swift; sourceTree = "<group>"; };
+		085EA3702111EA7F0073A516 /* ObserverEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverEntry.swift; sourceTree = "<group>"; };
+		085EA3722111EAC20073A516 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		085EA3742111EC140073A516 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		085EA3762111F2FE0073A516 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				085617762108B9FC001B2006 /* DesignPatternsEntry.swift */,
+				085EA36F2111EA680073A516 /* Observer */,
 				08561791210DB5BD001B2006 /* Strategy */,
 				0856178A210B501F001B2006 /* Factory */,
 				76E05A70210B297700B6A16A /* Adapter */,
@@ -248,6 +257,17 @@
 				08561798210DB76E001B2006 /* QuackBehavior.swift */,
 			);
 			path = Strategy;
+			sourceTree = "<group>";
+		};
+		085EA36F2111EA680073A516 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				085EA3702111EA7F0073A516 /* ObserverEntry.swift */,
+				085EA3722111EAC20073A516 /* Observable.swift */,
+				085EA3742111EC140073A516 /* WeatherData.swift */,
+				085EA3762111F2FE0073A516 /* Display.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		08E27C5D204AA2FC00CD1AE1 = {
@@ -615,6 +635,7 @@
 				085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */,
 				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
 				08F396CD204AE01400FD2DE4 /* SearchViewController.swift in Sources */,
+				085EA3712111EA7F0073A516 /* ObserverEntry.swift in Sources */,
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
 				08561793210DB6AD001B2006 /* Duck.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
@@ -626,6 +647,7 @@
 				08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */,
 				08F396D2204AE01400FD2DE4 /* Singleton.swift in Sources */,
 				08F396E0204AE01400FD2DE4 /* RichTextCell.swift in Sources */,
+				085EA3732111EAC20073A516 /* Observable.swift in Sources */,
 				76E05A72210B29A800B6A16A /* Adapter.swift in Sources */,
 				08561781210948EB001B2006 /* WrapperCommandManager.swift in Sources */,
 				08F396DE204AE01400FD2DE4 /* KingfisherViewController.swift in Sources */,
@@ -637,6 +659,7 @@
 				08F396F5204AE0DF00FD2DE4 /* Extension.swift in Sources */,
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
+				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
 				08F396DA204AE01400FD2DE4 /* KeyboardViewController.swift in Sources */,
 				08F396DB204AE01400FD2DE4 /* EZBaseVC.swift in Sources */,
 				08F396DD204AE01400FD2DE4 /* EZTabBarController.swift in Sources */,
@@ -658,6 +681,7 @@
 				085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */,
 				0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */,
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
+				085EA3772111F2FF0073A516 /* Display.swift in Sources */,
 				08561799210DB76E001B2006 /* QuackBehavior.swift in Sources */,
 				0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */,
 				08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */,

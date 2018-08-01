@@ -43,7 +43,10 @@ func designPatternsEntry() {
 //    commandEntry()
     
     // 2. 策略模式
-    strategyEntry()
+//    strategyEntry()
+    
+    // 3. 观察者模式
+    ObserverEntry()
     
 }
 
