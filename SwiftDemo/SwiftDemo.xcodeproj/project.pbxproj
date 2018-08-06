@@ -33,6 +33,7 @@
 		085EA3732111EAC20073A516 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3722111EAC20073A516 /* Observable.swift */; };
 		085EA3752111EC140073A516 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3742111EC140073A516 /* WeatherData.swift */; };
 		085EA3772111F2FF0073A516 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA3762111F2FE0073A516 /* Display.swift */; };
+		085EA37921134E120073A516 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EA37821134E120073A516 /* WKWebViewController.swift */; };
 		08E27C6A204AA2FC00CD1AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */; };
 		08E27C6C204AA2FC00CD1AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */; };
 		08E27C71204AA2FC00CD1AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 		085EA3722111EAC20073A516 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		085EA3742111EC140073A516 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		085EA3762111F2FE0073A516 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		085EA37821134E120073A516 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		08E27C66204AA2FC00CD1AE1 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				08F396C9204AE01400FD2DE4 /* Student.swift */,
 				08F396CA204AE01400FD2DE4 /* LQTextViewController.swift */,
 				084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */,
+				085EA37821134E120073A516 /* WKWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				085617712108B238001B2006 /* TetrisMachine.swift in Sources */,
 				085617792108BA29001B2006 /* CommandEntry.swift in Sources */,
 				08F396EE204AE02500FD2DE4 /* GroupAvatarView.swift in Sources */,
+				085EA37921134E120073A516 /* WKWebViewController.swift in Sources */,
 				08F396F6204AE0DF00FD2DE4 /* String+Extention.swift in Sources */,
 				08F396DC204AE01400FD2DE4 /* EZNavigationController.swift in Sources */,
 				08F396E1204AE01400FD2DE4 /* Student.swift in Sources */,
@@ -848,12 +852,14 @@
 			baseConfigurationReference = F513FE2398EF89191F90B4BF /* Pods-SwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 733RR644TP;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -864,12 +870,14 @@
 			baseConfigurationReference = 67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 733RR644TP;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

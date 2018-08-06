@@ -80,6 +80,9 @@ class ViewController: EZBaseVC {
         
         let item11 = CellInfo(title: "Video", vcClass: VideoPlayViewController.self)
         dataSource.append(item11)
+        
+        let item12 = CellInfo(title: "WKWebView", vcClass: WKWebViewController.self)
+        dataSource.append(item12)
     }
     
     
