@@ -48,7 +48,6 @@ var boysGirls = boys + girls
 nameArr += boys
 nameArr += girls
 
-
 // insert 
 
 // 插入单个元素
@@ -125,6 +124,14 @@ print(countGrate2)
 
 let range = 0..<4
 let range1 = 0...4
+
+
+
+
+
+
+
+
 
 
 

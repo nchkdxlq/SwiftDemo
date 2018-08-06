@@ -77,6 +77,7 @@
 		08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F3204AE0DE00FD2DE4 /* UITableView+Extension.swift */; };
 		08F396F9204AE8D700FD2DE4 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */; };
 		70921FBDFBA6C9984C08DFF0 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */; };
+		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
 		76CA56B8210821CE001B6F2E /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA56B7210821CE001B6F2E /* Init.swift */; };
 		76E05A72210B29A800B6A16A /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E05A71210B29A800B6A16A /* Adapter.swift */; };
 		76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E05A73210B29BA00B6A16A /* AdapterEntry.swift */; };
@@ -177,6 +178,7 @@
 		08F396F3204AE0DE00FD2DE4 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		76CA56B7210821CE001B6F2E /* Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		76E05A71210B29A800B6A16A /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		76E05A73210B29BA00B6A16A /* AdapterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterEntry.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				76CA56B7210821CE001B6F2E /* Init.swift */,
+				760D99FF21133304008C205E /* Array.swift */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
 				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
+				760D9A0021133304008C205E /* Array.swift in Sources */,
 				08F396DA204AE01400FD2DE4 /* KeyboardViewController.swift in Sources */,
 				08F396DB204AE01400FD2DE4 /* EZBaseVC.swift in Sources */,
 				08F396DD204AE01400FD2DE4 /* EZTabBarController.swift in Sources */,

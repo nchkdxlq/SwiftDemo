@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 命令模式测试入口
         designPatternsEntry()
+        arrayEntry()
         
         return true
     }
