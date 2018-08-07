@@ -76,6 +76,7 @@
 		08F396F6204AE0DF00FD2DE4 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F2204AE0DE00FD2DE4 /* String+Extention.swift */; };
 		08F396F7204AE0DF00FD2DE4 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F3204AE0DE00FD2DE4 /* UITableView+Extension.swift */; };
 		08F396F9204AE8D700FD2DE4 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */; };
+		08FF85042118864100F00303 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF85032118864100F00303 /* Protocol.swift */; };
 		70921FBDFBA6C9984C08DFF0 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */; };
 		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
 		76CA56B8210821CE001B6F2E /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA56B7210821CE001B6F2E /* Init.swift */; };
@@ -177,6 +178,7 @@
 		08F396F2204AE0DE00FD2DE4 /* String+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		08F396F3204AE0DE00FD2DE4 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
+		08FF85032118864100F00303 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		76CA56B7210821CE001B6F2E /* Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 			children = (
 				76CA56B7210821CE001B6F2E /* Init.swift */,
 				760D99FF21133304008C205E /* Array.swift */,
+				08FF85032118864100F00303 /* Protocol.swift */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				08561793210DB6AD001B2006 /* Duck.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				085617732108B338001B2006 /* Command.swift in Sources */,
+				08FF85042118864100F00303 /* Protocol.swift in Sources */,
 				08F396CC204AE01400FD2DE4 /* SearchResultsController.swift in Sources */,
 				0856176D2108B00F001B2006 /* TMCommandProtocol.swift in Sources */,
 				08561787210A0DF3001B2006 /* QueueCommandManager.swift in Sources */,
