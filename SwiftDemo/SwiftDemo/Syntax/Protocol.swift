@@ -13,7 +13,7 @@ import Foundation
     1. 方法可以是静态方法和实例方法；
     2. 初始化器只能是指定初始化器，
        但是在遵循协议的类型可以实现初始化器时，可以是指定初始化器，也可以是便捷初始化器。
-    3. 属性可以是静态属性和实例属性，属性还需要指明是gettable/settable。
+    3. 属性可以是静态属性和实例属性，属性还需要指明是gettable/settable；并不关心是计算属性还是存储属性，这个由遵循协议的类型决定。
  */
 
 protocol SomeProtocol {
@@ -83,7 +83,7 @@ protocol SomeProtocolInit {
 
 /*
  
- 可以通过实现"指定初始化器"或"便捷初始化器"使遵循写协议的类型满足协议初始化要求。
+ 可以通过实现"指定初始化器"或"便捷初始化器"使遵循协议的类型满足协议初始化要求。
  在两种情况下，必须使用required关键字修饰初始化器实现。
  
  1. 为了保证遵循协议类的所有子类中也有这个初始化器，所以在遵循协议类中协议的初始化器必须使用require关键字，
@@ -157,7 +157,96 @@ struct Hamster {
         return "A hamster named \(name)"
     }
 }
+
 extension Hamster: TextRepresentable {}
+
+
+// MARK: - Protocol Inheritance (协议继承)
+
+// 遵循协议的类型需要实现"SomeProtocol"和"AnotherProtocol"以及"InheritingProtocol"所有的要求。
+
+protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+    // protocol definition goes here
+}
+
+
+// MARK: - Class-Only Protocols (只允许类遵循的协议)
+// 只要在继承协议列表中添加"AnyObject"即可
+protocol SomeClassOnlyProtocol: AnyObject, InheritingProtocol {
+    // class-only protocol definition goes here
+}
+
+// MARK: - Protocol Composition (协议合并)
+
+protocol Named {
+    var name: String { get }
+}
+
+protocol Aged {
+    var age: Int { get }
+}
+
+struct Person: Named, Aged {
+    var name: String
+    var age: Int
+}
+
+// 用 & 合并多个协议
+func wishHappyBirthday(to celebrator: Named & Aged) {
+    print("Happy Birthday, \(celebrator.name), you're \(celebrator.age)!")
+}
+
+class Location {
+    var latitude: Double
+    var longitude: Double
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
+class City: Location, Named {
+    var name: String
+    
+    init(name: String, latitude: Double, longitude: Double) {
+        self.name = name
+        super.init(latitude: latitude, longitude: longitude)
+    }
+}
+
+func beginConcert(in location: Location & Named) {
+    print("Hello, \(location.name)")
+}
+
+// MARK: - Checking for Protocol Conformance (检查是否遵循某个协议)
+
+func checkingForProtocol() {
+    let city = City(name: "shenzhen", latitude: 22.284545, longitude: 114.158656)
+    let location = Location(latitude: 22.284545, longitude: 114.158656)
+    let objects: [AnyObject] = [city, location]
+    
+    for item in objects {
+        
+        // "is" 判断是否遵循了指定协议, 返回true/false
+        if item is Named {
+            print("conformed Named Protocol")
+        }
+        
+        // "as?", 返回一个可选类型，如果没遵循指定协议，则返回nil
+        if let name = item as? Named {
+            print("\(name.name)")
+        }
+        
+        // "as!" 强制转换为指定类型，如果实际上不是指定类型，则会出现运行时错误
+        let name = item as! Named
+        print("\(name.name)")
+    }
+}
+
+
+// MARK: - Optional Protocol Requirements
+
+
 
 
 
