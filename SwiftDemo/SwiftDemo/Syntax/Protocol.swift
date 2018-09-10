@@ -16,6 +16,10 @@ import Foundation
     3. 属性可以是静态属性和实例属性，属性还需要指明是gettable/settable；并不关心是计算属性还是存储属性，这个由遵循协议的类型决定。
  */
 
+func protocolEntry() {
+    hashtableTest()
+}
+
 protocol SomeProtocol {
     
     var mustBeSettable: Int { get set }
@@ -86,7 +90,7 @@ protocol SomeProtocolInit {
  可以通过实现"指定初始化器"或"便捷初始化器"使遵循协议的类型满足协议初始化要求。
  在两种情况下，必须使用required关键字修饰初始化器实现。
  
- 1. 为了保证遵循协议类的所有子类中也有这个初始化器，所以在遵循协议类中协议的初始化器必须使用require关键字，
+ 1. 为了保证遵循协议类的所有子类中也有这个初始化器，所以在遵循协议类中的初始化器必须使用require关键字，
  如果遵循协议的类已经是final了，就不会有子类了，协议的初始化器实现就不需要用require了。
  
  2. 如果遵循协议类的父类有与协议相同的初始化器，那么实现初始化器时需要 overrider require 关键字。
@@ -244,9 +248,133 @@ func checkingForProtocol() {
 }
 
 
-// MARK: - Optional Protocol Requirements
+// MARK: - Optional Protocol Requirements (可选协议)
+
+/*
+ 1. 如果想要让OC的类遵循Swift协议，协议必须定义为可选类型，定义协议/方法/属性都必须 @objc 关键之开头
+ 2. 可选协议只能被OC类或者用@objc定义的类遵循，结构体和枚举不能准备可选协议
+ 3. 可选协议使用可选链调用
+ 
+ */
+
+@objc protocol CounterDataSource {
+    
+    @objc optional func increment(forCount count: Int) -> Int
+    @objc optional var fixedIncrement: Int { get }
+    
+}
 
 
+
+// MARK: - Protocol Extensions (协议扩展)
+
+/*
+ 协议扩展为协议提供默认实现，
+ 
+ 1. 当遵循协议的类型没有实现协议的方法，使用协议的默认实现
+ 2. 当遵循协议的类型为协议提供了自己的实现时，将使用自己的实现
+ 
+ */
+
+extension RandomNumberGenerator {
+    
+    func random() -> Double {
+        return 0.5
+    }
+}
+
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+
+
+// MARK: - Equatable & Hashable & Comparable
+
+
+/*
+ 
+ === & == 的区别
+ 等价于（===）用于判断两个引用是否指向同一个类对象
+ 等于（==）判断两个实例的值是否相等/相同
+ 
+ */
+
+class IntegerRef {
+    
+    let value: Int
+    
+    init(value: Int) {
+        self.value = value
+    }
+
+}
+
+extension IntegerRef: Equatable {
+
+    static func == (lhs: IntegerRef, rhs: IntegerRef) -> Bool {
+//        return lhs.value == rhs.value
+        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+//        return lhs === rhs
+    }
+}
+
+extension IntegerRef: Hashable {
+    var hashValue: Int {
+        return self.value
+    }
+}
+
+
+extension IntegerRef: Comparable {
+    
+    // 只要实现 static func < (lhs: Self, rhs: Self) -> Bool 就可以， 因为其他的方法在Comparable扩展中提供了默认实现
+    static func < (lhs: IntegerRef, rhs: IntegerRef) -> Bool {
+        return lhs.value < rhs.value
+    }
+}
+
+
+extension Person: Equatable {
+    
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.age == rhs.age && lhs.name == rhs.name
+    }
+}
+
+func hashtableTest() {
+    
+    let integer1 = IntegerRef(value: 1)
+    let integer2 = IntegerRef(value: 1)
+    var arr = [integer1, integer2]
+    
+    arr.append(IntegerRef(value: 2))
+    
+    if integer1 === integer2 {
+        print("true")
+    } else {
+        print("false")
+    }
+    // false
+    
+    let ret = arr.contains(integer1)
+    print(ret)
+    
+    arr.sort()
+    
+    
+    let p1 = Person(name: "rose", age: 20)
+    let p2 = Person(name: "Jack", age: 21)
+    var pArr = [p1]
+    pArr.append(p2)
+    pArr.contains(p1)
+}
 
 
 
