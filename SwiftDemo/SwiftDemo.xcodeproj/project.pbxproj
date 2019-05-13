@@ -79,6 +79,8 @@
 		08FF85042118864100F00303 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF85032118864100F00303 /* Protocol.swift */; };
 		70921FBDFBA6C9984C08DFF0 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */; };
 		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
+		7619A099214699BB005D9C95 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619A098214699BB005D9C95 /* Generics.swift */; };
+		76699205214A95DE0045817F /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76699204214A95DE0045817F /* ARC.swift */; };
 		76CA56B8210821CE001B6F2E /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA56B7210821CE001B6F2E /* Init.swift */; };
 		76E05A72210B29A800B6A16A /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E05A71210B29A800B6A16A /* Adapter.swift */; };
 		76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E05A73210B29BA00B6A16A /* AdapterEntry.swift */; };
@@ -181,6 +183,8 @@
 		08FF85032118864100F00303 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		7619A098214699BB005D9C95 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
+		76699204214A95DE0045817F /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
 		76CA56B7210821CE001B6F2E /* Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		76E05A71210B29A800B6A16A /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		76E05A73210B29BA00B6A16A /* AdapterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterEntry.swift; sourceTree = "<group>"; };
@@ -418,6 +422,8 @@
 				76CA56B7210821CE001B6F2E /* Init.swift */,
 				760D99FF21133304008C205E /* Array.swift */,
 				08FF85032118864100F00303 /* Protocol.swift */,
+				7619A098214699BB005D9C95 /* Generics.swift */,
+				76699204214A95DE0045817F /* ARC.swift */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -599,10 +605,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Cent/Cent.framework",
-				"${BUILT_PRODUCTS_DIR}/Dollar/Dollar.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageViewer/ImageViewer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
@@ -612,8 +616,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cent.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dollar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageViewer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
@@ -622,7 +624,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -667,6 +669,7 @@
 				0856178321094F53001B2006 /* GenericsCommand.swift in Sources */,
 				08F396D1204AE01400FD2DE4 /* BadgeView.swift in Sources */,
 				08F396F5204AE0DF00FD2DE4 /* Extension.swift in Sources */,
+				7619A099214699BB005D9C95 /* Generics.swift in Sources */,
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
 				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
@@ -693,6 +696,7 @@
 				085617772108B9FC001B2006 /* DesignPatternsEntry.swift in Sources */,
 				0856177B2108C917001B2006 /* DynamicCommand.swift in Sources */,
 				08F396D5204AE01400FD2DE4 /* EZConst.swift in Sources */,
+				76699205214A95DE0045817F /* ARC.swift in Sources */,
 				085EA3772111F2FF0073A516 /* Display.swift in Sources */,
 				08561799210DB76E001B2006 /* QuackBehavior.swift in Sources */,
 				0856177D2108CFA3001B2006 /* DynamicCommandManager.swift in Sources */,

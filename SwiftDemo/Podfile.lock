@@ -1,25 +1,21 @@
 PODS:
   - Alamofire (4.2.0)
-  - Cent (7.0.0):
-    - Dollar (~> 7.1.0)
-  - Dollar (7.1.0)
   - ImageViewer (5.0.0)
-  - Kingfisher (4.6.3)
-  - PromiseKit (6.2.0):
-    - PromiseKit/CorePromise (= 6.2.0)
-    - PromiseKit/Foundation (= 6.2.0)
-    - PromiseKit/UIKit (= 6.2.0)
-  - PromiseKit/CorePromise (6.2.0)
-  - PromiseKit/Foundation (6.2.0):
+  - Kingfisher (4.10.1)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.2.0):
+  - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
-  - SnapKit (4.0.0)
+  - SnapKit (4.0.1)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.2.0)
-  - Cent
   - ImageViewer (~> 5.0)
   - Kingfisher (~> 4.6)
   - PromiseKit (~> 6.0)
@@ -27,10 +23,8 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Cent
-    - Dollar
     - ImageViewer
     - Kingfisher
     - PromiseKit
@@ -39,14 +33,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  Cent: fb5ef7da981cc382a3562da5d86a01461cfb5ac4
-  Dollar: dc69a2997fa5df12ae7a91fec897963664c26750
   ImageViewer: 3def6e39c6979ce3e9d001c78eec0d8b895f2f73
-  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
-  PromiseKit: ea9a155e1fd98a926ccfaf633c0fbd69851f0e7b
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 881fac15208f3d110ca38476af42b483c2cf4f82
+PODFILE CHECKSUM: 23e23e218df5cc1be0e8a22dabff237d16fa81a4
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1
