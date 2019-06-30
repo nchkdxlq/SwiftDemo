@@ -4,5 +4,7 @@
         <page name='Basic Operators'/>
         <page name='Control Flow'/>
         <page name='functions'/>
+        <page name='Enum'/>
+        <page name='Struct'/>
     </pages>
 </playground>
