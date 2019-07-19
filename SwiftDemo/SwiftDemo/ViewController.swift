@@ -83,6 +83,12 @@ class ViewController: EZBaseVC {
         
         let item12 = CellInfo(title: "WKWebView", vcClass: WKWebViewController.self)
         dataSource.append(item12)
+        
+        let item13 = CellInfo(title: "UIStackView", vcClass: StackViewController.self)
+        dataSource.append(item13)
+        
+        let item14 = CellInfo(title: "Misc", vcClass: MiscViewController.self)
+        dataSource.append(item14)
     }
     
     
