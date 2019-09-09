@@ -6,5 +6,6 @@
         <page name='functions'/>
         <page name='Enum'/>
         <page name='Struct'/>
+        <page name='Optional'/>
     </pages>
 </playground>

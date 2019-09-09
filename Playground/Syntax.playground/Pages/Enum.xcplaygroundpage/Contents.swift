@@ -178,3 +178,20 @@ MemoryLayout<Int>.stride
 MemoryLayout<Int>.alignment
 
 
+MemoryLayout.size(ofValue: age)
+
+
+
+
+enum Password {
+    case number(Int, Int, Int, Int)
+    case other
+}
+
+MemoryLayout<Password>.size
+MemoryLayout<Password>.stride
+MemoryLayout<Password>.alignment
+
+var pwd = Password.number(1, 2, 3, 4)
+
+
