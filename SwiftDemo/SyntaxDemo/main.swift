@@ -8,9 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
-
 struct_entry()
 
 func_entry()
+
+enum_entry()
 
