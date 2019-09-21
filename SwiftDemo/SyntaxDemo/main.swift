@@ -14,3 +14,6 @@ func_entry()
 
 enum_entry()
 
+
+optional_entry()
+
