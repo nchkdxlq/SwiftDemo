@@ -9,11 +9,13 @@
 import Foundation
 
 //struct_entry()
-//
+
 //func_entry()
-//
+
 //enum_entry()
-//
+
 //optional_entry()
 
-closure_entry()
+//closure_entry()
+
+property_entry()

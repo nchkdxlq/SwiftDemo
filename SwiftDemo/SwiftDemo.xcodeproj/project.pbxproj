@@ -84,6 +84,8 @@
 		185A237E232719A9001A1FAD /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237D232719A9001A1FAD /* Mems.swift */; };
 		185A23802329C126001A1FAD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237F2329C126001A1FAD /* Optional.swift */; };
 		18FD10FB2335FDA300504E86 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FA2335FDA300504E86 /* Closure.swift */; };
+		18FD10FD233767E100504E86 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FC233767E100504E86 /* Property.swift */; };
+		18FD10FF2338528700504E86 /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FE2338528700504E86 /* Inheritance.swift */; };
 		70921FBDFBA6C9984C08DFF0 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */; };
 		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
 		7619A099214699BB005D9C95 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619A098214699BB005D9C95 /* Generics.swift */; };
@@ -211,6 +213,8 @@
 		185A237D232719A9001A1FAD /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		185A237F2329C126001A1FAD /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		18FD10FA2335FDA300504E86 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		18FD10FC233767E100504E86 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		18FD10FE2338528700504E86 /* Inheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inheritance.swift; sourceTree = "<group>"; };
 		67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7619A098214699BB005D9C95 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 				185A237B2326A294001A1FAD /* enum.swift */,
 				185A237F2329C126001A1FAD /* Optional.swift */,
 				18FD10FA2335FDA300504E86 /* Closure.swift */,
+				18FD10FC233767E100504E86 /* Property.swift */,
+				18FD10FE2338528700504E86 /* Inheritance.swift */,
 			);
 			path = SyntaxDemo;
 			sourceTree = "<group>";
@@ -811,10 +817,12 @@
 			files = (
 				18404EEB22E34D3800D4034E /* struct.swift in Sources */,
 				18404EE622E34CE800D4034E /* main.swift in Sources */,
+				18FD10FF2338528700504E86 /* Inheritance.swift in Sources */,
 				185A237C2326A294001A1FAD /* enum.swift in Sources */,
 				1846690422E4223A00D452C4 /* function.swift in Sources */,
 				18FD10FB2335FDA300504E86 /* Closure.swift in Sources */,
 				185A237E232719A9001A1FAD /* Mems.swift in Sources */,
+				18FD10FD233767E100504E86 /* Property.swift in Sources */,
 				185A23802329C126001A1FAD /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
