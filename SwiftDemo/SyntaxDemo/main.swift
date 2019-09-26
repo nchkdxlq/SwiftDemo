@@ -18,4 +18,8 @@ import Foundation
 
 //closure_entry()
 
-property_entry()
+//property_entry()
+
+protocol_entry()
+
+error_entry()
