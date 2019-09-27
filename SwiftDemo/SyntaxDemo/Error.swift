@@ -14,7 +14,8 @@ func error_entry() {
     
     selfDefineError()
     
-    
+    try_test()
+    defer_test()
 }
 
 /*
@@ -108,6 +109,103 @@ func exec(fn: (Int, Int) throws -> Int, num1: Int, num2: Int) rethrows -> Int {
  
  */
 func errorHandle() {
+    // 模式匹配具体的错误
+    do {
+        let ret = try devide(num1: 20, num2: 10)
+        print(ret)
+    } catch MyError.invalidInput(let msg) { // 匹配某个具体的错误
+        print(msg)
+    } catch MyError.overflow {
+        print("MyError.overflow")
+    } catch is XMLParsingError { // 匹配某一类型的错误
+        print("XMLParsingError")
+    } catch let error as IntParsingError { // 匹配某一类型的错误，并且把错误命名为error
+        print(error);
+    } catch {
+        // 默认处理，有一个隐式的error变量
+        print(error)
+    }
     
+    try_test()
 }
 
+// 当前函数不处理错误，把错误抛给上层函数
+func errorHandle_test() throws -> Void {
+    let ret = try devide(num1: 20, num2: 10)
+    print(ret)
+}
+
+
+/*
+ try, 单独使用try, 当前函数不处理Error, 而是把Error抛给上一层函数
+ try? try!
+ 
+ 可以使用try? 、try! 调用可能会抛出Error的函数, 这样就不需要处理Error了
+ */
+
+
+func try_test() {
+    // 使用`try?`，如果函数没有抛出Error, 则返回结果是Optional类型，如果抛出错误，则为nil
+    var _ = try? devide(num1: 20, num2: 10) // Optional(2) , Int?
+    let a = try? devide(num1: 20, num2: 0) // nil
+    print(a as Any)
+    // 与上面等价
+    var b: Int? = nil
+    do {
+        b = try devide(num1: 20, num2: 0)
+    } catch {
+        b = nil
+    }
+    print(b as Any)
+    
+    // 当能确定输入的参数一定不会抛出Error时，可以使用`try!`调用, 是代码更简洁
+    var _ = try! devide(num1: 20, num2: 10) // 2
+}
+
+
+
+// MARK: - defer
+
+func defer_test() {
+    try? processFile("input.txt")
+}
+
+
+func processFile(_ fileName: String) throws {
+    let file = open(fileName)
+    
+    defer {
+        close(fileName) // 在函数结束之前，一定会调用
+    }
+    
+    print("devide begin")
+    let _ = try devide(num1: 20, num2: 0)
+    print("devide end")
+    
+    print("process...")
+}
+
+func open(_ path: String) -> Int {
+    print("open file")
+    return 0
+}
+
+func close(_ path: String) {
+    print("Close file")
+}
+
+
+// MARK: -  fatalError
+
+/*
+ 如果遇到严重错误，希望结束程序运行时, 可以直接使用fatalError函数抛出错误 (无法使用`do-catch`捕获的错误)
+ 使用了fatalError就不需要再写`return`了
+ */
+
+func test(_ num: Int) -> Int {
+    if (num > 0) {
+        return 1
+    }
+    
+    fatalError("num不能小于0")
+}
