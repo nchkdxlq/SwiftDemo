@@ -24,6 +24,8 @@ import Foundation
 
 //error_entry()
 
-string_entry()
+//string_entry()
 
 //array_entry()
+
+operator_entry()
