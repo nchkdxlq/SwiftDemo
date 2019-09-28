@@ -20,6 +20,10 @@ import Foundation
 
 //property_entry()
 
-protocol_entry()
+//protocol_entry()
 
-error_entry()
+//error_entry()
+
+string_entry()
+
+//array_entry()
