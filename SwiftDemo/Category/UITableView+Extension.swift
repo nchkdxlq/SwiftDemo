@@ -1,12 +1,13 @@
 //
 //  UITableView+Extension.swift
-//  SwiftDemo_learn
+//  SwiftDemo
 //
-//  Created by nchkdxlq on 2016/12/25.
-//  Copyright © 2016年 nchkdxlq. All rights reserved.
+//  Created by Knox on 2019/9/29.
+//  Copyright © 2019 luoquan. All rights reserved.
 //
 
 import UIKit
+
 
 extension UITableView {
     

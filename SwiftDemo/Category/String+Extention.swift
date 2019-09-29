@@ -114,39 +114,6 @@ extension String {
 #endif
 
 
-extension String {
-    
-    var length: Int {
-        return characters.count
-    }
-    
-    
-    subscript(_ index: Int) -> String {
-        let start = self.index(startIndex, offsetBy: index)
-        let end = self.index(after: start)
-        return substring(with: start..<end)
-    }
-    
-    subscript(from i: Int) -> String {
-        let fromIndex = index(startIndex, offsetBy: i)
-        return substring(from: fromIndex)
-    }
-    
-    subscript(to i: Int) -> String {
-        let toIndex = index(startIndex, offsetBy: i)
-        return substring(to: toIndex)
-    }
-    
-    subscript(_ range: Range<Int>) -> String {
-        let start = index(startIndex, offsetBy: range.lowerBound)
-        let end = index(startIndex, offsetBy: range.upperBound)
-        return substring(with: start..<end)
-    }
-    
-    
-}
-
-
 extension NSAttributedString {
     
     func boundingSize(with maxSize: CGSize) -> CGSize {
