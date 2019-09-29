@@ -89,12 +89,11 @@
 		18577EE1233F689700EA6003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18577EE0233F689700EA6003 /* AppDelegate.swift */; };
 		18577EE3233F689700EA6003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18577EE2233F689700EA6003 /* SceneDelegate.swift */; };
 		18577EE5233F689700EA6003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18577EE4233F689700EA6003 /* ViewController.swift */; };
-		18577EE8233F689700EA6003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18577EE6233F689700EA6003 /* Main.storyboard */; };
 		18577EEA233F689800EA6003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18577EE9233F689800EA6003 /* Assets.xcassets */; };
-		18577EED233F689800EA6003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18577EEB233F689800EA6003 /* LaunchScreen.storyboard */; };
 		185A237C2326A294001A1FAD /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237B2326A294001A1FAD /* enum.swift */; };
 		185A237E232719A9001A1FAD /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237D232719A9001A1FAD /* Mems.swift */; };
 		185A23802329C126001A1FAD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237F2329C126001A1FAD /* Optional.swift */; };
+		18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F31234031C20012D590 /* BaseViewController.swift */; };
 		18FD10FB2335FDA300504E86 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FA2335FDA300504E86 /* Closure.swift */; };
 		18FD10FD233767E100504E86 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FC233767E100504E86 /* Property.swift */; };
 		18FD10FF2338528700504E86 /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FE2338528700504E86 /* Inheritance.swift */; };
@@ -233,13 +232,12 @@
 		18577EE0233F689700EA6003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18577EE2233F689700EA6003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18577EE4233F689700EA6003 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18577EE7233F689700EA6003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18577EE9233F689800EA6003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18577EEC233F689800EA6003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18577EEE233F689800EA6003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185A237B2326A294001A1FAD /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		185A237D232719A9001A1FAD /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		185A237F2329C126001A1FAD /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		18DF3F31234031C20012D590 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18FD10FA2335FDA300504E86 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		18FD10FC233767E100504E86 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		18FD10FE2338528700504E86 /* Inheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inheritance.swift; sourceTree = "<group>"; };
@@ -531,15 +529,22 @@
 		18577EDF233F689700EA6003 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18DF3F33234037420012D590 /* Classes */,
 				18577EE0233F689700EA6003 /* AppDelegate.swift */,
 				18577EE2233F689700EA6003 /* SceneDelegate.swift */,
-				18577EE4233F689700EA6003 /* ViewController.swift */,
-				18577EE6233F689700EA6003 /* Main.storyboard */,
 				18577EE9233F689800EA6003 /* Assets.xcassets */,
-				18577EEB233F689800EA6003 /* LaunchScreen.storyboard */,
 				18577EEE233F689800EA6003 /* Info.plist */,
 			);
 			path = RxSwiftDemo;
+			sourceTree = "<group>";
+		};
+		18DF3F33234037420012D590 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18DF3F31234031C20012D590 /* BaseViewController.swift */,
+				18577EE4233F689700EA6003 /* ViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		76CA56B6210821AA001B6F2E /* Syntax */ = {
@@ -675,7 +680,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = luoquan;
 				TargetAttributes = {
 					08E27C65204AA2FC00CD1AE1 = {
@@ -756,9 +761,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18577EED233F689800EA6003 /* LaunchScreen.storyboard in Resources */,
 				18577EEA233F689800EA6003 /* Assets.xcassets in Resources */,
-				18577EE8233F689700EA6003 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,6 +982,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18577EE5233F689700EA6003 /* ViewController.swift in Sources */,
+				18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */,
 				18577EE1233F689700EA6003 /* AppDelegate.swift in Sources */,
 				18577EE3233F689700EA6003 /* SceneDelegate.swift in Sources */,
 			);
@@ -1004,22 +1008,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				08E27C73204AA2FC00CD1AE1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		18577EE6233F689700EA6003 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18577EE7233F689700EA6003 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		18577EEB233F689800EA6003 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18577EEC233F689800EA6003 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1247,6 +1235,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAXG53JU3J;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1263,6 +1252,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAXG53JU3J;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1276,6 +1266,7 @@
 			baseConfigurationReference = 17892973400263AB63D3B857 /* Pods-RxSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAXG53JU3J;
@@ -1287,7 +1278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.knox.RxSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1296,6 +1287,7 @@
 			baseConfigurationReference = 854CC3820DF27E60449358BA /* Pods-RxSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAXG53JU3J;
@@ -1306,7 +1298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.knox.RxSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

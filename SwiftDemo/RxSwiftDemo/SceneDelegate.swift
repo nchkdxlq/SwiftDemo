@@ -8,6 +8,8 @@
 
 import UIKit
 
+#if false
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -51,3 +53,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+#endif
