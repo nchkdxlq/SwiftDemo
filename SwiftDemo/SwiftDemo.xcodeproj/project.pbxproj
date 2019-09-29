@@ -75,6 +75,7 @@
 		08F396F9204AE8D700FD2DE4 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */; };
 		08FF85042118864100F00303 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF85032118864100F00303 /* Protocol.swift */; };
 		1822DF4323403F4B00318293 /* RxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */; };
+		1822DF452340EB7B00318293 /* Transforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822DF442340EB7B00318293 /* Transforming.swift */; };
 		18404EE622E34CE800D4034E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404EE522E34CE800D4034E /* main.swift */; };
 		18404EEB22E34D3800D4034E /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404EEA22E34D3800D4034E /* struct.swift */; };
 		1846690422E4223A00D452C4 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846690322E4223A00D452C4 /* function.swift */; };
@@ -224,6 +225,7 @@
 		08FF85032118864100F00303 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		17892973400263AB63D3B857 /* Pods-RxSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTestViewController.swift; sourceTree = "<group>"; };
+		1822DF442340EB7B00318293 /* Transforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transforming.swift; sourceTree = "<group>"; };
 		18404EE322E34CE800D4034E /* SyntaxDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SyntaxDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		18404EE522E34CE800D4034E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18404EEA22E34D3800D4034E /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 				18DF3F31234031C20012D590 /* BaseViewController.swift */,
 				18577EE4233F689700EA6003 /* ViewController.swift */,
 				1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */,
+				1822DF442340EB7B00318293 /* Transforming.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				18577EE5233F689700EA6003 /* ViewController.swift in Sources */,
 				18DF3F3723403B620012D590 /* UIScreen+Extension.swift in Sources */,
 				18DF3F4023403CFC0012D590 /* UIView+Extension.swift in Sources */,
+				1822DF452340EB7B00318293 /* Transforming.swift in Sources */,
 				18DF3F3D23403CD90012D590 /* UITableView+Extension.swift in Sources */,
 				1822DF4323403F4B00318293 /* RxSwiftTestViewController.swift in Sources */,
 				18DF3F4323403DE00012D590 /* String+Extention.swift in Sources */,

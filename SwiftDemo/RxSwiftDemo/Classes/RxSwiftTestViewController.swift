@@ -13,6 +13,7 @@ import RxCocoa
 class RxSwiftTestViewController: BaseViewController {
 
     let disposeBag = DisposeBag()
+    let transforming = Transforming()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class RxSwiftTestViewController: BaseViewController {
             print("button Tapped")
         })
         .disposed(by: disposeBag)
+        
+        transforming.transforming_entry()
     }
     
 
