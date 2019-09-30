@@ -13,6 +13,7 @@ import RxCocoa
 class RxSwiftTestViewController: BaseViewController {
 
     let disposeBag = DisposeBag()
+    let transforming = Transforming()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class RxSwiftTestViewController: BaseViewController {
 //        observable_range()
 //        observable_repeatElement()
 //        observable_timer()
+        
+        transforming.transforming_entry()
     }
     
     func button_test() {
@@ -79,7 +82,7 @@ class RxSwiftTestViewController: BaseViewController {
         }.disposed(by: disposeBag)
         
         replaySubject.on(.next("c"))
-        replaySubject.on(.next("d"))
+        replaySubject.on(.next("d"))        
     }
     
     // 当一个观察者订阅一个 BehaviorSubject ，它会发送原序列最近的那个值（如果原序列还有没发射值那就用一个默认值代替），之后继续发射原序列的值。
