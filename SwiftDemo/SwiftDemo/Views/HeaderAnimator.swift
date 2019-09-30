@@ -32,7 +32,7 @@ class HeaderAnimator: UIView {
     }()
     
     let indicatorView: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.hidesWhenStopped = true
         indicator.stopAnimating()
         return indicator

@@ -116,7 +116,7 @@ class BadgeView: UIButton {
             
             let text = badgeValue ?? ""
             setTitle(badgeValue, for: .normal)
-            titleLabel?.font = UIFont.systemFont(ofSize: text.length > 2 ? 7.5 : 10.0)
+            titleLabel?.font = UIFont.systemFont(ofSize: text.count > 2 ? 7.5 : 10.0)
         }
     }
 }

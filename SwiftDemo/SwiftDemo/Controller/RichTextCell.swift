@@ -13,7 +13,7 @@ class RichTextCell: UITableViewCell {
     var richTextView: UITextView!
     var richTextLabel: UILabel!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
 //        richTextView = UITextView()
@@ -28,7 +28,7 @@ class RichTextCell: UITableViewCell {
         richTextLabel.numberOfLines = 0
         contentView.addSubview(richTextLabel)
         richTextLabel.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(10, 10, 10, 10))
+            make.edges.equalTo(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         }
     }
     

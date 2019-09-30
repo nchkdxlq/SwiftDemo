@@ -41,7 +41,7 @@ class EZNavigationController: UINavigationController {
 extension EZNavigationController: UINavigationControllerDelegate
 {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if navigationController.childViewControllers.count > 0 {
+        if navigationController.children.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
         }
     }

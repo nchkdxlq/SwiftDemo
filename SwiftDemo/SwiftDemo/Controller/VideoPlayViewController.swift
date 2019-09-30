@@ -157,11 +157,12 @@ class VideoPlayViewController: EZBaseVC {
                            selector: #selector(playItemDidEndHandle(_:)),
                            name: didPlayToEndTime,
                            object: nil)
-        let didEnterBackground = NSNotification.Name.UIApplicationDidEnterBackground
+        let didEnterBackground = UIApplication.didEnterBackgroundNotification
         center.addObserver(self,
                            selector: #selector(enterBackgroundHandle(_:)),
                            name:didEnterBackground,
                            object: nil)
+    
     
     }
     
@@ -222,7 +223,7 @@ class VideoPlayViewController: EZBaseVC {
                              selector: #selector(refreshHandle(_:)),
                              userInfo: nil,
                              repeats: true)
-        RunLoop.current.add(refreshTimer!, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(refreshTimer!, forMode: .common)
     }
     
     //MARK: - button action
@@ -245,7 +246,7 @@ class VideoPlayViewController: EZBaseVC {
     }
     
     @objc private func playItemDidEndHandle(_ note: NSNotification) {
-        player.seek(to: kCMTimeZero)
+        player.seek(to: CMTime.zero)
         playButton.isSelected = false
         invalidateTimer()
         currentTimeLabel.text = "00:00"
@@ -278,9 +279,9 @@ class VideoPlayViewController: EZBaseVC {
         }
         
         if keyPath == #keyPath(AVPlayerItem.status) {
-            let status: AVPlayerItemStatus
+            let status: AVPlayerItem.Status
             if let statusNumber = change?[.newKey] as? NSNumber {
-                status = AVPlayerItemStatus(rawValue: statusNumber.intValue)!
+                status = AVPlayerItem.Status(rawValue: statusNumber.intValue)!
             } else {
                 status = .unknown
             }
@@ -294,6 +295,8 @@ class VideoPlayViewController: EZBaseVC {
             // Player item failed. See error.
             case .unknown: break
                 // Player item is not yet ready.
+            @unknown default:
+                fatalError()
             }
         }
     }

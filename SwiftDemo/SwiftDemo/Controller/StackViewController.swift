@@ -49,7 +49,7 @@ class StackViewController: BaseViewController {
     func setupTimer() {
 //        timer = Timer(fireAt: Date.init(timeIntervalSinceNow: 10), interval: 3.0, target: self, selector: #selector(timerHandle), userInfo: nil, repeats: true)
         timer = Timer(timeInterval: 3.0, target: self, selector: #selector(timerHandle), userInfo: nil, repeats: true)
-        RunLoop.current.add(timer!, forMode: .commonModes)
+        RunLoop.current.add(timer!, forMode: .common)
 //        timer?.fire()
         print("setup  - \(Date().timeIntervalSince1970)");
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: EZBaseVC {
 
-    var tableViewStyle: UITableViewStyle = .plain
+    var tableViewStyle: UITableView.Style = .plain
     
     lazy var tableView: UITableView = {
         let table = UITableView(frame: self.view.bounds, style: self.tableViewStyle)

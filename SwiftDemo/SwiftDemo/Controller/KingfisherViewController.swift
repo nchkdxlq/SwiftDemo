@@ -21,7 +21,7 @@ class ProgressView: UIView {
         
         backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         
-        indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        indicatorView = UIActivityIndicatorView(style: .white)
         indicatorView.hidesWhenStopped = true
         addSubview(indicatorView)
         

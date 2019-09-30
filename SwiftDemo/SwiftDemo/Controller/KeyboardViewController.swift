@@ -64,7 +64,7 @@ class KeyboardViewController: EZBaseVC {
         tableView.hiddenEmptyCells()
         tableView.showsHorizontalScrollIndicator = false
 //        tableView.separatorStyle = .none
-        tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.allowsSelection = false
         tableView.rowHeight = 50.0
         tableView.register(UITableViewCell.self,
@@ -81,13 +81,13 @@ class KeyboardViewController: EZBaseVC {
         let center = NotificationCenter.default
         center.addObserver(self,
                            selector: #selector(KeyboardViewController.keyBoardHandle(_:)),
-                           name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+                           name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     fileprivate func sendMessage() {
         let text = textFiled.text ?? ""
         textFiled.text = nil
-        if text.length == 0 { return }
+        if text.count == 0 { return }
         let section = 1
         let sectionData = dataSource[section]
         sectionData.dataList.append(text)
@@ -116,7 +116,7 @@ class KeyboardViewController: EZBaseVC {
         
         print(userInfo)
         
-        guard let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        guard let value = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         
         let endFrame = value.cgRectValue
         let deltaY = endFrame.height

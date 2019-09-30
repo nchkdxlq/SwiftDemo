@@ -78,7 +78,7 @@ class AudioViewController: EZBaseVC {
                 }
             }
             
-            if audioSession.recordPermission() == .granted {
+            if audioSession.recordPermission == .granted {
                 recorderHandle()
             } else {
                 AVAudioSession.sharedInstance().requestRecordPermission({ (result) in
@@ -121,11 +121,11 @@ class AudioViewController: EZBaseVC {
     private func setupSession(_ active: Bool) {
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            let activeFlag = AVAudioSessionSetActiveOptions.notifyOthersOnDeactivation
-            try audioSession.setActive(active, with: activeFlag)
+            let activeFlag = AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation
+            try audioSession.setActive(active, options: activeFlag)
             if active {
-                try audioSession.setCategory(AVAudioSessionCategoryPlayback)
-                try audioSession.setMode(AVAudioSessionModeDefault)
+                try audioSession.setCategory(AVAudioSession.Category.playback)
+                try audioSession.setMode(AVAudioSession.Mode.default)
             }
         } catch {
             print(error)
@@ -150,15 +150,16 @@ class AudioViewController: EZBaseVC {
     }
     
     private func addObserver() {
+        
         let center = NotificationCenter.default
         center.addObserver(self,
                            selector: #selector(routeDidChangehandle(_:)),
-                           name: Notification.Name.AVAudioSessionRouteChange,
+                           name: AVAudioSession.routeChangeNotification,
                            object: nil)
         
         center.addObserver(self,
                            selector: #selector(proximityStateDidChangeHandle(_:)),
-                           name: Notification.Name.UIDeviceProximityStateDidChange,
+                           name: UIDevice.proximityStateDidChangeNotification,
                            object: nil)
     }
     
@@ -169,12 +170,12 @@ class AudioViewController: EZBaseVC {
         guard let targetOutput = outputs.first else {
             return
         }
-        if targetOutput.portType == AVAudioSessionPortBuiltInSpeaker {
+        if targetOutput.portType == AVAudioSession.Port.builtInSpeaker {
             audioPlayer?.play()
-        } else if targetOutput.portType == AVAudioSessionPortHeadphones {
+        } else if targetOutput.portType == AVAudioSession.Port.headphones {
             audioPlayer?.pause()
         }
-        print("outPutType: " + targetOutput.portType)
+        print("outPutType: " + targetOutput.portType.rawValue)
     }
     
     
@@ -186,23 +187,23 @@ class AudioViewController: EZBaseVC {
         }
         
         let shareSession = AVAudioSession.sharedInstance()
-        if output.portType == AVAudioSessionPortBuiltInSpeaker {
+        if output.portType == AVAudioSession.Port.builtInSpeaker {
             print("扬声器: \(UIDevice.current.proximityState == true ? "靠近" : "远离")")
             if UIDevice.current.proximityState {
                 do {
-                    try shareSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+                    try shareSession.setCategory(AVAudioSession.Category.playAndRecord)
                 } catch {}
             }
             
-        } else if output.portType == AVAudioSessionPortHeadphones {
+        } else if output.portType == AVAudioSession.Port.headphones {
             
             print("耳机: \(UIDevice.current.proximityState == true ? "靠近" : "远离")")
             
-        } else if output.portType == AVAudioSessionPortBuiltInReceiver {
+        } else if output.portType == AVAudioSession.Port.builtInReceiver {
             print("听筒: \(UIDevice.current.proximityState == true ? "靠近" : "远离")")
             if !UIDevice.current.proximityState {
                 do {
-                    try shareSession.setCategory(AVAudioSessionCategoryPlayback)
+                    try shareSession.setCategory(AVAudioSession.Category.playback)
                 } catch {}
             }
         }
