@@ -13,9 +13,9 @@ import RxCocoa
 
 struct Transforming {
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
-    func transforming_entry() {
+    func entry() {
         
 //        map_test()
 //        flatMap_test()
@@ -25,7 +25,7 @@ struct Transforming {
         window_test()
     }
 
-    func map_test() {
+    private func map_test() {
         print("------- map -------")
         
         let seq = Observable.of(1, 2, 3)
@@ -37,7 +37,7 @@ struct Transforming {
     }
     
     
-    func flatMap_test() {
+    private func flatMap_test() {
         print("------- map -------")
         
         let seqInt = Observable.of(1, 2)
@@ -52,7 +52,7 @@ struct Transforming {
     
     // 应用一个 accumulator (累加) 的方法遍历一个序列，然后返回累加的结果。
     // 此外我们还需要一个初始的累加值。实时上这个操作就类似于 Swift 中的 reduce 。
-    func scan_test() {
+    private func scan_test() {
         print("------- scan -------")
         
         let seqInt = Observable.of(0, 1, 2, 3, 4, 5)

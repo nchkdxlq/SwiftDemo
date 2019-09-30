@@ -12,13 +12,13 @@ import RxSwift
 
 struct Filter {
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     func filter_entry() {
         filter_test()
     }
     
-    func filter_test() {
+    private func filter_test() {
         print("------ filter ------")
         
         let seqInt = Observable.of(0, 1, 2, 3, 4)
