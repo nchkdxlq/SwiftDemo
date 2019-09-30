@@ -20,7 +20,7 @@ class RxSwiftTestViewController: BaseViewController {
 
 //        publishSubject_test()
 //        replaySubject_test()
-        behaviorSubject_test()
+//        behaviorSubject_test()
         
 //        observable_just()
 //        observable_of()
@@ -29,7 +29,20 @@ class RxSwiftTestViewController: BaseViewController {
 //        observable_repeatElement()
 //        observable_timer()
         
-        transforming.transforming_entry()
+//        transforming.transforming_entry()
+        
+        
+        // 1: 创建序列
+//        _ = Observable<String>.create { (obserber) -> Disposable in
+//            // 3:发送信号
+//            obserber.onNext("Cooci -  框架班级")
+//            return Disposables.create()  // 这个销毁不影响我们这次的解读
+//            // 2: 订阅序列
+//            }.subscribe(onNext: { (text) in
+//                print("订阅到:\(text)")
+//            })
+        
+        button_test()
     }
     
     func button_test() {
@@ -38,9 +51,25 @@ class RxSwiftTestViewController: BaseViewController {
         btn.backgroundColor = UIColor.blue
         view.addSubview(btn)
         
-        btn.rx.tap.subscribe(onNext: {
-            print("button Tapped")
-        }).disposed(by: disposeBag)
+//        btn.rx.tap.subscribe(onNext: {
+//            print("button Tapped")
+//        }).disposed(by: disposeBag)
+        
+//        btn.rx.tap.map { event -> Int in
+//            return 1
+//            }.scan(0) { (sum, value) -> Int in
+//                return sum + value
+//            }.subscribe(onNext: { (value) in
+//                print(value)
+//            }).disposed(by: disposeBag)
+//
+        btn.rx.tap
+            .map { return 1 }
+            .scan(0) { acc, x in return acc + x }
+            .subscribe { event in
+                print(event)
+            }.disposed(by: disposeBag)
+        
     }
     
     
@@ -82,7 +111,7 @@ class RxSwiftTestViewController: BaseViewController {
         }.disposed(by: disposeBag)
         
         replaySubject.on(.next("c"))
-        replaySubject.on(.next("d"))        
+        replaySubject.on(.next("d"))
     }
     
     // 当一个观察者订阅一个 BehaviorSubject ，它会发送原序列最近的那个值（如果原序列还有没发射值那就用一个默认值代替），之后继续发射原序列的值。
@@ -139,6 +168,11 @@ class RxSwiftTestViewController: BaseViewController {
         obs3.subscribe { (event) in
             print(event)
         }.disposed(by: disposeBag)
+        
+        let binder = Binder<Int>.init(self) { (vc, num) in
+            vc.title = "\(num)"
+        }
+        obs3.subscribe(binder).disposed(by: disposeBag)
     }
     
     func observable_range() {
