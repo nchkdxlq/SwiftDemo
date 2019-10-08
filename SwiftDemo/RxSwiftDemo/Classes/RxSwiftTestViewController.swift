@@ -16,15 +16,18 @@ class RxSwiftTestViewController: BaseViewController {
     let transforming = Transforming()
     let subject = Subject()
     let observable = ObservableTest()
+    let comnination = Combination()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        subject.entry()
-        observable.entry()
-        transforming.entry()
+//        subject.entry()
+//        observable.entry()
+//        transforming.entry()
+        comnination.entry()
         
-        button_test()
+        
+//        button_test()
     }
     
     func button_test() {

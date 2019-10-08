@@ -95,6 +95,7 @@
 		185A23802329C126001A1FAD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237F2329C126001A1FAD /* Optional.swift */; };
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
+		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
 		18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F31234031C20012D590 /* BaseViewController.swift */; };
 		18DF3F3623403B620012D590 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F3523403B620012D590 /* UIScreen+Extension.swift */; };
 		18DF3F3723403B620012D590 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F3523403B620012D590 /* UIScreen+Extension.swift */; };
@@ -251,6 +252,7 @@
 		185A237F2329C126001A1FAD /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
 		18DF3F31234031C20012D590 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18DF3F3523403B620012D590 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		18DF3F3823403BEA0012D590 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 				1822DF462340F87B00318293 /* Filter.swift */,
 				187BC59F23422836005B14CE /* Subject.swift */,
 				187BC5A123422902005B14CE /* Observable.swift */,
+				187BC5A42342402A005B14CE /* Combination.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				18DF3F3D23403CD90012D590 /* UITableView+Extension.swift in Sources */,
 				1822DF4323403F4B00318293 /* RxSwiftTestViewController.swift in Sources */,
 				18DF3F4323403DE00012D590 /* String+Extention.swift in Sources */,
+				187BC5A52342402A005B14CE /* Combination.swift in Sources */,
 				18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */,
 				187BC5A223422902005B14CE /* Observable.swift in Sources */,
 				18DF3F3A23403BEA0012D590 /* UIColor+Extension.swift in Sources */,
