@@ -40,6 +40,9 @@ class ViewController: BaseViewController {
     private func setupDataSource() {
         let item0 = CellItem(title: "RxSwift初体验", vcClass: RxSwiftTestViewController.self)
         dataSource.append(item0)
+        
+        let item1 = CellItem(title: "Login", vcClass: LoginViewController.self)
+        dataSource.append(item1)
     }
     
 }
