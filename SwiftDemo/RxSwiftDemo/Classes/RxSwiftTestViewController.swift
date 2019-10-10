@@ -17,6 +17,8 @@ class RxSwiftTestViewController: BaseViewController {
     let subject = Subject()
     let observable = ObservableTest()
     let comnination = Combination()
+    let observer = ObserverTest()
+    let bind = BindTest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,9 @@ class RxSwiftTestViewController: BaseViewController {
 //        subject.entry()
 //        observable.entry()
 //        transforming.entry()
-        comnination.entry()
-        
+//        comnination.entry()
+        observer.entry()
+//        bind.entry()
         
 //        button_test()
     }

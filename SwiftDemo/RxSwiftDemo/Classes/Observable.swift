@@ -16,7 +16,8 @@ struct ObservableTest {
     
     func entry() {
         
-        
+        observable_just()
+        observable_of()
         
     }
     
@@ -25,6 +26,16 @@ struct ObservableTest {
         let observable = Observable<Int>.just(one)
         observable.subscribe { (e) in
             print(e)
+        }.disposed(by: disposeBag)
+        
+        // 等价上面的
+        let obs = Observable<Int>.create { (observer) -> Disposable in
+            observer.on(.next(one))
+            observer.onCompleted()
+            return Disposables.create()
+        }
+        obs.subscribe{ event in
+            print("create", event)
         }.disposed(by: disposeBag)
     }
     
