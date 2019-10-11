@@ -43,6 +43,9 @@ class ViewController: BaseViewController {
         
         let item1 = CellItem(title: "Login", vcClass: LoginViewController.self)
         dataSource.append(item1)
+        
+        let item2 = CellItem(title: "Combine", vcClass: CombineViewController.self)
+        dataSource.append(item2)
     }
     
 }
