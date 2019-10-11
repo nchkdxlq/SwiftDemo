@@ -19,6 +19,7 @@ class RxSwiftTestViewController: BaseViewController {
     let comnination = Combination()
     let observer = ObserverTest()
     let bind = BindTest()
+    let share = ShareTest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,9 @@ class RxSwiftTestViewController: BaseViewController {
 //        observable.entry()
 //        transforming.entry()
 //        comnination.entry()
-        observer.entry()
+//        observer.entry()
 //        bind.entry()
+        share.entry()
         
 //        button_test()
     }

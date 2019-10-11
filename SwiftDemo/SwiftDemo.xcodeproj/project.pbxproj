@@ -119,6 +119,7 @@
 		70921FBDFBA6C9984C08DFF0 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7FFCCCE150699ACFE149C /* Pods_SwiftDemo.framework */; };
 		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
 		7619A099214699BB005D9C95 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619A098214699BB005D9C95 /* Generics.swift */; };
+		76524B9323508B97002F355A /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76524B9223508B97002F355A /* Share.swift */; };
 		76696643228994EF00BA69B8 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76696642228994EF00BA69B8 /* StackViewController.swift */; };
 		766966452289967400BA69B8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766966442289967400BA69B8 /* BaseViewController.swift */; };
 		76699205214A95DE0045817F /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76699204214A95DE0045817F /* ARC.swift */; };
@@ -277,6 +278,7 @@
 		67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7619A098214699BB005D9C95 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
+		76524B9223508B97002F355A /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		76696642228994EF00BA69B8 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		766966442289967400BA69B8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		76699204214A95DE0045817F /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
@@ -581,19 +583,13 @@
 		18DF3F33234037420012D590 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				76524B9123508B73002F355A /* RxSwift */,
 				1866896F234FFE8400EC958A /* Combine */,
 				18DF3F31234031C20012D590 /* BaseViewController.swift */,
 				18577EE4233F689700EA6003 /* ViewController.swift */,
 				1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */,
 				18C1A240234EBE5700AB47A8 /* LoginViewController.swift */,
 				18C1A243234EC0B900AB47A8 /* LoginViewController.xib */,
-				1822DF442340EB7B00318293 /* Transforming.swift */,
-				1822DF462340F87B00318293 /* Filter.swift */,
-				187BC59F23422836005B14CE /* Subject.swift */,
-				187BC5A123422902005B14CE /* Observable.swift */,
-				187BC5A42342402A005B14CE /* Combination.swift */,
-				18C1A23B234E191600AB47A8 /* Observer.swift */,
-				18C1A23D234E24B700AB47A8 /* Bind.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -608,6 +604,21 @@
 				18DF3F3E23403CFC0012D590 /* UIView+Extension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		76524B9123508B73002F355A /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				1822DF442340EB7B00318293 /* Transforming.swift */,
+				1822DF462340F87B00318293 /* Filter.swift */,
+				187BC59F23422836005B14CE /* Subject.swift */,
+				187BC5A123422902005B14CE /* Observable.swift */,
+				187BC5A42342402A005B14CE /* Combination.swift */,
+				18C1A23B234E191600AB47A8 /* Observer.swift */,
+				18C1A23D234E24B700AB47A8 /* Bind.swift */,
+				76524B9223508B97002F355A /* Share.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		76CA56B6210821AA001B6F2E /* Syntax */ = {
@@ -1071,6 +1082,7 @@
 				18DF3F4323403DE00012D590 /* String+Extention.swift in Sources */,
 				187BC5A52342402A005B14CE /* Combination.swift in Sources */,
 				18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */,
+				76524B9323508B97002F355A /* Share.swift in Sources */,
 				187BC5A223422902005B14CE /* Observable.swift in Sources */,
 				18DF3F3A23403BEA0012D590 /* UIColor+Extension.swift in Sources */,
 				18577EE1233F689700EA6003 /* AppDelegate.swift in Sources */,
