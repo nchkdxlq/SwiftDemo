@@ -120,6 +120,9 @@
 		760D9A0021133304008C205E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D99FF21133304008C205E /* Array.swift */; };
 		7619A099214699BB005D9C95 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619A098214699BB005D9C95 /* Generics.swift */; };
 		76524B9323508B97002F355A /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76524B9223508B97002F355A /* Share.swift */; };
+		76524B972351DAEA002F355A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76524B952351DAEA002F355A /* RegisterViewController.swift */; };
+		76524B982351DAEA002F355A /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76524B962351DAEA002F355A /* RegisterViewController.xib */; };
+		76524B9A2351DB56002F355A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76524B992351DB56002F355A /* RegisterViewModel.swift */; };
 		76696643228994EF00BA69B8 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76696642228994EF00BA69B8 /* StackViewController.swift */; };
 		766966452289967400BA69B8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766966442289967400BA69B8 /* BaseViewController.swift */; };
 		76699205214A95DE0045817F /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76699204214A95DE0045817F /* ARC.swift */; };
@@ -279,6 +282,9 @@
 		760D99FF21133304008C205E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7619A098214699BB005D9C95 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
 		76524B9223508B97002F355A /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		76524B952351DAEA002F355A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		76524B962351DAEA002F355A /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		76524B992351DB56002F355A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		76696642228994EF00BA69B8 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		766966442289967400BA69B8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		76699204214A95DE0045817F /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
@@ -585,6 +591,7 @@
 			children = (
 				76524B9123508B73002F355A /* RxSwift */,
 				1866896F234FFE8400EC958A /* Combine */,
+				76524B942351DAB8002F355A /* Register&Login */,
 				18DF3F31234031C20012D590 /* BaseViewController.swift */,
 				18577EE4233F689700EA6003 /* ViewController.swift */,
 				1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */,
@@ -619,6 +626,16 @@
 				76524B9223508B97002F355A /* Share.swift */,
 			);
 			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		76524B942351DAB8002F355A /* Register&Login */ = {
+			isa = PBXGroup;
+			children = (
+				76524B952351DAEA002F355A /* RegisterViewController.swift */,
+				76524B962351DAEA002F355A /* RegisterViewController.xib */,
+				76524B992351DB56002F355A /* RegisterViewModel.swift */,
+			);
+			path = "Register&Login";
 			sourceTree = "<group>";
 		};
 		76CA56B6210821AA001B6F2E /* Syntax */ = {
@@ -837,6 +854,7 @@
 			files = (
 				18C1A244234EC0B900AB47A8 /* LoginViewController.xib in Resources */,
 				18577EEA233F689800EA6003 /* Assets.xcassets in Resources */,
+				76524B982351DAEA002F355A /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,6 +1085,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C1A241234EBE5700AB47A8 /* LoginViewController.swift in Sources */,
+				76524B972351DAEA002F355A /* RegisterViewController.swift in Sources */,
 				18577EE5233F689700EA6003 /* ViewController.swift in Sources */,
 				18C1A23C234E191600AB47A8 /* Observer.swift in Sources */,
 				187BC5A023422836005B14CE /* Subject.swift in Sources */,
@@ -1087,6 +1106,7 @@
 				18DF3F3A23403BEA0012D590 /* UIColor+Extension.swift in Sources */,
 				18577EE1233F689700EA6003 /* AppDelegate.swift in Sources */,
 				18577EE3233F689700EA6003 /* SceneDelegate.swift in Sources */,
+				76524B9A2351DB56002F355A /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
