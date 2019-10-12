@@ -10,12 +10,13 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct ObservableTest {
+class ObservableTest {
     
     private let disposeBag = DisposeBag()
     
     func entry() {
         
+        sendTextMessage()
         observable_just()
         observable_of()
         
@@ -91,4 +92,74 @@ struct ObservableTest {
     
     
     
+    func sendTextMessage() {
+        let msg = Message()
+        msg.mid = NSUUID().uuidString
+        msg.umid = 100
+        msg.type = .text
+        msg.state = .idle
+        
+        let obs = sendMessage(msg)
+        print("before")
+        obs.subscribe { (event) in
+            print(event)
+        }.disposed(by: disposeBag)
+    }
+}
+
+
+
+
+class Message {
+    
+    // 消息转态
+    enum MessageState {
+        case idle, sending, success, failed
+    }
+    
+    // 消息类型
+    enum MessageType {
+        case text, image, audio, video, file
+    }
+    
+    var umid: UInt = 0
+    var mid: String = ""
+    var state: MessageState = .idle
+    var type: MessageType = .text
+}
+
+
+
+/*
+ 实现如下需求
+ 1. 发送消息过程，
+ a) 消息发送中转圈
+ b) 发送成功隐藏转圈
+ c) 发送失败隐藏转圈并显示感叹号
+ 
+ 
+ 疑问？
+ 
+ 1. Observable什么时候释放
+ 
+ 
+ */
+
+
+/*
+ 
+ 创建一个`Observable`, 把需要做的事情放在闭包里面, 比如网络请求、读取文件等等
+ 
+ */
+func sendMessage(_ msg: Message) -> Observable<Message.MessageState> {
+    return Observable<Message.MessageState>.create { (observer) -> Disposable in
+        msg.state = .sending
+        observer.on(.next(.sending))
+        // 1s后发送成功
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            msg.state = .success
+            observer.on(.next(.success))
+        }
+        return Disposables.create()
+    }
 }

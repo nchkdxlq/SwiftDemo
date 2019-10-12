@@ -30,3 +30,13 @@ struct ObserverTest {
     }
     
 }
+
+/*
+ 
+ 在实际开发中，创建`Observer`比较容易, 可以利用`AnyObserver`直接创建; 也可以使用`Binder`创建。创建好Observer后直接订阅`Observable`就可以。
+ 
+ 
+ 那如何创建`Observable`呢？如何与实际的业务结合起来。
+ 
+ 
+ */

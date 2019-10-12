@@ -25,12 +25,12 @@ class RxSwiftTestViewController: BaseViewController {
         super.viewDidLoad()
         
 //        subject.entry()
-//        observable.entry()
+        observable.entry()
 //        transforming.entry()
 //        comnination.entry()
 //        observer.entry()
 //        bind.entry()
-        share.entry()
+//        share.entry()
         
 //        button_test()
     }
