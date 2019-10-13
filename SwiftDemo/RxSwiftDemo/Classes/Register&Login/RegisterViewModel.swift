@@ -27,6 +27,8 @@ struct RegisterViewModel {
         let api = GitHubAPI.sharedPAI
         let psdMinCount = 5
         
+        //flatMapLatest 如果有新的值发射出来，则会取消原来发出的网络请求
+        //flatMap 则不会
         usernameValidated = username.flatMapLatest { (account) -> Observable<ValidationResult> in
             // 是否为空
             if account.isEmpty {

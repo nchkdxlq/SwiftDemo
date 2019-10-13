@@ -20,18 +20,19 @@ class RxSwiftTestViewController: BaseViewController {
     let observer = ObserverTest()
     let bind = BindTest()
     let share = ShareTest()
+    let map = MapTest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        subject.entry()
-        observable.entry()
+//        observable.entry()
 //        transforming.entry()
 //        comnination.entry()
 //        observer.entry()
 //        bind.entry()
 //        share.entry()
-        
+        map.entry()
 //        button_test()
     }
     
