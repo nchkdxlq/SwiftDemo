@@ -42,6 +42,7 @@ class ViewController: BaseViewController {
             CellItem(title: "RxSwift初体验", vcClass: RxSwiftTestViewController.self),
             CellItem(title: "Login", vcClass: LoginViewController.self),
             CellItem(title: "Register", vcClass: RegisterViewController.self),
+            CellItem(title: "Calculator", vcClass: CalculatorViewController.self),
             CellItem(title: "Combine", vcClass: CombineViewController.self)
         ];
     }

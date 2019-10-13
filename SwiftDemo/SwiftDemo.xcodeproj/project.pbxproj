@@ -98,6 +98,8 @@
 		18683D272352F338007FC806 /* GtiHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D262352F338007FC806 /* GtiHubAPI.swift */; };
 		18683D292352F9A8007FC806 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D282352F9A8007FC806 /* ValidationResult.swift */; };
 		18683D2D2352FC7B007FC806 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D2C2352FC7B007FC806 /* Map.swift */; };
+		18683D3123530BC9007FC806 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D2F23530BC9007FC806 /* CalculatorViewController.swift */; };
+		18683D3223530BC9007FC806 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18683D3023530BC9007FC806 /* CalculatorViewController.xib */; };
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
@@ -268,6 +270,8 @@
 		18683D262352F338007FC806 /* GtiHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GtiHubAPI.swift; sourceTree = "<group>"; };
 		18683D282352F9A8007FC806 /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		18683D2C2352FC7B007FC806 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		18683D2F23530BC9007FC806 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		18683D3023530BC9007FC806 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
@@ -592,12 +596,22 @@
 			path = Combine;
 			sourceTree = "<group>";
 		};
+		18683D2E23530B6E007FC806 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				18683D2F23530BC9007FC806 /* CalculatorViewController.swift */,
+				18683D3023530BC9007FC806 /* CalculatorViewController.xib */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 		18DF3F33234037420012D590 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				76524B9123508B73002F355A /* RxSwift */,
 				1866896F234FFE8400EC958A /* Combine */,
 				76524B942351DAB8002F355A /* Register&Login */,
+				18683D2E23530B6E007FC806 /* Calculator */,
 				18DF3F31234031C20012D590 /* BaseViewController.swift */,
 				18577EE4233F689700EA6003 /* ViewController.swift */,
 				1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */,
@@ -863,6 +877,7 @@
 			files = (
 				18C1A244234EC0B900AB47A8 /* LoginViewController.xib in Resources */,
 				18577EEA233F689800EA6003 /* Assets.xcassets in Resources */,
+				18683D3223530BC9007FC806 /* CalculatorViewController.xib in Resources */,
 				76524B982351DAEA002F355A /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1118,6 +1133,7 @@
 				18DF3F3A23403BEA0012D590 /* UIColor+Extension.swift in Sources */,
 				18577EE1233F689700EA6003 /* AppDelegate.swift in Sources */,
 				18577EE3233F689700EA6003 /* SceneDelegate.swift in Sources */,
+				18683D3123530BC9007FC806 /* CalculatorViewController.swift in Sources */,
 				76524B9A2351DB56002F355A /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
