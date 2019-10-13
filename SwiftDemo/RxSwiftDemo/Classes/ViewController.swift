@@ -43,6 +43,7 @@ class ViewController: BaseViewController {
             CellItem(title: "Login", vcClass: LoginViewController.self),
             CellItem(title: "Register", vcClass: RegisterViewController.self),
             CellItem(title: "Calculator", vcClass: CalculatorViewController.self),
+            CellItem(title: "TableView", vcClass: TableViewController.self),
             CellItem(title: "Combine", vcClass: CombineViewController.self)
         ];
     }
