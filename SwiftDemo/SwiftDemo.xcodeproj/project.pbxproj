@@ -95,6 +95,8 @@
 		185A23802329C126001A1FAD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A237F2329C126001A1FAD /* Optional.swift */; };
 		18668971234FFEB200EC958A /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668970234FFEB200EC958A /* CombineViewController.swift */; };
 		18668973234FFF9B00EC958A /* CombineUtile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668972234FFF9B00EC958A /* CombineUtile.swift */; };
+		18683D272352F338007FC806 /* GtiHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D262352F338007FC806 /* GtiHubAPI.swift */; };
+		18683D292352F9A8007FC806 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D282352F9A8007FC806 /* ValidationResult.swift */; };
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
@@ -262,6 +264,8 @@
 		185A237F2329C126001A1FAD /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		18668970234FFEB200EC958A /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		18668972234FFF9B00EC958A /* CombineUtile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineUtile.swift; sourceTree = "<group>"; };
+		18683D262352F338007FC806 /* GtiHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GtiHubAPI.swift; sourceTree = "<group>"; };
+		18683D282352F9A8007FC806 /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
@@ -634,6 +638,8 @@
 				76524B952351DAEA002F355A /* RegisterViewController.swift */,
 				76524B962351DAEA002F355A /* RegisterViewController.xib */,
 				76524B992351DB56002F355A /* RegisterViewModel.swift */,
+				18683D282352F9A8007FC806 /* ValidationResult.swift */,
+				18683D262352F338007FC806 /* GtiHubAPI.swift */,
 			);
 			path = "Register&Login";
 			sourceTree = "<group>";
@@ -1097,8 +1103,10 @@
 				18668973234FFF9B00EC958A /* CombineUtile.swift in Sources */,
 				18668971234FFEB200EC958A /* CombineViewController.swift in Sources */,
 				18DF3F3D23403CD90012D590 /* UITableView+Extension.swift in Sources */,
+				18683D292352F9A8007FC806 /* ValidationResult.swift in Sources */,
 				1822DF4323403F4B00318293 /* RxSwiftTestViewController.swift in Sources */,
 				18DF3F4323403DE00012D590 /* String+Extention.swift in Sources */,
+				18683D272352F338007FC806 /* GtiHubAPI.swift in Sources */,
 				187BC5A52342402A005B14CE /* Combination.swift in Sources */,
 				18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */,
 				76524B9323508B97002F355A /* Share.swift in Sources */,

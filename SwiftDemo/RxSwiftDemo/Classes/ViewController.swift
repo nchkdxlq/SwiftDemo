@@ -38,14 +38,12 @@ class ViewController: BaseViewController {
 
     
     private func setupDataSource() {
-        let item0 = CellItem(title: "RxSwift初体验", vcClass: RxSwiftTestViewController.self)
-        dataSource.append(item0)
-        
-        let item1 = CellItem(title: "Login", vcClass: LoginViewController.self)
-        dataSource.append(item1)
-        
-        let item2 = CellItem(title: "Combine", vcClass: CombineViewController.self)
-        dataSource.append(item2)
+        dataSource = [
+            CellItem(title: "RxSwift初体验", vcClass: RxSwiftTestViewController.self),
+            CellItem(title: "Login", vcClass: LoginViewController.self),
+            CellItem(title: "Register", vcClass: RegisterViewController.self),
+            CellItem(title: "Combine", vcClass: CombineViewController.self)
+        ];
     }
     
 }
