@@ -102,6 +102,7 @@
 		18683D3223530BC9007FC806 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18683D3023530BC9007FC806 /* CalculatorViewController.xib */; };
 		18683D3623532459007FC806 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D3423532459007FC806 /* TableViewController.swift */; };
 		18683D3723532459007FC806 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18683D3523532459007FC806 /* TableViewController.xib */; };
+		18683D3A23533597007FC806 /* Take&Skip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683D3923533597007FC806 /* Take&Skip.swift */; };
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
@@ -276,6 +277,7 @@
 		18683D3023530BC9007FC806 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		18683D3423532459007FC806 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18683D3523532459007FC806 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		18683D3923533597007FC806 /* Take&Skip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Take&Skip.swift"; sourceTree = "<group>"; };
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 				18C1A23D234E24B700AB47A8 /* Bind.swift */,
 				76524B9223508B97002F355A /* Share.swift */,
 				18683D2C2352FC7B007FC806 /* Map.swift */,
+				18683D3923533597007FC806 /* Take&Skip.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -1127,6 +1130,7 @@
 				76524B972351DAEA002F355A /* RegisterViewController.swift in Sources */,
 				18683D2D2352FC7B007FC806 /* Map.swift in Sources */,
 				18577EE5233F689700EA6003 /* ViewController.swift in Sources */,
+				18683D3A23533597007FC806 /* Take&Skip.swift in Sources */,
 				18C1A23C234E191600AB47A8 /* Observer.swift in Sources */,
 				187BC5A023422836005B14CE /* Subject.swift in Sources */,
 				1822DF472340F87B00318293 /* Filter.swift in Sources */,

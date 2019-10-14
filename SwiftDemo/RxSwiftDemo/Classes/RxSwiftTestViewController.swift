@@ -21,6 +21,7 @@ class RxSwiftTestViewController: BaseViewController {
     let bind = BindTest()
     let share = ShareTest()
     let map = MapTest()
+    let take_skip = Take_Skip()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,8 @@ class RxSwiftTestViewController: BaseViewController {
 //        observer.entry()
 //        bind.entry()
 //        share.entry()
-        map.entry()
+//        map.entry()
+        take_skip.entry()
 //        button_test()
     }
     
