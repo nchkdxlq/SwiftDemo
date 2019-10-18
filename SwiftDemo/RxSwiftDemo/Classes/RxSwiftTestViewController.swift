@@ -33,8 +33,8 @@ class RxSwiftTestViewController: BaseViewController {
 //        observer.entry()
 //        bind.entry()
 //        share.entry()
-//        map.entry()
-        take_skip.entry()
+        map.entry()
+//        take_skip.entry()
 //        button_test()
     }
     

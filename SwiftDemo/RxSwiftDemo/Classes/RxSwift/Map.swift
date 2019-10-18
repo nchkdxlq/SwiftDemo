@@ -10,14 +10,21 @@ import Foundation
 import RxSwift
 import RxRelay
 
-struct MapTest {
+
+enum TestError : Error {
+    case httpError
+}
+
+class MapTest {
     
     let disposeBag = DisposeBag()
     
     func entry() {
-        map_test()
-        flatMap_test()
-        flatMapLatest_test()
+//        map_test()
+//        flatMap_test()
+//        flatMapLatest_test()
+        
+        testFlatMap()
     }
     
     // https://beeth0ven.github.io/RxSwift-Chinese-Documentation/content/decision_tree/map.html
@@ -63,5 +70,53 @@ struct MapTest {
         first.onNext("🐶") // 不打印
     }
     
+    
+    func testFlatMap() {
+        let account = "111"
+    
+        loadServerConfig().flatMap { [unowned self] () -> Observable<String> in
+            print("queryLocalInfo")
+            return self.queryLocalInfo(account: account)
+        }.flatMap { [unowned self] (token) -> Observable<Void> in
+            print("login")
+            return self.login(account: account, password: "", dToken: token)
+        }.subscribe {
+            print($0)
+        }.disposed(by: disposeBag)
+    }
+    
+    
+    func login(account: String, password: String, dToken: String) -> Observable<Void> {
+        
+        return Observable.create { observer -> Disposable in
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                observer.onNext(())
+                observer.onError(TestError.httpError)
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func queryLocalInfo(account: String) -> Observable<String> {
+        
+        return Observable.create { observer -> Disposable in
+            
+            observer.onNext("123456")
+            
+            return Disposables.create()
+        }
+        
+    }
+    
+    func loadServerConfig() -> Observable<Void> {
+        return Observable.create { observer -> Disposable in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                observer.onNext(())
+            }
+            return Disposables.create()
+        }
+    }
     
 }

@@ -13,6 +13,11 @@ import RxCocoa
 private let minimalUsernameLength = 5
 private let minimalPasswordLength = 5
 
+enum LoginTestError : Error {
+    case httpError
+}
+
+
 
 class LoginViewController: BaseViewController {
     
@@ -27,9 +32,17 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var actionButton: UIButton!
     
     
+    @IBOutlet weak var successButton: UIButton!
+    @IBOutlet weak var failureButton: UIButton!
+    @IBOutlet weak var successCount: UILabel!
+    @IBOutlet var failureCount: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "登录"
+        
+        errorHandle()
         
         usernameTips.text = "Username has to be at least \(minimalUsernameLength) characters"
         passwordTips.text = "Password has to be at least \(minimalPasswordLength) characters"
@@ -66,6 +79,36 @@ class LoginViewController: BaseViewController {
         alertC.addAction(cancel)
         
         present(alertC, animated: true, completion: nil)
+    }
+    
+    
+    func errorHandle() {
+        
+        /*
+        
+         疑问
+         1. successTap、failureTap是局部变量，没有保持，为什么没有释放？
+         2. fatMap产生的Observer也没有保存，收到`onError`事件后，为什么就不能再发出事件了, 不是每次都是新的Observer吗？？
+         
+         
+         */
+        
+        let successTap = successButton.rx.tap.map { return true }
+        let failureTap = failureButton.rx.tap.map { return false }
+        
+        Observable.merge(successTap, failureTap).flatMap { (value) -> Observable<Void> in
+             return Observable.create { (observer) -> Disposable in
+                print("Observable.create")
+                if value {
+                    observer.onNext(())
+                } else {
+                    observer.onError(LoginTestError.httpError)
+                }
+                return Disposables.create()
+            }
+        }.subscribe { (event) in
+            print(event)
+        }.disposed(by: disposeBag)
     }
     
     
