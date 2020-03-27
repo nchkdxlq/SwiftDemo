@@ -22,7 +22,7 @@ fileprivate class GeneratorManager {
     }
     
     func removeGenerator(_ genetator: GroupAvatarGenerator) {
-        if let index = generators.index(of: genetator) {
+        if let index = generators.firstIndex(of: genetator) {
             generators.remove(at: index)
         }
     }
@@ -30,7 +30,7 @@ fileprivate class GeneratorManager {
 
 class GroupAvatarGenerator: Equatable {
     
-    private var imageTasks = [RetrieveImageTask]()
+    private var imageTasks = [DownloadTask]()
     private var images = [Any]()
     private let completion: (UIImage?) -> ()
     private let size: CGSize
@@ -109,12 +109,17 @@ class GroupAvatarGenerator: Equatable {
         for (index, item) in self.images.enumerated() {
             group.enter()
             if let url = item as? URL {
-                let task = KingfisherManager.shared.retrieveImage(with: url, options: nil, progressBlock: nil, completionHandler: { (image, error, _, _) in
-                    if let __image = image {
-                        drawImage(__image, at: index)
+                let task = KingfisherManager.shared.retrieveImage(with: url) { (result) in
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                        break
+                    case .success(let imageResult):
+                        drawImage(imageResult.image, at: index)
+                        break
                     }
                     group.leave()
-                })
+                }!
                 imageTasks.append(task)
             } else if let image = item as? UIImage {
                 drawImage(image, at: index)
