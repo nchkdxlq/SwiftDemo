@@ -28,4 +28,10 @@ import Foundation
 
 //array_entry()
 
-operator_entry()
+//operator_entry()
+
+
+generics_entry()
+
+
+print("\n")
