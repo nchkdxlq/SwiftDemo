@@ -31,7 +31,9 @@ import Foundation
 //operator_entry()
 
 
-generics_entry()
+//generics_entry()
+
+protocol_entry()
 
 
 print("\n")

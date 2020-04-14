@@ -9,6 +9,25 @@
 import Foundation
 
 
+
+enum CompassPoint {
+    case east
+    case south
+    case west
+    case north
+}
+
+let point = CompassPoint.east
+
+enum Suit: String {
+    case spades = "黑桃"
+    case hearts = "红桃"
+    case clubs = "草花"
+    case diamonds = "方片"
+}
+
+
+
 /*
  
  1. 成员指
@@ -29,6 +48,10 @@ func enum_entry() {
 //    memoryLayout_test1()
 //    memoryLayout_test2()
     enum_memoryLayout()
+    
+    let suit = Suit.spades
+    print("rawValue", suit.rawValue)
+    print("hashValue", suit.hashValue)
 }
 
 
