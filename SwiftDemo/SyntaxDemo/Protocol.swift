@@ -36,6 +36,8 @@ func protocol_entry() {
     test_optional_protocol()
     
     test_protocol_extension()
+    
+    test_self_protocol()
 } 
 
 /**
@@ -571,3 +573,85 @@ extension Collection where Iterator.Element: TextRepresentable {
 }
 
 
+
+// MARK: - 带有Self的协议
+
+struct MoneytaryAmount: Equatable {
+    var currency: String
+    var amountInCents: Int
+    
+    
+    static func ==(lhs: MoneytaryAmount, rhs: MoneytaryAmount) -> Bool {
+        return lhs.currency == rhs.currency && lhs.amountInCents == rhs.amountInCents
+    }
+}
+
+
+
+func allEqual<E: Equatable>(x: [E]) -> Bool {
+    guard let firstElement = x.first else { return true }
+    for element in x {
+        if element != firstElement {
+            return false
+        }
+    }
+    
+    return true
+}
+
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        guard let firstElement = self.first else { return true }
+        for element in self {
+            if element != firstElement {
+                return false
+            }
+        }
+        
+        return true
+    }
+}
+
+
+class IntegerRef: NSObject {
+    let int: Int
+    
+    init(_ int: Int) {
+        self.int = int
+    }
+    
+//    override func isEqual(_ object: Any?) -> Bool {
+//        guard let intRef = object as? IntegerRef else { return false }
+//        return self.int == intRef.int
+//    }
+}
+
+
+func ==(lhs: IntegerRef, rhs: IntegerRef) -> Bool {
+    return lhs.int == rhs.int
+}
+
+
+func test_self_protocol() {
+    print("==== self_protocol ====")
+    
+    // 不能使用Equatable来作为类型进行变量声明
+//    let x: Equatable = MoneytaryAmount(currency: "Eur", amountInCents: 100)
+    
+    let x = MoneytaryAmount(currency: "Eur", amountInCents: 100)
+    let y = "Hello"
+    print(x, y)
+    // 不能作为类型使用
+//    let arr: [Equatable] = [x, y]
+//    allEqual(x: [x, y])
+    
+    let one = IntegerRef(1)
+    let otherOne = IntegerRef(1)
+    
+    print(one == otherOne) // true
+    
+    // 当它们被声明为NSObject时，那么NSObject的 `==` 将被调用，而这个运算符底层使用的是`===`来检查引用是否指向同一个对象。
+    let two: NSObject = IntegerRef(2)
+    let otherTwo: NSObject = IntegerRef(2)
+    print(two == otherTwo) // false
+}
