@@ -11,14 +11,15 @@ import Foundation
 
 class Lexer {
     
-    var tokens = [Token]() // 保存解析出来的token
+    private (set) var tokens = [Token]() // 保存解析出来的token
     private var state = DfaState.initial
     private var tokenType = TokenType.identifier
     private var tokenText = ""
     
-    func tokenize(code: String) {
+    func tokenize(code: String) -> TokenReader {
         code.forEach(parse)
-        parse(Character(" "))
+        saveTokenIfNeeded()
+        return TokenReader(tokens: tokens)
     }
     
     private func parse(_ ch: Character) {
@@ -100,14 +101,8 @@ class Lexer {
     
     
     private func initToken(_ ch: Character) -> DfaState {
-        if (!tokenText.isEmpty) {
-            // 开启一个新的状态，且tokenText不为空，保存token
-            let token = SimpleToken(type: tokenType, text: tokenText)
-            tokens.append(token)
-            
-            tokenText = "" // 清空
-            tokenType = .identifier
-        }
+        
+        saveTokenIfNeeded()
         
         var newState = DfaState.initial
         
@@ -162,6 +157,17 @@ class Lexer {
         }
         
         return newState
+    }
+    
+    private func saveTokenIfNeeded() {
+        if (!tokenText.isEmpty) {
+            // 开启一个新的状态，且tokenText不为空，保存token
+            let token = SimpleToken(type: tokenType, text: tokenText)
+            tokens.append(token)
+            
+            tokenText = "" // 清空
+            tokenType = .identifier
+        }
     }
     
 }
