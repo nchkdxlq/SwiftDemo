@@ -9,4 +9,11 @@
 import Foundation
 
 
+//let code = "int age = 45"
+//let code = "age >= 45"
+let code = "2+3*5"
 
+let lexer = Lexer()
+lexer.tokenize(code: code)
+
+print(lexer.tokens)
