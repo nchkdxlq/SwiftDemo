@@ -9,11 +9,30 @@
 import Foundation
 
 
-//let code = "int age = 45"
-//let code = "age >= 45"
-let code = "2+3*5"
 
-let lexer = Lexer()
-lexer.tokenize(code: code)
 
-print(lexer.tokens)
+
+func lexer() {
+    //let code = "int age = 45"
+    //let code = "age >= 45"
+    let code = "2+3*5"
+
+    let lexer = Lexer()
+    _ = lexer.tokenize(code: code)
+
+    print(lexer.tokens)
+}
+
+func calculator_entry() {
+    var code = "int a = b+3;"
+    code = "2+3*5"
+    code = "10+1"
+    let calculator = Calculator()
+    let result = calculator.evaluate(code: code)
+    assert(result == 11, "error")
+    print("result = \(result)")
+}
+
+calculator_entry()
+
+

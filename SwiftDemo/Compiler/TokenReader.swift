@@ -9,7 +9,7 @@
 import Foundation
 
 // 用于读取token
-struct TokenReader {
+class TokenReader {
     
     private let tokens: [Token]
     private var pos = 0
@@ -19,7 +19,7 @@ struct TokenReader {
     }
     
     
-    mutating func read() -> Token? {
+    func read() -> Token? {
         var token: Token? = nil;
         if pos < tokens.count {
             token = tokens[pos]
@@ -38,7 +38,7 @@ struct TokenReader {
     }
     
     // 回溯一个token
-    mutating func unread() {
+    func unread() {
         if pos > 0 {
             pos -= 1
         }
