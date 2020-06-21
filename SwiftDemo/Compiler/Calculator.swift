@@ -21,18 +21,15 @@ import Foundation
 
  result = 9
  
- 
- 
- 
  */
 
 class Calculator {
     
     func evaluate(code: String) -> Int {
         // 1. 词法分析
-        let tokenReader = lexer(code: code)
+        let tokenReader = lexicalAnalysis(code: code)
         // 2. 语法分析
-        let node = programRoot(tokenReader: tokenReader)
+        let node = programRoot(tokenReader)
         // 3. 求值
         let result = evaluate(node: node, indent: "")
         
@@ -87,23 +84,23 @@ class Calculator {
     
     
     // MARK: - 词法分析
-    func lexer(code: String) -> TokenReader {
+    func lexicalAnalysis(code: String) -> TokenReader {
         let lexer = Lexer()
         return lexer.tokenize(code: code)
     }
     
     
     // MARK: - 语法分析
-    func programRoot(tokenReader: TokenReader) -> ASTNode {
+    func programRoot(_ tokens: TokenReader) -> ASTNode {
         let node = ASTNode(type: .programm, text: "Calculator")
-        if let child = additive(tokenReader: tokenReader) {
-            node.addChild(child: child)
+        if let child = additive(tokens) {
+            node.addChild(child)
         }
         return node
     }
     
     // MARK: - int声明语句
-    func iniDeclare(tokens: TokenReader) -> ASTNode? {
+    func iniDeclare(_ tokens: TokenReader) -> ASTNode? {
         guard let intToken = tokens.peek() else {
             return nil
         }
@@ -122,8 +119,8 @@ class Calculator {
                 
                 if let assignToken = tokens.peek(), assignToken.type == .assignment {
                     tokens.read() // 消耗掉等号
-                    if let child = additive(tokenReader: tokens) { // 匹配一个表达式
-                        node?.addChild(child: child)
+                    if let child = additive(tokens) { // 匹配一个表达式
+                        node?.addChild(child)
                     } else {
                         print("invalide variable initialization, expecting an expression")
                     }
@@ -147,21 +144,21 @@ class Calculator {
     
     
     // MARK: - 加法表达式
-    private func additive(tokenReader: TokenReader) -> ASTNode? {
-        guard let child1 = multiplicative(tokenReader: tokenReader) else {
+    private func additive_v1(_ tokens: TokenReader) -> ASTNode? {
+        guard let child1 = multiplicative(tokens) else {
             return nil
         }
-        guard var token = tokenReader.peek() else {
+        guard var token = tokens.peek() else {
             return child1
         }
         
         var node = child1
         if token.type == .plus || token.type == .minus {
-            token = tokenReader.read()!
-            if let child2 = additive(tokenReader: tokenReader) {
+            token = tokens.read()!
+            if let child2 = additive_v1(tokens) {
                 node = ASTNode(type: .additive, text: token.text)
-                node.addChild(child: child1)
-                node.addChild(child: child2)
+                node.addChild(child1)
+                node.addChild(child2)
             } else {
                 print("invalid additive expression, expecting the right part.")
             }
@@ -170,24 +167,49 @@ class Calculator {
         return node
     }
     
-    
-    // 语法解析：乘法表达式
-    private func multiplicative(tokenReader: TokenReader) -> ASTNode? {
-        guard let child1 = primary(tokenReader: tokenReader) else {
+    private func additive(_ tokens: TokenReader) -> ASTNode? {
+        guard var child1 = multiplicative(tokens) else {
             return nil
         }
         
-        guard var token = tokenReader.peek() else {
+        // 核心逻辑，把前面的结点作为下个加号token的子节点
+        var node = child1
+        while true {
+            guard let token = tokens.peek(),
+                (token.type == .plus || token.type == .minus) else {
+                break
+            }
+            tokens.read() // 消耗掉加号
+            node = ASTNode(type: .additive, text: token.text)
+            node.addChild(child1) //注意，新节点在顶层，保证正确的结合性
+            if let child2 = multiplicative(tokens) {
+                node.addChild(child2)
+            }
+            
+            child1 = node
+        }
+        
+        return node
+    }
+    
+    
+    // 语法解析：乘法表达式
+    private func multiplicative(_ tokens: TokenReader) -> ASTNode? {
+        guard let child1 = primary(tokens) else {
+            return nil
+        }
+        
+        guard let token = tokens.peek() else {
             return child1
         }
         
         var node = child1
         if token.type == .star || token.type == .slash {
-            token = tokenReader.read()!
-            if let child2 = multiplicative(tokenReader: tokenReader) {
+            tokens.read()
+            if let child2 = multiplicative(tokens) {
                 node = ASTNode(type: .multiplicative, text: token.text)
-                node.addChild(child: child1)
-                node.addChild(child: child2)
+                node.addChild(child1)
+                node.addChild(child2)
             } else {
                 print("invalid multiplicative expression, expecting the right part.")
             }
@@ -197,28 +219,27 @@ class Calculator {
     }
     
     // 语法解析：基础表达式
-    private func primary(tokenReader: TokenReader) -> ASTNode? {
-        guard var token = tokenReader.peek() else { return nil }
+    private func primary(_ tokens: TokenReader) -> ASTNode? {
+        guard let token = tokens.peek() else { return nil }
         var node: ASTNode? = nil
         
         switch token.type {
             case .intLiteral:
-                token = tokenReader.read()!
+                tokens.read()
                 node = ASTNode(type: .intLiteral, text: token.text)
                 break
             
             case .identifier:
-                token = tokenReader.read()!
+                tokens.read()
                 node = ASTNode(type: .identifier, text: token.text)
                 break
             case .leftParen:
-                 _ = tokenReader.read()
-                
-                 node = additive(tokenReader: tokenReader)
+                 tokens.read()
+                 node = additive(tokens)
                  if node != nil {
-                    if let tk = tokenReader.peek() {
+                    if let tk = tokens.peek() {
                         if tk.type == .rightParen {
-                            _ = tokenReader.read()
+                            tokens.read()
                         }
                     } else {
                         print("expecting right parenthesis")

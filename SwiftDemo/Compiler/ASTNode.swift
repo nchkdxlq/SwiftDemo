@@ -44,7 +44,7 @@ class ASTNode {
     }
     
     // 添加子节点的时候，如果子节点不是命名节点，直接把它的下级节点加进来。这样简化了AST。
-    func addChild(child: ASTNode) {
+    func addChild(_ child: ASTNode) {
         if child.isNamedNode {
             children.append(child)
             child.parent = self
