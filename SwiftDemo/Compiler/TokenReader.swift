@@ -19,6 +19,7 @@ class TokenReader {
     }
     
     
+    @discardableResult
     func read() -> Token? {
         var token: Token? = nil;
         if pos < tokens.count {

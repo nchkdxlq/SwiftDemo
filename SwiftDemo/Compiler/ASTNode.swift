@@ -59,7 +59,7 @@ class ASTNode {
 
 
 
-enum ASTNodeType {
+enum ASTNodeType: String {
     case undefined
     case programm          //程序入口，根节点
 

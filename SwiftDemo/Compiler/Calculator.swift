@@ -9,16 +9,40 @@
 import Foundation
 
 
+/*
+ 解析表达式 `2+3+4`时，计算顺序出现了错误，先计算了3+4。
+ 
+ programm Calculator
+     additive +
+         intLiteral 2
+         additive +
+             intLiteral 3
+             intLiteral 4
+
+ result = 9
+ 
+ 
+ 
+ 
+ */
+
 class Calculator {
     
-    
     func evaluate(code: String) -> Int {
-        let node = parse(code: code)
-         return evaluate(node: node, indent: "")
+        // 1. 词法分析
+        let tokenReader = lexer(code: code)
+        // 2. 语法分析
+        let node = programRoot(tokenReader: tokenReader)
+        // 3. 求值
+        let result = evaluate(node: node, indent: "")
+        
+        return result
     }
     
-    // 对某个AST节点求值，并打印求值过程。
+    // MARK: - 对某个AST节点求值，并打印求值过程。
     func evaluate(node: ASTNode, indent: String) -> Int {
+        
+        print(indent + node.type.rawValue + " \(node.text)")
         var result = 0
         
         switch node.type {
@@ -26,8 +50,8 @@ class Calculator {
             for child in node.children {
                result = evaluate(node: child, indent: indent + "\t")
             }
-            
             break
+            
         case .additive:
             let child1 = node.children[0]
             let value1 = evaluate(node: child1, indent: indent + "\t")
@@ -38,6 +62,7 @@ class Calculator {
             } else {
                 return value1 - value2
             }
+            
         case .multiplicative:
             let child1 = node.children[0]
             let value1 = evaluate(node: child1, indent: indent + "\t")
@@ -48,8 +73,11 @@ class Calculator {
             } else {
                 return value1 / value2
             }
+            
         case .intLiteral:
             result = Int(node.text)!
+            break;
+            
         default:
             break
         }
@@ -58,10 +86,10 @@ class Calculator {
     }
     
     
-    func parse(code: String) -> ASTNode {
+    // MARK: - 词法分析
+    func lexer(code: String) -> TokenReader {
         let lexer = Lexer()
-        let tokenReader = lexer.tokenize(code: code)
-        return programRoot(tokenReader: tokenReader)
+        return lexer.tokenize(code: code)
     }
     
     
@@ -74,7 +102,51 @@ class Calculator {
         return node
     }
     
+    // MARK: - int声明语句
+    func iniDeclare(tokens: TokenReader) -> ASTNode? {
+        guard let intToken = tokens.peek() else {
+            return nil
+        }
+        
+        var node: ASTNode? = nil
+        
+        if intToken.type == .int {
+            tokens.read() // 消耗掉 int
+            // 匹配标识符
+            if let idToken = tokens.peek(), idToken.type == .identifier {
+                //创建当前节点，并把变量名记到AST节点的文本值中，这里新建一个变量子节点也是可以的
+                node = ASTNode(type: .intDeclaration, text: idToken.text)
+                
+                // 消耗掉标识符
+                tokens.read()
+                
+                if let assignToken = tokens.peek(), assignToken.type == .assignment {
+                    tokens.read() // 消耗掉等号
+                    if let child = additive(tokenReader: tokens) { // 匹配一个表达式
+                        node?.addChild(child: child)
+                    } else {
+                        print("invalide variable initialization, expecting an expression")
+                    }
+                }
+                
+            } else {
+                print("variable name expected")
+            }
+        }
+        
+        if node != nil {
+            if let semiToken = tokens.peek(), semiToken.type == .semiColon {
+                tokens.read()
+            }
+        } else {
+            print("invalid statement, expecting semicolon")
+        }
+        
+        return node
+    }
     
+    
+    // MARK: - 加法表达式
     private func additive(tokenReader: TokenReader) -> ASTNode? {
         guard let child1 = multiplicative(tokenReader: tokenReader) else {
             return nil

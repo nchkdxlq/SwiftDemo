@@ -25,12 +25,11 @@ func lexer() {
 
 func calculator_entry() {
     var code = "int a = b+3;"
-    code = "2+3*5"
-    code = "10+1"
+    code = "2+3*5*2"
+    code = "2+3+4"
     let calculator = Calculator()
     let result = calculator.evaluate(code: code)
-    assert(result == 11, "error")
-    print("result = \(result)")
+    print("\nresult = \(result) \n")
 }
 
 calculator_entry()
