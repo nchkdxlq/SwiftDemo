@@ -32,6 +32,9 @@ func calculator_entry() {
     print("\nresult = \(result) \n")
 }
 
-calculator_entry()
+//calculator_entry()
+
+
+scriptParser()
 
 

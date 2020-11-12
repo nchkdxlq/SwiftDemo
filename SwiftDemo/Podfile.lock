@@ -31,7 +31,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Kingfisher
     - PromiseKit
@@ -53,4 +53,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 863e91e938deff4a7d57a304fa175eea230c1c95
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1

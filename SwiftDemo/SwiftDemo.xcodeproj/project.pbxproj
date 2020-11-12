@@ -86,6 +86,7 @@
 		183629ED249DCD1B00C5E2BF /* TokenReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629EC249DCD1B00C5E2BF /* TokenReader.swift */; };
 		183629EF249DD66500C5E2BF /* ASTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629EE249DD66500C5E2BF /* ASTNode.swift */; };
 		183629F1249DDAE100C5E2BF /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629F0249DDAE100C5E2BF /* Calculator.swift */; };
+		183629F324A8155200C5E2BF /* ScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629F224A8155200C5E2BF /* ScriptParser.swift */; };
 		18404EE622E34CE800D4034E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404EE522E34CE800D4034E /* main.swift */; };
 		18404EEB22E34D3800D4034E /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404EEA22E34D3800D4034E /* struct.swift */; };
 		1846690422E4223A00D452C4 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846690322E4223A00D452C4 /* function.swift */; };
@@ -277,6 +278,7 @@
 		183629EC249DCD1B00C5E2BF /* TokenReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReader.swift; sourceTree = "<group>"; };
 		183629EE249DD66500C5E2BF /* ASTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNode.swift; sourceTree = "<group>"; };
 		183629F0249DDAE100C5E2BF /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		183629F224A8155200C5E2BF /* ScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptParser.swift; sourceTree = "<group>"; };
 		18404EE322E34CE800D4034E /* SyntaxDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SyntaxDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		18404EE522E34CE800D4034E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18404EEA22E34D3800D4034E /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 		183629DE249C3FC400C5E2BF /* Compiler */ = {
 			isa = PBXGroup;
 			children = (
+				183629E6249C45D300C5E2BF /* Util.swift */,
 				183629DF249C3FC400C5E2BF /* main.swift */,
 				183629E4249C446700C5E2BF /* types.swift */,
 				183629EA249D024100C5E2BF /* Token.swift */,
@@ -606,7 +609,7 @@
 				183629EC249DCD1B00C5E2BF /* TokenReader.swift */,
 				183629EE249DD66500C5E2BF /* ASTNode.swift */,
 				183629F0249DDAE100C5E2BF /* Calculator.swift */,
-				183629E6249C45D300C5E2BF /* Util.swift */,
+				183629F224A8155200C5E2BF /* ScriptParser.swift */,
 			);
 			path = Compiler;
 			sourceTree = "<group>";
@@ -1181,6 +1184,7 @@
 			files = (
 				183629E0249C3FC400C5E2BF /* main.swift in Sources */,
 				183629EF249DD66500C5E2BF /* ASTNode.swift in Sources */,
+				183629F324A8155200C5E2BF /* ScriptParser.swift in Sources */,
 				183629EB249D024100C5E2BF /* Token.swift in Sources */,
 				183629ED249DCD1B00C5E2BF /* TokenReader.swift in Sources */,
 				183629E7249C45D300C5E2BF /* Util.swift in Sources */,

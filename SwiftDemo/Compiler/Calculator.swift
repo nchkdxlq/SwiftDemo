@@ -36,6 +36,7 @@ class Calculator {
         return result
     }
     
+    
     // MARK: - 对某个AST节点求值，并打印求值过程。
     func evaluate(node: ASTNode, indent: String) -> Int {
         
@@ -120,7 +121,7 @@ class Calculator {
                 if let assignToken = tokens.peek(), assignToken.type == .assignment {
                     tokens.read() // 消耗掉等号
                     if let child = additive(tokens) { // 匹配一个表达式
-                        node?.addChild(child)
+                        node!.addChild(child)
                     } else {
                         print("invalide variable initialization, expecting an expression")
                     }
@@ -254,6 +255,55 @@ class Calculator {
         }
         
         return node
+    }
+    
+    // MARK: - 赋值语句
+    private func assignmentStatement(_ tokens: TokenReader) -> ASTNode? {
+        guard let idToken = tokens.peek(), idToken.type == .identifier else {
+            return nil;
+        }
+        var node: ASTNode? = nil
+        
+        tokens.read() // 消耗标识符
+        if let assignToken = tokens.peek(), assignToken.type == .assignment {
+            tokens.read() // 消化掉等号
+            if let child = additive(tokens) {
+                node = ASTNode(type: .assignmentStmt, text: idToken.text)
+                node!.addChild(child)
+                if let semiToken = tokens.peek(), semiToken.type == .semiColon {
+                    tokens.read() // 消化掉分号
+                } else {
+                    // 报错，缺少分号
+                    print("invalid statement, expecting semicolon")
+                    exit(1)
+                }
+            } else {
+                // 出错，等号右面没有一个合法的表达式
+                print("invalide assignment statement, expecting an expression")
+                exit(1)
+            }
+        } else {
+            tokens.unread() // 回溯，吐出之前消化的标识符
+        }
+        
+        return node;
+    }
+    
+    
+    private func expressionStatement(_ tokens: TokenReader) -> ASTNode? {
+        let pos = tokens.position // 记下初始位置
+        guard let node = additive(tokens) else { // 匹配加法规则
+            return nil
+        }
+        
+        // 匹配分号
+        if let semiToken = tokens.peek(), semiToken.type == .semiColon {
+            tokens.read() // 消化掉分号
+            return node
+        } else {
+            tokens.position = pos // 缺少分号，回溯
+            return nil
+        }
     }
     
 }
