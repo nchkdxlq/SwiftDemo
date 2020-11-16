@@ -77,6 +77,13 @@
 		1822DF4323403F4B00318293 /* RxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */; };
 		1822DF452340EB7B00318293 /* Transforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822DF442340EB7B00318293 /* Transforming.swift */; };
 		1822DF472340F87B00318293 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822DF462340F87B00318293 /* Filter.swift */; };
+		18335448255D774F006826F6 /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18335447255D774F006826F6 /* URLSessionViewController.swift */; };
+		18335458255D79F0006826F6 /* SessionTaskDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18335457255D79F0006826F6 /* SessionTaskDelegateImp.swift */; };
+		18335460255D7BFB006826F6 /* SessionDataDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833545F255D7BFB006826F6 /* SessionDataDelegateImp.swift */; };
+		1833546E255D7C8F006826F6 /* SessionDownloadDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833546D255D7C8F006826F6 /* SessionDownloadDelegateImp.swift */; };
+		18335476255D7CE7006826F6 /* SessionStreamDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18335475255D7CE7006826F6 /* SessionStreamDelegateImp.swift */; };
+		18335490255D7D41006826F6 /* SessionWebSocketDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833548F255D7D41006826F6 /* SessionWebSocketDelegateImp.swift */; };
+		183354A4255D7EF9006826F6 /* URLSessionDelegateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183354A3255D7EF9006826F6 /* URLSessionDelegateImp.swift */; };
 		183629D82494971500C5E2BF /* JavaScriptCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629D72494971500C5E2BF /* JavaScriptCore.swift */; };
 		183629E0249C3FC400C5E2BF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629DF249C3FC400C5E2BF /* main.swift */; };
 		183629E5249C446700C5E2BF /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183629E4249C446700C5E2BF /* types.swift */; };
@@ -268,6 +275,13 @@
 		1822DF4223403F4B00318293 /* RxSwiftTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTestViewController.swift; sourceTree = "<group>"; };
 		1822DF442340EB7B00318293 /* Transforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transforming.swift; sourceTree = "<group>"; };
 		1822DF462340F87B00318293 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		18335447255D774F006826F6 /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
+		18335457255D79F0006826F6 /* SessionTaskDelegateImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTaskDelegateImp.swift; sourceTree = "<group>"; };
+		1833545F255D7BFB006826F6 /* SessionDataDelegateImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataDelegateImp.swift; sourceTree = "<group>"; };
+		1833546D255D7C8F006826F6 /* SessionDownloadDelegateImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDownloadDelegateImp.swift; sourceTree = "<group>"; };
+		18335475255D7CE7006826F6 /* SessionStreamDelegateImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStreamDelegateImp.swift; sourceTree = "<group>"; };
+		1833548F255D7D41006826F6 /* SessionWebSocketDelegateImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionWebSocketDelegateImp.swift; sourceTree = "<group>"; };
+		183354A3255D7EF9006826F6 /* URLSessionDelegateImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDelegateImp.swift; sourceTree = "<group>"; };
 		183629D72494971500C5E2BF /* JavaScriptCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptCore.swift; sourceTree = "<group>"; };
 		183629DD249C3FC400C5E2BF /* Compiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Compiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		183629DF249C3FC400C5E2BF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -525,6 +539,7 @@
 		08F396B2204AE01400FD2DE4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18335432255D76D1006826F6 /* Network */,
 				766966442289967400BA69B8 /* BaseViewController.swift */,
 				08F396EB204AE02500FD2DE4 /* CustomWebViewController.swift */,
 				08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */,
@@ -596,6 +611,20 @@
 				C102318F130CC1F5A1AEE985 /* Pods_RxSwiftDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18335432255D76D1006826F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18335447255D774F006826F6 /* URLSessionViewController.swift */,
+				183354A3255D7EF9006826F6 /* URLSessionDelegateImp.swift */,
+				18335457255D79F0006826F6 /* SessionTaskDelegateImp.swift */,
+				1833545F255D7BFB006826F6 /* SessionDataDelegateImp.swift */,
+				1833546D255D7C8F006826F6 /* SessionDownloadDelegateImp.swift */,
+				18335475255D7CE7006826F6 /* SessionStreamDelegateImp.swift */,
+				1833548F255D7D41006826F6 /* SessionWebSocketDelegateImp.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		183629DE249C3FC400C5E2BF /* Compiler */ = {
@@ -1088,19 +1117,24 @@
 			files = (
 				76CA56B8210821CE001B6F2E /* Init.swift in Sources */,
 				084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */,
+				18335476255D7CE7006826F6 /* SessionStreamDelegateImp.swift in Sources */,
 				08F396D8204AE01400FD2DE4 /* ButtonViewController.swift in Sources */,
 				08561795210DB6C4001B2006 /* StrategyEntry.swift in Sources */,
 				76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */,
 				766966452289967400BA69B8 /* BaseViewController.swift in Sources */,
+				18335490255D7D41006826F6 /* SessionWebSocketDelegateImp.swift in Sources */,
+				1833546E255D7C8F006826F6 /* SessionDownloadDelegateImp.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
 				085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */,
 				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
+				183354A4255D7EF9006826F6 /* URLSessionDelegateImp.swift in Sources */,
 				18DF3F3923403BEA0012D590 /* UIColor+Extension.swift in Sources */,
 				08F396CD204AE01400FD2DE4 /* SearchViewController.swift in Sources */,
 				085EA3712111EA7F0073A516 /* ObserverEntry.swift in Sources */,
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
+				18335448255D774F006826F6 /* URLSessionViewController.swift in Sources */,
 				08561793210DB6AD001B2006 /* Duck.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				085617732108B338001B2006 /* Command.swift in Sources */,
@@ -1124,6 +1158,7 @@
 				08F396D1204AE01400FD2DE4 /* BadgeView.swift in Sources */,
 				08F396F5204AE0DF00FD2DE4 /* Extension.swift in Sources */,
 				7619A099214699BB005D9C95 /* Generics.swift in Sources */,
+				18335460255D7BFB006826F6 /* SessionDataDelegateImp.swift in Sources */,
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
 				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
@@ -1132,6 +1167,7 @@
 				08F396DA204AE01400FD2DE4 /* KeyboardViewController.swift in Sources */,
 				08F396DB204AE01400FD2DE4 /* EZBaseVC.swift in Sources */,
 				08F396DD204AE01400FD2DE4 /* EZTabBarController.swift in Sources */,
+				18335458255D79F0006826F6 /* SessionTaskDelegateImp.swift in Sources */,
 				08F396D0204AE01400FD2DE4 /* GestureRecognizerViewController.swift in Sources */,
 				18DF3F3F23403CFC0012D590 /* UIView+Extension.swift in Sources */,
 				08F396DF204AE01400FD2DE4 /* SwiftyJSONViewController.swift in Sources */,

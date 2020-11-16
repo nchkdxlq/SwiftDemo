@@ -89,6 +89,9 @@ class ViewController: EZBaseVC {
         
         let item14 = CellInfo(title: "Misc", vcClass: MiscViewController.self)
         dataSource.append(item14)
+        
+        let item15 = CellInfo(title: "URLSession", vcClass: URLSessionViewController.self)
+        dataSource.append(item15)
     }
     
     
