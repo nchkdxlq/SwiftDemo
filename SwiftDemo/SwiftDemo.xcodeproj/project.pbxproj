@@ -123,6 +123,7 @@
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
+		1899B6B02568A019005F4DC7 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */; };
 		18C1A23C234E191600AB47A8 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23B234E191600AB47A8 /* Observer.swift */; };
 		18C1A23E234E24B700AB47A8 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23D234E24B700AB47A8 /* Bind.swift */; };
 		18C1A241234EBE5700AB47A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A240234EBE5700AB47A8 /* LoginViewController.swift */; };
@@ -325,6 +326,7 @@
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
+		1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafePointer.swift; sourceTree = "<group>"; };
 		18C1A23B234E191600AB47A8 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		18C1A23D234E24B700AB47A8 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
 		18C1A240234EBE5700AB47A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 				18577E9E233EFB2E00EA6003 /* Array.swift */,
 				18577EA2233F532100EA6003 /* Operator.swift */,
 				183629D72494971500C5E2BF /* JavaScriptCore.swift */,
+				1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */,
 			);
 			path = SyntaxDemo;
 			sourceTree = "<group>";
@@ -1251,6 +1254,7 @@
 				1846690422E4223A00D452C4 /* function.swift in Sources */,
 				18577EA3233F532100EA6003 /* Operator.swift in Sources */,
 				18FD10FB2335FDA300504E86 /* Closure.swift in Sources */,
+				1899B6B02568A019005F4DC7 /* UnsafePointer.swift in Sources */,
 				185A237E232719A9001A1FAD /* Mems.swift in Sources */,
 				18577E9F233EFB2E00EA6003 /* Array.swift in Sources */,
 				18FD10FD233767E100504E86 /* Property.swift in Sources */,

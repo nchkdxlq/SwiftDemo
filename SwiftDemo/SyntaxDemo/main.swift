@@ -33,7 +33,9 @@ import Foundation
 
 //generics_entry()
 
-protocol_entry()
+//protocol_entry()
 
+
+unsafePointer_entry()
 
 print("\n")
