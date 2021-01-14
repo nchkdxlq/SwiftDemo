@@ -2,12 +2,14 @@ platform :ios, '10.0'
 use_frameworks!
 
 def common_pods
-  pod 'Alamofire', '~> 5.0'
+  pod 'Alamofire', '~> 5.2'
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 4.0.0'
   pod 'PromiseKit', '~> 6.0'
   pod 'Kingfisher', '~> 5.0'
   #  pod 'ImageViewer'
+#  pod 'Starscream', '~> 4.0.0'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 end
 
 target :'SwiftDemo'  do

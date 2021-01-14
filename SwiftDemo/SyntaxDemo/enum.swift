@@ -30,7 +30,7 @@ enum Suit: String {
 
 /*
  
- 1. 成员指
+ 1. 成员值
  2. 关联值 (associate value) 关联的值存储在枚举变量中
  3. 原始值 (rawValue)
  
@@ -38,7 +38,7 @@ enum Suit: String {
  总结：
  1. 枚举的`关联值`存储在枚举变量内存中, 关联值枚举类型的内存空间模型为: 前面的字节是`关联值`，接下来的字节才是`成员值`
  2. `原始值`不存储在枚举变量中, 通过枚举的rawValue(计算属性)属性获取, 所以`原始值类型`不影响枚举变量占用内存空间大小
- 3. 成员值值需要一个字节存储, 当枚举只有一个成员时, 枚举变量占用的内存空间为0.
+ 3. 成员值只需要一个字节存储, 当枚举只有一个成员时, 枚举变量占用的内存空间为0.
  
  */
 
@@ -48,6 +48,7 @@ func enum_entry() {
 //    memoryLayout_test1()
 //    memoryLayout_test2()
     enum_memoryLayout()
+    recursive_test()
     
     let suit = Suit.spades
     print("rawValue", suit.rawValue)
@@ -134,3 +135,38 @@ fileprivate func enum_memoryLayout() {
      
      */
 }
+
+
+// 递归枚举
+indirect enum ArithExpr {
+    case number(Int)
+    case addition(ArithExpr, ArithExpr)
+    case subtraction(ArithExpr, ArithExpr)
+    
+    func calculate() -> Int {
+        switch self {
+        case let .number(num):
+            return num
+        case let .addition(left, right):
+            return left.calculate() + right.calculate()
+        case let .subtraction(left, right):
+            return left.calculate() - right.calculate()
+        }
+    }
+}
+
+
+func recursive_test() {
+    let a = ArithExpr.number(10)
+    let b = ArithExpr.number(5)
+    let sum = ArithExpr.addition(a, b)
+    let sub = ArithExpr.subtraction(sum, a)
+    
+    let result = sub.calculate()
+    print("ArithExpr = \(result)")
+    
+    if case ArithExpr.number(let num) = a {
+        
+    }
+}
+
