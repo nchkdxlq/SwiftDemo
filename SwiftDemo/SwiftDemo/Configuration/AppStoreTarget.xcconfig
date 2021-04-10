@@ -15,5 +15,6 @@
 
 APP_BUNDLE_NAME = $(inherited)
 APP_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo
+APP_ICON = AppIcon
 
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) TARGET_PROD

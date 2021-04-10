@@ -15,5 +15,6 @@
 
 APP_BUNDLE_NAME = $(inherited) deta
 APP_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo.internal
+APP_ICON = AppIcon-deta
 
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) TARGET_BETA

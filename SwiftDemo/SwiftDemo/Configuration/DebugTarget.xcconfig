@@ -15,6 +15,7 @@
 
 APP_BUNDLE_NAME = $(inherited) dev
 APP_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo.dev
+APP_ICON = AppIcon-dev
 
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) TARGET_DEBUG
 
