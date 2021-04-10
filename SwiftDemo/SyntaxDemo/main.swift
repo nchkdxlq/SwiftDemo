@@ -16,7 +16,7 @@ import Foundation
 
 //optional_entry()
 
-//closure_entry()
+closure_entry()
 
 //property_entry()
 
@@ -36,6 +36,6 @@ import Foundation
 //protocol_entry()
 
 
-unsafePointer_entry()
+//unsafePointer_entry()
 
 print("\n")
