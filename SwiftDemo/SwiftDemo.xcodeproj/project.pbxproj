@@ -1405,7 +1405,7 @@
 			};
 			name = Debug;
 		};
-		08E27C8D204AA2FD00CD1AE1 /* Release */ = {
+		08E27C8D204AA2FD00CD1AE1 /* Internal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1457,7 +1457,7 @@
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Internal;
 		};
 		08E27C8F204AA2FD00CD1AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1477,7 +1477,7 @@
 			};
 			name = Debug;
 		};
-		08E27C90204AA2FD00CD1AE1 /* Release */ = {
+		08E27C90204AA2FD00CD1AE1 /* Internal */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
@@ -1493,7 +1493,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Internal;
 		};
 		08E27C92204AA2FD00CD1AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1512,7 +1512,7 @@
 			};
 			name = Debug;
 		};
-		08E27C93204AA2FD00CD1AE1 /* Release */ = {
+		08E27C93204AA2FD00CD1AE1 /* Internal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1527,7 +1527,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDemo.app/SwiftDemo";
 			};
-			name = Release;
+			name = Internal;
 		};
 		08E27C95204AA2FD00CD1AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1545,7 +1545,7 @@
 			};
 			name = Debug;
 		};
-		08E27C96204AA2FD00CD1AE1 /* Release */ = {
+		08E27C96204AA2FD00CD1AE1 /* Internal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1559,7 +1559,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftDemo;
 			};
-			name = Release;
+			name = Internal;
 		};
 		183629E1249C3FC400C5E2BF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1578,7 +1578,7 @@
 			};
 			name = Debug;
 		};
-		183629E2249C3FC400C5E2BF /* Release */ = {
+		183629E2249C3FC400C5E2BF /* Internal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -1592,7 +1592,7 @@
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
-			name = Release;
+			name = Internal;
 		};
 		18404EE722E34CE800D4034E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1611,7 +1611,7 @@
 			};
 			name = Debug;
 		};
-		18404EE822E34CE800D4034E /* Release */ = {
+		18404EE822E34CE800D4034E /* Internal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -1625,7 +1625,7 @@
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
-			name = Release;
+			name = Internal;
 		};
 		18577EEF233F689800EA6003 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1648,7 +1648,7 @@
 			};
 			name = Debug;
 		};
-		18577EF0233F689800EA6003 /* Release */ = {
+		18577EF0233F689800EA6003 /* Internal */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 854CC3820DF27E60449358BA /* Pods-RxSwiftDemo.release.xcconfig */;
 			buildSettings = {
@@ -1666,7 +1666,164 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = Internal;
+		};
+		18E5EE732621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		18E5EE742621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F120DA3D778D118EA8D5FF /* Pods-SwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 733RR644TP;
+				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		18E5EE752621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 733RR644TP;
+				INFOPLIST_FILE = SwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDemo.app/SwiftDemo";
+			};
+			name = AppStore;
+		};
+		18E5EE762621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 733RR644TP;
+				INFOPLIST_FILE = SwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftDemo;
+			};
+			name = AppStore;
+		};
+		18E5EE772621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PAXG53JU3J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = AppStore;
+		};
+		18E5EE782621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854CC3820DF27E60449358BA /* Pods-RxSwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.knox.RxSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = AppStore;
+		};
+		18E5EE792621494B00BC116E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PAXG53JU3J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = AppStore;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1675,64 +1832,71 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08E27C8C204AA2FD00CD1AE1 /* Debug */,
-				08E27C8D204AA2FD00CD1AE1 /* Release */,
+				08E27C8D204AA2FD00CD1AE1 /* Internal */,
+				18E5EE732621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		08E27C8E204AA2FD00CD1AE1 /* Build configuration list for PBXNativeTarget "SwiftDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08E27C8F204AA2FD00CD1AE1 /* Debug */,
-				08E27C90204AA2FD00CD1AE1 /* Release */,
+				08E27C90204AA2FD00CD1AE1 /* Internal */,
+				18E5EE742621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		08E27C91204AA2FD00CD1AE1 /* Build configuration list for PBXNativeTarget "SwiftDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08E27C92204AA2FD00CD1AE1 /* Debug */,
-				08E27C93204AA2FD00CD1AE1 /* Release */,
+				08E27C93204AA2FD00CD1AE1 /* Internal */,
+				18E5EE752621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		08E27C94204AA2FD00CD1AE1 /* Build configuration list for PBXNativeTarget "SwiftDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08E27C95204AA2FD00CD1AE1 /* Debug */,
-				08E27C96204AA2FD00CD1AE1 /* Release */,
+				08E27C96204AA2FD00CD1AE1 /* Internal */,
+				18E5EE762621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		183629E3249C3FC400C5E2BF /* Build configuration list for PBXNativeTarget "Compiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183629E1249C3FC400C5E2BF /* Debug */,
-				183629E2249C3FC400C5E2BF /* Release */,
+				183629E2249C3FC400C5E2BF /* Internal */,
+				18E5EE792621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		18404EE922E34CE800D4034E /* Build configuration list for PBXNativeTarget "SyntaxDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18404EE722E34CE800D4034E /* Debug */,
-				18404EE822E34CE800D4034E /* Release */,
+				18404EE822E34CE800D4034E /* Internal */,
+				18E5EE772621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 		18577EF1233F689800EA6003 /* Build configuration list for PBXNativeTarget "RxSwiftDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18577EEF233F689800EA6003 /* Debug */,
-				18577EF0233F689800EA6003 /* Release */,
+				18577EF0233F689800EA6003 /* Internal */,
+				18E5EE782621494B00BC116E /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Internal;
 		};
 /* End XCConfigurationList section */
 	};
