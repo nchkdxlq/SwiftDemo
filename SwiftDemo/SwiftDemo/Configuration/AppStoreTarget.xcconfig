@@ -1,0 +1,19 @@
+//
+//  AppStoreTarget.xcconfig
+//  SwiftDemo
+//
+//  Created by Knox on 2021/4/10.
+//  Copyright © 2021 luoquan. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+#include "../../Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.appstore.xcconfig"
+#include "BaseTarget.xcconfig"
+
+APP_BUNDLE_NAME = $(inherited)
+APP_BUNDLE_IDENTIFIER = com.nchkdxlq.SwiftDemo
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) TARGET_PROD

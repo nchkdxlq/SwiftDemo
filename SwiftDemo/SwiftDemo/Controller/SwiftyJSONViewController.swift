@@ -17,7 +17,7 @@ class SwiftyJSONViewController: EZBaseVC {
 
         let str = "{\"name\": \"luoquan\", \"age\": 25, \"gender\": \"male\"}"
         
-        let jsonObject = JSON.parse(str)
+        let jsonObject = JSON(str)
         
         // 方式1
         let result = jsonObject.dictionaryValue

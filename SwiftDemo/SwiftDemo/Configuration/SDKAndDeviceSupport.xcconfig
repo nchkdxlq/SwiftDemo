@@ -1,0 +1,13 @@
+//
+//  SDKAndDeviceSupport.xcconfig
+//  SwiftDemo
+//
+//  Created by Knox on 2021/4/10.
+//  Copyright © 2021 luoquan. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+TARGETED_DEVICE_FAMILY = 1
+IPHONEOS_DEPLOYMENT_TARGET = 12.0

@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        logBuildConfigurationSettings()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootVc = EZNavigationController(rootViewController: ViewController())
@@ -27,6 +28,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        protocolEntry()
         
         return true
+    }
+    
+    private func logBuildConfigurationSettings() {
+        var settings = "App Environment"
+        #if DEBUG
+            settings += " Project-debug"
+        #elseif BETA
+            settings += " Project-internal"
+        #elseif PROD
+            settings += " Project-appStore"
+        #else
+            settings += " Project-null"
+        #endif
+                    
+        #if TARGET_DEBUG
+            settings += " Target-debug"
+        #elseif TARGET_DETA
+            settings += " Target-internal"
+        #elseif TARGET_PROD
+            settings += " Target-appStore"
+        #else
+            settings += " Target-null"
+        #endif
+        print("\n>>>>>>>>>>>>>>>>> ", settings, " <<<<<<<<<<<<<<<<<<\n")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
