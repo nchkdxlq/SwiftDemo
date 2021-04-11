@@ -1,8 +1,6 @@
 PODS:
   - Alamofire (5.4.2)
-  - Kingfisher (5.13.2):
-    - Kingfisher/Core (= 5.13.2)
-  - Kingfisher/Core (5.13.2)
+  - Kingfisher (6.2.1)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -23,24 +21,23 @@ PODS:
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
   - SwiftGen (6.4.0)
-  - SwiftLint (0.40.3)
+  - SwiftLint (0.43.1)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4.2)
-  - Kingfisher (~> 5.0)
+  - Kingfisher (~> 6.2)
   - PromiseKit (~> 6.0)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SnapKit (~> 5.0.0)
   - Socket.IO-Client-Swift (~> 15.2.0)
   - SwiftGen (= 6.4.0)
-  - SwiftLint (= 0.40.3)
+  - SwiftLint (= 0.43.1)
   - SwiftyJSON (~> 5.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Kingfisher
     - PromiseKit
     - RxCocoa
     - RxRelay
@@ -48,6 +45,7 @@ SPEC REPOS:
     - SnapKit
   trunk:
     - Alamofire
+    - Kingfisher
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftGen
@@ -56,7 +54,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
-  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -65,9 +63,9 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
-  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: a9470cfe7683fff25e0cbec6ee8528a7560d1b3f
+PODFILE CHECKSUM: b88f4e71b2aa530387892f00942469334294f12c
 
 COCOAPODS: 1.10.0

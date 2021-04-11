@@ -21,7 +21,7 @@ class RxSwiftTestViewController: BaseViewController {
     let bind = BindTest()
     let share = ShareTest()
     let map = MapTest()
-    let take_skip = Take_Skip()
+    let takeSkip = Take_Skip()
     
     override func viewDidLoad() {
         super.viewDidLoad()

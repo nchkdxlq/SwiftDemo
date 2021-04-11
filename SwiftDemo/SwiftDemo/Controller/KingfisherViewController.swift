@@ -111,21 +111,8 @@ class KingfisherViewController: EZBaseVC {
         let url = URL(string: image_url)
         let placeholder = UIImage(named: "Me")
         testProgressView.startAnimating()
-        imageView.kf.setImage(with: url,
-                              placeholder: placeholder,
-                              options: [.forceRefresh],
-                              progressBlock: { (current, total) in
-                                let progress = Double(current) / Double(total)
-                                testProgressView.setProgress(progress)
-                                print("progress: \(progress)")
-                                
-        }) { (image, error, cachaType, url) in
-            testProgressView.stopAnimating()
-            testProgressView.removeFromSuperview()
-            if let __image = image {
-                print(__image)
-            }
-        }
+        
+        imageView.kf.setImage(with: url, placeholder: placeholder, options: [.forceRefresh])
     }
     
     

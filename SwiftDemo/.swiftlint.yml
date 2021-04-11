@@ -1,0 +1,23 @@
+only_rules:
+  - array_init
+  - attributes
+  - block_based_kvo
+  - class_delegate_protocol
+  - closing_brace
+  - closure_end_indentation
+  - closure_parameter_position
+  - closure_spacing
+  - collection_alignment
+  - comma
+
+excluded:
+  - Pods
+  - "./SwiftDemoTests"
+  - "./SwiftDemoUITests"
+
+custom_rules:
+  no_hardcoded_strings:
+    regex: "([A-Za-z]+)"
+    match_kinds: string
+    message: "Please do not hardcode strings and add them to the appropriate `Localizable.strings` file; a build script compiles all strings into strongly typed resources available through `Generated/Strings.swift`, e.g. `L10n.accessCamera"
+    severity: warning

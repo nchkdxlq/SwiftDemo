@@ -8,7 +8,7 @@ def common_pods
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 5.0.1'
   pod 'PromiseKit', '~> 6.0'
-  pod 'Kingfisher', '~> 5.0'
+  pod 'Kingfisher', '~> 6.2'
   #  pod 'ImageViewer'
 #  pod 'Starscream', '~> 4.0.0'
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
@@ -16,7 +16,7 @@ end
 
 
 def dev_pods
-  pod 'SwiftLint', '0.40.3', configurations: ['Debug']
+  pod 'SwiftLint', '0.43.1', configurations: ['Debug']
   pod 'SwiftGen', '6.4.0', configurations: ['Debug']
 end
 
