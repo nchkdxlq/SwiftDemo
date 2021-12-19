@@ -124,6 +124,7 @@
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
 		1899B6B02568A019005F4DC7 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */; };
+		18A9370B26BD7562000088B7 /* WKNavigationDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */; };
 		18C1A23C234E191600AB47A8 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23B234E191600AB47A8 /* Observer.swift */; };
 		18C1A23E234E24B700AB47A8 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23D234E24B700AB47A8 /* Bind.swift */; };
 		18C1A241234EBE5700AB47A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A240234EBE5700AB47A8 /* LoginViewController.swift */; };
@@ -330,6 +331,7 @@
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
 		1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafePointer.swift; sourceTree = "<group>"; };
+		18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKNavigationDelegateImpl.swift; sourceTree = "<group>"; };
 		18C1A23B234E191600AB47A8 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		18C1A23D234E24B700AB47A8 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
 		18C1A240234EBE5700AB47A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -563,8 +565,9 @@
 			children = (
 				763BC8432594567F00CE3C24 /* CollectionView */,
 				18335432255D76D1006826F6 /* Network */,
-				766966442289967400BA69B8 /* BaseViewController.swift */,
+				18A9370926BD751B000088B7 /* WKWebView */,
 				08F396EB204AE02500FD2DE4 /* CustomWebViewController.swift */,
+				766966442289967400BA69B8 /* BaseViewController.swift */,
 				08F396F8204AE8D600FD2DE4 /* ProtocolViewController.swift */,
 				08F396B3204AE01400FD2DE4 /* ClosureSyntax.swift */,
 				08F396B4204AE01400FD2DE4 /* SearchResultsController.swift */,
@@ -588,7 +591,6 @@
 				08F396C9204AE01400FD2DE4 /* Student.swift */,
 				08F396CA204AE01400FD2DE4 /* LQTextViewController.swift */,
 				084D0B34205DEF5700C2795A /* VideoPlayViewController.swift */,
-				085EA37821134E120073A516 /* WKWebViewController.swift */,
 				76696642228994EF00BA69B8 /* StackViewController.swift */,
 				76B935A322E09A7F00D216E9 /* MiscViewController.swift */,
 			);
@@ -727,6 +729,15 @@
 				18683D3523532459007FC806 /* TableViewController.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		18A9370926BD751B000088B7 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				085EA37821134E120073A516 /* WKWebViewController.swift */,
+				18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */,
+			);
+			path = WKWebView;
 			sourceTree = "<group>";
 		};
 		18DF3F33234037420012D590 /* Classes */ = {
@@ -1281,6 +1292,7 @@
 				08F396F9204AE8D700FD2DE4 /* ProtocolViewController.swift in Sources */,
 				763BC8452594570A00CE3C24 /* NKCollectionHeaderView.swift in Sources */,
 				08E36E2E204EDA0E0020D5FB /* RefreshHeaderView.swift in Sources */,
+				18A9370B26BD7562000088B7 /* WKNavigationDelegateImpl.swift in Sources */,
 				18DF3F3C23403CD90012D590 /* UITableView+Extension.swift in Sources */,
 				08F396ED204AE02500FD2DE4 /* CustomWebViewController.swift in Sources */,
 				08F396D3204AE01400FD2DE4 /* BaseTableViewController.swift in Sources */,
