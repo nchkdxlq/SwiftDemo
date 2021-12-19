@@ -99,6 +99,8 @@
 		184593C4276EF2390012EFBE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184593C3276EF2390012EFBE /* main.swift */; };
 		184593CD276EF4300012EFBE /* CreationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184593CC276EF4300012EFBE /* CreationEntry.swift */; };
 		184593D0276EF4D50012EFBE /* FactoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184593CF276EF4D50012EFBE /* FactoryEntry.swift */; };
+		184593D3276F32510012EFBE /* BehaviorEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184593D2276F32500012EFBE /* BehaviorEntry.swift */; };
+		184593D5276F32A30012EFBE /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184593D4276F32A30012EFBE /* Observer.swift */; };
 		1846690422E4223A00D452C4 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846690322E4223A00D452C4 /* function.swift */; };
 		18577E97233BAB5200EA6003 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18577E96233BAB5200EA6003 /* Protocol.swift */; };
 		18577E99233C3E7600EA6003 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18577E98233C3E7600EA6003 /* Error.swift */; };
@@ -317,6 +319,8 @@
 		184593C3276EF2390012EFBE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		184593CC276EF4300012EFBE /* CreationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationEntry.swift; sourceTree = "<group>"; };
 		184593CF276EF4D50012EFBE /* FactoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryEntry.swift; sourceTree = "<group>"; };
+		184593D2276F32500012EFBE /* BehaviorEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorEntry.swift; sourceTree = "<group>"; };
+		184593D4276F32A30012EFBE /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		1846690322E4223A00D452C4 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
 		18577E96233BAB5200EA6003 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		18577E98233C3E7600EA6003 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -739,6 +743,8 @@
 		184593CB276EF3D40012EFBE /* Behavior (行为型) */ = {
 			isa = PBXGroup;
 			children = (
+				184593D2276F32500012EFBE /* BehaviorEntry.swift */,
+				184593D1276F322C0012EFBE /* Observer */,
 			);
 			path = "Behavior (行为型)";
 			sourceTree = "<group>";
@@ -749,6 +755,14 @@
 				184593CF276EF4D50012EFBE /* FactoryEntry.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		184593D1276F322C0012EFBE /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				184593D4276F32A30012EFBE /* Observer.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		18577EDF233F689700EA6003 /* RxSwiftDemo */ = {
@@ -1459,6 +1473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184593D3276F32510012EFBE /* BehaviorEntry.swift in Sources */,
+				184593D5276F32A30012EFBE /* Observer.swift in Sources */,
 				184593C4276EF2390012EFBE /* main.swift in Sources */,
 				184593D0276EF4D50012EFBE /* FactoryEntry.swift in Sources */,
 				184593CD276EF4300012EFBE /* CreationEntry.swift in Sources */,

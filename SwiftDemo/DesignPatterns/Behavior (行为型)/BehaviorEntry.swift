@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  BehaviorEntry.swift
 //  DesignPatterns
 //
 //  Created by Knox on 2021/12/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-creattionEntry()
 
-behaviorEntry()
-
+func behaviorEntry() {
+    
+}
