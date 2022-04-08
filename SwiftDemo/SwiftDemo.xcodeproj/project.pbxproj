@@ -134,6 +134,11 @@
 		18C1A23E234E24B700AB47A8 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23D234E24B700AB47A8 /* Bind.swift */; };
 		18C1A241234EBE5700AB47A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A240234EBE5700AB47A8 /* LoginViewController.swift */; };
 		18C1A244234EC0B900AB47A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C1A243234EC0B900AB47A8 /* LoginViewController.xib */; };
+		18CF8EB127FBE766007C10BB /* MiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF8EB027FBE766007C10BB /* MiniApp.swift */; };
+		18CF8EB327FBEB7A007C10BB /* MiniAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF8EB227FBEB7A007C10BB /* MiniAppManager.swift */; };
+		18CF8EB527FBEBCC007C10BB /* MiniAppDownloaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF8EB427FBEBCC007C10BB /* MiniAppDownloaderManager.swift */; };
+		18CF8EB727FBF02B007C10BB /* MiniAppDowloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF8EB627FBF02B007C10BB /* MiniAppDowloadTask.swift */; };
+		18CF8EB927FBF111007C10BB /* MiniAppSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF8EB827FBF110007C10BB /* MiniAppSynchronizer.swift */; };
 		18DF3F32234031C20012D590 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F31234031C20012D590 /* BaseViewController.swift */; };
 		18DF3F3623403B620012D590 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F3523403B620012D590 /* UIScreen+Extension.swift */; };
 		18DF3F3723403B620012D590 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3F3523403B620012D590 /* UIScreen+Extension.swift */; };
@@ -356,6 +361,11 @@
 		18C1A23D234E24B700AB47A8 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
 		18C1A240234EBE5700AB47A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18C1A243234EC0B900AB47A8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		18CF8EB027FBE766007C10BB /* MiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniApp.swift; sourceTree = "<group>"; };
+		18CF8EB227FBEB7A007C10BB /* MiniAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppManager.swift; sourceTree = "<group>"; };
+		18CF8EB427FBEBCC007C10BB /* MiniAppDownloaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppDownloaderManager.swift; sourceTree = "<group>"; };
+		18CF8EB627FBF02B007C10BB /* MiniAppDowloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppDowloadTask.swift; sourceTree = "<group>"; };
+		18CF8EB827FBF110007C10BB /* MiniAppSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppSynchronizer.swift; sourceTree = "<group>"; };
 		18DF3F31234031C20012D590 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18DF3F3523403B620012D590 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		18DF3F3823403BEA0012D590 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -550,6 +560,7 @@
 				08F396C3204AE01400FD2DE4 /* EZBaseVC.swift */,
 				08F396C4204AE01400FD2DE4 /* EZNavigationController.swift */,
 				08F396C5204AE01400FD2DE4 /* EZTabBarController.swift */,
+				18CF8EAF27FBE742007C10BB /* MiniApp */,
 				0856176A2108AB5D001B2006 /* DesignPatterns */,
 				76CA56B6210821AA001B6F2E /* Syntax */,
 				08F396EF204AE0DE00FD2DE4 /* Extension */,
@@ -811,6 +822,18 @@
 				18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */,
 			);
 			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		18CF8EAF27FBE742007C10BB /* MiniApp */ = {
+			isa = PBXGroup;
+			children = (
+				18CF8EB227FBEB7A007C10BB /* MiniAppManager.swift */,
+				18CF8EB027FBE766007C10BB /* MiniApp.swift */,
+				18CF8EB427FBEBCC007C10BB /* MiniAppDownloaderManager.swift */,
+				18CF8EB627FBF02B007C10BB /* MiniAppDowloadTask.swift */,
+				18CF8EB827FBF110007C10BB /* MiniAppSynchronizer.swift */,
+			);
+			path = MiniApp;
 			sourceTree = "<group>";
 		};
 		18DF3F33234037420012D590 /* Classes */ = {
@@ -1330,13 +1353,16 @@
 				7679C0A12587644100F12EB1 /* CollectionViewController.swift in Sources */,
 				76CA56B8210821CE001B6F2E /* Init.swift in Sources */,
 				084D0B35205DEF5700C2795A /* VideoPlayViewController.swift in Sources */,
+				18CF8EB527FBEBCC007C10BB /* MiniAppDownloaderManager.swift in Sources */,
 				18335476255D7CE7006826F6 /* SessionStreamDelegateImp.swift in Sources */,
 				08F396D8204AE01400FD2DE4 /* ButtonViewController.swift in Sources */,
 				08561795210DB6C4001B2006 /* StrategyEntry.swift in Sources */,
 				76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */,
+				18CF8EB927FBF111007C10BB /* MiniAppSynchronizer.swift in Sources */,
 				766966452289967400BA69B8 /* BaseViewController.swift in Sources */,
 				18335490255D7D41006826F6 /* SessionWebSocketDelegateImp.swift in Sources */,
 				1833546E255D7C8F006826F6 /* SessionDownloadDelegateImp.swift in Sources */,
+				18CF8EB127FBE766007C10BB /* MiniApp.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
@@ -1370,8 +1396,10 @@
 				0856178321094F53001B2006 /* GenericsCommand.swift in Sources */,
 				08F396D1204AE01400FD2DE4 /* BadgeView.swift in Sources */,
 				08F396F5204AE0DF00FD2DE4 /* Extension.swift in Sources */,
+				18CF8EB727FBF02B007C10BB /* MiniAppDowloadTask.swift in Sources */,
 				7619A099214699BB005D9C95 /* Generics.swift in Sources */,
 				18335460255D7BFB006826F6 /* SessionDataDelegateImp.swift in Sources */,
+				18CF8EB327FBEB7A007C10BB /* MiniAppManager.swift in Sources */,
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
 				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
