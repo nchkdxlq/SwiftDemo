@@ -27,7 +27,7 @@ class MiniAppManager: NSObject {
         activeMiniAppList.removeAll()
         var dowloadList = [MiniApp]()
         for app in mergedApps {
-            if app.state == .open {
+            if app.isActive {
                 activeMiniAppList.append(app)
             }
             if app.version != app.packageVersion {
