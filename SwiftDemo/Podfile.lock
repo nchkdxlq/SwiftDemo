@@ -37,15 +37,14 @@ DEPENDENCIES:
   - SwiftyJSON (~> 5.0.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
+    - Alamofire
+    - Kingfisher
     - PromiseKit
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
-  trunk:
-    - Alamofire
-    - Kingfisher
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftGen
@@ -66,6 +65,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: b88f4e71b2aa530387892f00942469334294f12c
+PODFILE CHECKSUM: bff580b08ec80060f685953a76cf2a552bfddb2e
 
 COCOAPODS: 1.10.0
