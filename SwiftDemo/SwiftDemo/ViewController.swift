@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 private let cellTitle = "cellTitle"
 private let cellNextVC = "cellNextVC"
@@ -95,6 +96,9 @@ class ViewController: EZBaseVC {
         
         let item16 = CellInfo(title: "UICollectionView", vcClass: CollectionViewController.self)
         dataSource.append(item16)
+        
+        let item17 = CellInfo(title: "SwiftUI", vcClass: SwiftUIViewController.self)
+        dataSource.append(item17)
     }
     
     
@@ -132,7 +136,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         tableView.deselectRow(at: indexPath as IndexPath, animated: false)
         
         if let vcClass = dataSource[indexPath.row].vcClass {
-            let nextVC = vcClass.init()
+            if vcClass == SwiftUIViewController.self {
+                nextVC = SwiftUIViewController.hostingController()
+            } else {
+                nextVC = vcClass.init()
+            }
             navigationController?.pushViewController(nextVC, animated: true)
         }
     }

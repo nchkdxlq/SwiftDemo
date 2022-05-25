@@ -13,7 +13,7 @@ class Dog: NSObject {
 }
 
 
-class MiscViewController: BaseViewController {
+class MiscViewController: EZBaseVC {
     
 //    var button1: UIButton
 //    var button2: UIButton

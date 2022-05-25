@@ -21,7 +21,6 @@ def dev_pods
 end
 
 
-
 target 'SwiftDemo'  do
     common_pods
     dev_pods
@@ -29,8 +28,7 @@ end
 
 
 target 'RxSwiftDemo' do
+  
   common_pods
   
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
 end

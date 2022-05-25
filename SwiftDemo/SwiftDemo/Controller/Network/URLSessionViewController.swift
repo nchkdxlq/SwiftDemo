@@ -8,7 +8,7 @@
 
 import UIKit
 
-class URLSessionViewController: BaseViewController {
+class URLSessionViewController: EZBaseVC {
 
     let sessionDelegate = URLSessionDelegateImp()
     lazy var session: URLSession = {

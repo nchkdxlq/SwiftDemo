@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StackViewController: BaseViewController {
+class StackViewController: EZBaseVC {
     
     var timer: Timer?
     

@@ -10,12 +10,6 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
   - SnapKit (5.0.1)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
@@ -28,8 +22,6 @@ DEPENDENCIES:
   - Alamofire (~> 5.4.2)
   - Kingfisher (~> 6.2)
   - PromiseKit (~> 6.0)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
   - SnapKit (~> 5.0.0)
   - Socket.IO-Client-Swift (~> 15.2.0)
   - SwiftGen (= 6.4.0)
@@ -41,9 +33,6 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - PromiseKit
-    - RxCocoa
-    - RxRelay
-    - RxSwift
     - SnapKit
     - Socket.IO-Client-Swift
     - Starscream
@@ -55,9 +44,6 @@ SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
@@ -65,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: bff580b08ec80060f685953a76cf2a552bfddb2e
+PODFILE CHECKSUM: 644fde1bb239c71b0e0774c8abdf63191f437ab4
 
 COCOAPODS: 1.10.0
