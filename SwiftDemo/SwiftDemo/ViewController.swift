@@ -136,6 +136,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         tableView.deselectRow(at: indexPath as IndexPath, animated: false)
         
         if let vcClass = dataSource[indexPath.row].vcClass {
+            let nextVC: UIViewController
             if vcClass == SwiftUIViewController.self {
                 nextVC = SwiftUIViewController.hostingController()
             } else {

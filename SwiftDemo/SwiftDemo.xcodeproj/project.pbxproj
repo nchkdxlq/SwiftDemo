@@ -129,6 +129,8 @@
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
 		187E5CBF283D299900B6E6BC /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CBE283D299900B6E6BC /* SwiftUIViewController.swift */; };
+		187E5CC4283FCAB500B6E6BC /* DemoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CC3283FCAB500B6E6BC /* DemoText.swift */; };
+		187E5CC628405BFD00B6E6BC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CC528405BFD00B6E6BC /* CalculatorView.swift */; };
 		1899B6B02568A019005F4DC7 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */; };
 		18A9370B26BD7562000088B7 /* WKNavigationDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */; };
 		18C1A23C234E191600AB47A8 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23B234E191600AB47A8 /* Observer.swift */; };
@@ -356,6 +358,8 @@
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
 		187E5CBE283D299900B6E6BC /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		187E5CC3283FCAB500B6E6BC /* DemoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoText.swift; sourceTree = "<group>"; };
+		187E5CC528405BFD00B6E6BC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafePointer.swift; sourceTree = "<group>"; };
 		18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKNavigationDelegateImpl.swift; sourceTree = "<group>"; };
 		18C1A23B234E191600AB47A8 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
@@ -565,6 +569,7 @@
 				76CA56B6210821AA001B6F2E /* Syntax */,
 				08F396EF204AE0DE00FD2DE4 /* Extension */,
 				08F396B2204AE01400FD2DE4 /* Controller */,
+				187E5CC0283FCA6000B6E6BC /* SwiftUI */,
 				08F396EA204AE02500FD2DE4 /* Views */,
 				08F396E3204AE01F00FD2DE4 /* Resources */,
 				08E27C70204AA2FC00CD1AE1 /* Assets.xcassets */,
@@ -813,6 +818,15 @@
 				18683D3523532459007FC806 /* TableViewController.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		187E5CC0283FCA6000B6E6BC /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				187E5CC3283FCAB500B6E6BC /* DemoText.swift */,
+				187E5CC528405BFD00B6E6BC /* CalculatorView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		18A9370926BD751B000088B7 /* WKWebView */ = {
@@ -1360,6 +1374,7 @@
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
 				085617752108B3FF001B2006 /* TetrisMachineManager.swift in Sources */,
+				187E5CC628405BFD00B6E6BC /* CalculatorView.swift in Sources */,
 				083C18BB20503615000E4A31 /* UIScrollView+Extension.swift in Sources */,
 				183354A4255D7EF9006826F6 /* URLSessionDelegateImp.swift in Sources */,
 				18DF3F3923403BEA0012D590 /* UIColor+Extension.swift in Sources */,
@@ -1396,6 +1411,7 @@
 				08561789210A156B001B2006 /* ClosureCommandManager.swift in Sources */,
 				08F396D7204AE01400FD2DE4 /* TestViewController.swift in Sources */,
 				085EA3752111EC140073A516 /* WeatherData.swift in Sources */,
+				187E5CC4283FCAB500B6E6BC /* DemoText.swift in Sources */,
 				18DF3F3623403B620012D590 /* UIScreen+Extension.swift in Sources */,
 				760D9A0021133304008C205E /* Array.swift in Sources */,
 				08F396DA204AE01400FD2DE4 /* KeyboardViewController.swift in Sources */,
