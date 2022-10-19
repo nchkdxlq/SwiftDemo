@@ -1,15 +1,6 @@
 PODS:
   - Alamofire (5.4.2)
   - Kingfisher (6.2.1)
-  - PromiseKit (6.13.1):
-    - PromiseKit/CorePromise (= 6.13.1)
-    - PromiseKit/Foundation (= 6.13.1)
-    - PromiseKit/UIKit (= 6.13.1)
-  - PromiseKit/CorePromise (6.13.1)
-  - PromiseKit/Foundation (6.13.1):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.13.1):
-    - PromiseKit/CorePromise
   - SnapKit (5.0.1)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
@@ -21,7 +12,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.4.2)
   - Kingfisher (~> 6.2)
-  - PromiseKit (~> 6.0)
   - SnapKit (~> 5.0.0)
   - Socket.IO-Client-Swift (~> 15.2.0)
   - SwiftGen (= 6.4.0)
@@ -32,7 +22,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
-    - PromiseKit
     - SnapKit
     - Socket.IO-Client-Swift
     - Starscream
@@ -43,7 +32,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
-  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
@@ -51,6 +39,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 644fde1bb239c71b0e0774c8abdf63191f437ab4
+PODFILE CHECKSUM: 9a36b9e0136f73c37df2780e24e029be3ff1e4d7
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3
