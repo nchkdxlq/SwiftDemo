@@ -99,8 +99,19 @@ class ViewController: EZBaseVC {
         
         let item17 = CellInfo(title: "SwiftUI", vcClass: SwiftUIViewController.self)
         dataSource.append(item17)
+        
+        let item18 = CellInfo(title: "Rotation", vcClass: RotationViewController.self)
+        dataSource.append(item18)
     }
     
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
     
     
     override func didReceiveMemoryWarning() {

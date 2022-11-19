@@ -156,6 +156,7 @@
 		18FD10FB2335FDA300504E86 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FA2335FDA300504E86 /* Closure.swift */; };
 		18FD10FD233767E100504E86 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FC233767E100504E86 /* Property.swift */; };
 		18FD10FF2338528700504E86 /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FE2338528700504E86 /* Inheritance.swift */; };
+		3C0E2E642928D56C00BACBF1 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0E2E632928D56C00BACBF1 /* RotationViewController.swift */; };
 		3C4D38FE2900CB7B00E8C84B /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D38FD2900CB7B00E8C84B /* SwiftUIDemoApp.swift */; };
 		3C4D39002900CB7B00E8C84B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D38FF2900CB7B00E8C84B /* ContentView.swift */; };
 		3C4D39022900CB7D00E8C84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4D39012900CB7D00E8C84B /* Assets.xcassets */; };
@@ -400,6 +401,7 @@
 		18FD10FA2335FDA300504E86 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		18FD10FC233767E100504E86 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		18FD10FE2338528700504E86 /* Inheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inheritance.swift; sourceTree = "<group>"; };
+		3C0E2E632928D56C00BACBF1 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 		3C4D38FB2900CB7B00E8C84B /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4D38FD2900CB7B00E8C84B /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		3C4D38FF2900CB7B00E8C84B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 				76696642228994EF00BA69B8 /* StackViewController.swift */,
 				76B935A322E09A7F00D216E9 /* MiscViewController.swift */,
 				187E5CBE283D299900B6E6BC /* SwiftUIViewController.swift */,
+				3C0E2E632928D56C00BACBF1 /* RotationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1470,6 +1473,7 @@
 				08E36E30204EE09E0020D5FB /* RefreshComponent.swift in Sources */,
 				18335448255D774F006826F6 /* URLSessionViewController.swift in Sources */,
 				08561793210DB6AD001B2006 /* Duck.swift in Sources */,
+				3C0E2E642928D56C00BACBF1 /* RotationViewController.swift in Sources */,
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				085617732108B338001B2006 /* Command.swift in Sources */,
 				08FF85042118864100F00303 /* Protocol.swift in Sources */,
