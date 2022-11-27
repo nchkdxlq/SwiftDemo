@@ -131,6 +131,11 @@
 		186B497F2932518700914744 /* SpacerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B497E2932518700914744 /* SpacerDemo.swift */; };
 		186B4981293256ED00914744 /* FrameDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B4980293256ED00914744 /* FrameDemo.swift */; };
 		186B4983293264F900914744 /* GeometryReaderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B4982293264F900914744 /* GeometryReaderDemo.swift */; };
+		186B49852933605500914744 /* AlignmentGuideDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B49842933605500914744 /* AlignmentGuideDemo.swift */; };
+		186B498A2933736B00914744 /* TextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B49892933736B00914744 /* TextDemo.swift */; };
+		186B498C29337B6E00914744 /* ViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B498B29337B6E00914744 /* ViewDemo.swift */; };
+		186B498E293398F500914744 /* ImageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B498D293398F500914744 /* ImageDemo.swift */; };
+		186B49902933B5C300914744 /* MessageRowDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B498F2933B5C300914744 /* MessageRowDemo.swift */; };
 		187BC5A023422836005B14CE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC59F23422836005B14CE /* Subject.swift */; };
 		187BC5A223422902005B14CE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A123422902005B14CE /* Observable.swift */; };
 		187BC5A52342402A005B14CE /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC5A42342402A005B14CE /* Combination.swift */; };
@@ -376,6 +381,11 @@
 		186B497E2932518700914744 /* SpacerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerDemo.swift; sourceTree = "<group>"; };
 		186B4980293256ED00914744 /* FrameDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameDemo.swift; sourceTree = "<group>"; };
 		186B4982293264F900914744 /* GeometryReaderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemo.swift; sourceTree = "<group>"; };
+		186B49842933605500914744 /* AlignmentGuideDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuideDemo.swift; sourceTree = "<group>"; };
+		186B49892933736B00914744 /* TextDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDemo.swift; sourceTree = "<group>"; };
+		186B498B29337B6E00914744 /* ViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDemo.swift; sourceTree = "<group>"; };
+		186B498D293398F500914744 /* ImageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDemo.swift; sourceTree = "<group>"; };
+		186B498F2933B5C300914744 /* MessageRowDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowDemo.swift; sourceTree = "<group>"; };
 		187BC59F23422836005B14CE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		187BC5A123422902005B14CE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		187BC5A42342402A005B14CE /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
@@ -872,8 +882,20 @@
 				186B497E2932518700914744 /* SpacerDemo.swift */,
 				186B4980293256ED00914744 /* FrameDemo.swift */,
 				186B4982293264F900914744 /* GeometryReaderDemo.swift */,
+				186B49842933605500914744 /* AlignmentGuideDemo.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		186B49882933735A00914744 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				186B49892933736B00914744 /* TextDemo.swift */,
+				186B498B29337B6E00914744 /* ViewDemo.swift */,
+				186B498D293398F500914744 /* ImageDemo.swift */,
+				186B498F2933B5C300914744 /* MessageRowDemo.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		187E5CC0283FCA6000B6E6BC /* SwiftUI */ = {
@@ -980,6 +1002,7 @@
 		3C4D38FC2900CB7B00E8C84B /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				186B49882933735A00914744 /* View */,
 				186B49772932483400914744 /* Layout */,
 				3C4D390A2900D34D00E8C84B /* Calculator */,
 				3C4D38FD2900CB7B00E8C84B /* SwiftUIDemoApp.swift */,
@@ -1677,14 +1700,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA46CDA2902E8B8008BA3BD /* CalculatorBrain.swift in Sources */,
+				186B498A2933736B00914744 /* TextDemo.swift in Sources */,
 				3C4D39002900CB7B00E8C84B /* ContentView.swift in Sources */,
 				186B4981293256ED00914744 /* FrameDemo.swift in Sources */,
 				3C4D390E2900D57B00E8C84B /* CalculatorApp.swift in Sources */,
 				186B4983293264F900914744 /* GeometryReaderDemo.swift in Sources */,
 				3CCD247629019EFD00D22578 /* CalculatorButtonItem.swift in Sources */,
+				186B49902933B5C300914744 /* MessageRowDemo.swift in Sources */,
+				186B498E293398F500914744 /* ImageDemo.swift in Sources */,
 				186B497D29324E2D00914744 /* ZStackDemo.swift in Sources */,
 				186B497F2932518700914744 /* SpacerDemo.swift in Sources */,
+				186B498C29337B6E00914744 /* ViewDemo.swift in Sources */,
 				186B49792932485F00914744 /* VStackDemo.swift in Sources */,
+				186B49852933605500914744 /* AlignmentGuideDemo.swift in Sources */,
 				3C4D390C2900D35C00E8C84B /* CalculatorButton.swift in Sources */,
 				186B497B29324D0D00914744 /* HStackDemo.swift in Sources */,
 				3CCD247A2901A3BD00D22578 /* CalculatorButtonRow.swift in Sources */,

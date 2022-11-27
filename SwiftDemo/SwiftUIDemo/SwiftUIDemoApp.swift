@@ -12,7 +12,9 @@ import SwiftUI
 struct SwiftUIDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            CalculatorApp()
+//            CalculatorApp()
+//            ViewDemo()
+            ImageDemo1()
         }
     }
 }
