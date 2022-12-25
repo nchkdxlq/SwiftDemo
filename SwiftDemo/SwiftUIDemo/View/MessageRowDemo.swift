@@ -18,7 +18,10 @@ struct MessageRowDemo: View {
     let message: Message
     
     var body: some View {
-        HStack (alignment: .top) {
+        HStack (
+            alignment: .top, // alignment: child在HStack中垂直方向上的对齐方式
+            spacing: 8 // spacing: 水平方向child之间的间隔
+        ) {
             ZStack {
                 Circle()
                     .fill(Color.yellow)
@@ -28,9 +31,12 @@ struct MessageRowDemo: View {
             .frame(width: 40)
             
             Text(message.content)
+                .border(Color.blue)
         }
+        .border(Color.red)
         .padding([.horizontal], 10)
-        .frame(height: 200)
+        // alignment: frame的子View(padding)在frame中的对齐方式
+        .frame(height: 200, alignment: .top)
         .border(Color.green)
     }
 }
