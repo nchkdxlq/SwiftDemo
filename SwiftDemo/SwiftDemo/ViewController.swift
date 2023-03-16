@@ -102,6 +102,9 @@ class ViewController: EZBaseVC {
         
         let item18 = CellInfo(title: "Rotation", vcClass: RotationViewController.self)
         dataSource.append(item18)
+        
+        let item19 = CellInfo(title: "Combine", vcClass: CombineViewController.self)
+        dataSource.append(item19)
     }
     
     

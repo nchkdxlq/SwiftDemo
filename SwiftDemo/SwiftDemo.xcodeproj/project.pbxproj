@@ -142,6 +142,7 @@
 		187E5CBF283D299900B6E6BC /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CBE283D299900B6E6BC /* SwiftUIViewController.swift */; };
 		187E5CC4283FCAB500B6E6BC /* DemoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CC3283FCAB500B6E6BC /* DemoText.swift */; };
 		187E5CC628405BFD00B6E6BC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5CC528405BFD00B6E6BC /* CalculatorView.swift */; };
+		188B1FB329C21E28003C1756 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B1FB229C21E28003C1756 /* CombineViewController.swift */; };
 		1899B6B02568A019005F4DC7 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */; };
 		18A9370B26BD7562000088B7 /* WKNavigationDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */; };
 		18C1A23C234E191600AB47A8 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A23B234E191600AB47A8 /* Observer.swift */; };
@@ -393,6 +394,7 @@
 		187E5CBE283D299900B6E6BC /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
 		187E5CC3283FCAB500B6E6BC /* DemoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoText.swift; sourceTree = "<group>"; };
 		187E5CC528405BFD00B6E6BC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		188B1FB229C21E28003C1756 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		1899B6AF2568A019005F4DC7 /* UnsafePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafePointer.swift; sourceTree = "<group>"; };
 		18A9370A26BD7562000088B7 /* WKNavigationDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKNavigationDelegateImpl.swift; sourceTree = "<group>"; };
 		18C1A23B234E191600AB47A8 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
@@ -612,6 +614,7 @@
 		08E27C68204AA2FC00CD1AE1 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				188B1FB129C21DDD003C1756 /* Combine */,
 				18E5EEA826215E3000BC116E /* Configuration */,
 				08E27C69204AA2FC00CD1AE1 /* AppDelegate.swift */,
 				08E27C6B204AA2FC00CD1AE1 /* ViewController.swift */,
@@ -908,6 +911,14 @@
 				187E5CC528405BFD00B6E6BC /* CalculatorView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		188B1FB129C21DDD003C1756 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				188B1FB229C21E28003C1756 /* CombineViewController.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 		18A9370926BD751B000088B7 /* WKWebView */ = {
@@ -1510,6 +1521,7 @@
 				76E05A74210B29BA00B6A16A /* AdapterEntry.swift in Sources */,
 				18CF8EB927FBF111007C10BB /* MiniAppSynchronizer.swift in Sources */,
 				18335490255D7D41006826F6 /* SessionWebSocketDelegateImp.swift in Sources */,
+				188B1FB329C21E28003C1756 /* CombineViewController.swift in Sources */,
 				1833546E255D7C8F006826F6 /* SessionDownloadDelegateImp.swift in Sources */,
 				18CF8EB127FBE766007C10BB /* MiniApp.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
