@@ -169,6 +169,8 @@
 		18FD10FD233767E100504E86 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FC233767E100504E86 /* Property.swift */; };
 		18FD10FF2338528700504E86 /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD10FE2338528700504E86 /* Inheritance.swift */; };
 		3C0E2E642928D56C00BACBF1 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0E2E632928D56C00BACBF1 /* RotationViewController.swift */; };
+		3C29A2CE29CF3D27001457AC /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29A2CD29CF3D27001457AC /* NavViewController.swift */; };
+		3C29A2D029CF4369001457AC /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29A2CF29CF4369001457AC /* UIControl+Combine.swift */; };
 		3C4D38FE2900CB7B00E8C84B /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D38FD2900CB7B00E8C84B /* SwiftUIDemoApp.swift */; };
 		3C4D39002900CB7B00E8C84B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D38FF2900CB7B00E8C84B /* ContentView.swift */; };
 		3C4D39022900CB7D00E8C84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4D39012900CB7D00E8C84B /* Assets.xcassets */; };
@@ -427,6 +429,8 @@
 		18FD10FC233767E100504E86 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		18FD10FE2338528700504E86 /* Inheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inheritance.swift; sourceTree = "<group>"; };
 		3C0E2E632928D56C00BACBF1 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
+		3C29A2CD29CF3D27001457AC /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		3C29A2CF29CF4369001457AC /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
 		3C4D38FB2900CB7B00E8C84B /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4D38FD2900CB7B00E8C84B /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		3C4D38FF2900CB7B00E8C84B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -657,6 +661,7 @@
 		08F396B2204AE01400FD2DE4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3C29A2CC29CF3CE5001457AC /* NavigationController */,
 				763BC8432594567F00CE3C24 /* CollectionView */,
 				18335432255D76D1006826F6 /* Network */,
 				18A9370926BD751B000088B7 /* WKWebView */,
@@ -917,6 +922,7 @@
 			isa = PBXGroup;
 			children = (
 				188B1FB229C21E28003C1756 /* CombineViewController.swift */,
+				3C29A2CF29CF4369001457AC /* UIControl+Combine.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -1011,6 +1017,14 @@
 				18E5EF73262186EA00BC116E /* AppStoreTarget.xcconfig */,
 			);
 			name = Targets;
+			sourceTree = "<group>";
+		};
+		3C29A2CC29CF3CE5001457AC /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				3C29A2CD29CF3D27001457AC /* NavViewController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		3C4D38FC2900CB7B00E8C84B /* SwiftUIDemo */ = {
@@ -1524,6 +1538,7 @@
 				188B1FB329C21E28003C1756 /* CombineViewController.swift in Sources */,
 				1833546E255D7C8F006826F6 /* SessionDownloadDelegateImp.swift in Sources */,
 				18CF8EB127FBE766007C10BB /* MiniApp.swift in Sources */,
+				3C29A2CE29CF3D27001457AC /* NavViewController.swift in Sources */,
 				08F396D9204AE01400FD2DE4 /* Dispatch.swift in Sources */,
 				08F396D6204AE01400FD2DE4 /* LQSearch.swift in Sources */,
 				08F396D4204AE01400FD2DE4 /* GrammarViewController.swift in Sources */,
@@ -1541,6 +1556,7 @@
 				083C18B920503448000E4A31 /* HeaderAnimator.swift in Sources */,
 				085617732108B338001B2006 /* Command.swift in Sources */,
 				08FF85042118864100F00303 /* Protocol.swift in Sources */,
+				3C29A2D029CF4369001457AC /* UIControl+Combine.swift in Sources */,
 				08F396CC204AE01400FD2DE4 /* SearchResultsController.swift in Sources */,
 				0856176D2108B00F001B2006 /* TMCommandProtocol.swift in Sources */,
 				08561787210A0DF3001B2006 /* QueueCommandManager.swift in Sources */,
