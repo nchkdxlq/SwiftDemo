@@ -105,6 +105,9 @@ class ViewController: EZBaseVC {
         
         let item19 = CellInfo(title: "Combine", vcClass: CombineViewController.self)
         dataSource.append(item19)
+        
+        let item20 = CellInfo(title: "自定义转场动画", vcClass: NavViewController.self)
+        dataSource.append(item20)
     }
     
     
